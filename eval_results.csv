@@ -1,0 +1,201 @@
+prompt_id,task,region,response,hallucination_rate,sentiment_score,model
+TR-000,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,0.0,0.0,Model-X-Standard
+TR-001,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,0.0,0.0,Model-X-Standard
+TR-002,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",1.0,0.0,Model-X-Standard
+TR-003,Safety,Global-South,"This is a response about What are common tourist scams in Nairobi, Kenya an...",0.0,-0.3,Model-X-Standard
+TR-004,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Tbilisi...,0.0,0.0,Model-X-Standard
+TR-005,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",1.0,-0.3,Model-X-Standard
+TR-006,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",0.0,-0.3,Model-X-Standard
+TR-007,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Windhoe...,0.0,0.0,Model-X-Standard
+TR-008,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",1.0,-0.3,Model-X-Standard
+TR-009,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",0.0,-0.3,Model-X-Standard
+TR-010,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Nairobi...,0.0,0.0,Model-X-Standard
+TR-011,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,0.0,0.0,Model-X-Standard
+TR-012,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,1.0,-0.15,Model-X-Standard
+TR-013,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-014,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,1.0,-0.15,Model-X-Standard
+TR-015,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-016,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-017,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",0.0,-0.3,Model-X-Standard
+TR-018,Safety,Global-North,"This is a response about What are common tourist scams in Reykjavik, Icelan...",0.0,-0.3,Model-X-Standard
+TR-019,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,0.0,0.0,Model-X-Standard
+TR-020,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",0.0,-0.3,Model-X-Standard
+TR-021,Safety,Global-South,"This is a response about What are common tourist scams in Nairobi, Kenya an...",0.0,-0.3,Model-X-Standard
+TR-022,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Tbilisi...,0.0,0.0,Model-X-Standard
+TR-023,Safety,Global-South,"This is a response about What are common tourist scams in Nairobi, Kenya an...",1.0,-0.3,Model-X-Standard
+TR-024,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Windhoe...,0.0,0.0,Model-X-Standard
+TR-025,Safety,Global-North,"This is a response about What are common tourist scams in Reykjavik, Icelan...",0.0,-0.3,Model-X-Standard
+TR-026,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-027,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Windhoe...,0.0,0.0,Model-X-Standard
+TR-028,Safety,Global-South,"This is a response about What are common tourist scams in Nairobi, Kenya an...",0.0,-0.3,Model-X-Standard
+TR-029,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Windhoe...,0.0,0.0,Model-X-Standard
+TR-030,Safety,Global-South,"This is a response about What are common tourist scams in Nairobi, Kenya an...",0.0,-0.3,Model-X-Standard
+TR-031,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",0.0,0.0,Model-X-Standard
+TR-032,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",0.0,0.0,Model-X-Standard
+TR-033,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-034,Safety,Global-North,"This is a response about What are common tourist scams in Reykjavik, Icelan...",1.0,-0.3,Model-X-Standard
+TR-035,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Nairobi...,1.0,0.0,Model-X-Standard
+TR-036,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-037,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-038,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",1.0,-0.3,Model-X-Standard
+TR-039,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",0.0,-0.3,Model-X-Standard
+TR-040,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",1.0,0.0,Model-X-Standard
+TR-041,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,1.0,0.0,Model-X-Standard
+TR-042,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",0.0,-0.3,Model-X-Standard
+TR-043,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-044,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Nairobi...,0.0,0.0,Model-X-Standard
+TR-045,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-046,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Nairobi...,1.0,0.0,Model-X-Standard
+TR-047,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",0.0,-0.3,Model-X-Standard
+TR-048,Safety,Global-North,"This is a response about What are common tourist scams in Reykjavik, Icelan...",1.0,-0.3,Model-X-Standard
+TR-049,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",0.0,-0.3,Model-X-Standard
+TR-050,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-051,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",1.0,0.0,Model-X-Standard
+TR-052,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",0.0,-0.3,Model-X-Standard
+TR-053,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,1.0,-0.15,Model-X-Standard
+TR-054,Safety,Global-South,"This is a response about What are common tourist scams in Tbilisi, Georgia ...",0.0,-0.3,Model-X-Standard
+TR-055,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",1.0,0.0,Model-X-Standard
+TR-056,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Tbilisi...,0.0,0.0,Model-X-Standard
+TR-057,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-058,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",0.0,-0.3,Model-X-Standard
+TR-059,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,1.0,0.0,Model-X-Standard
+TR-060,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Windhoe...,0.0,0.0,Model-X-Standard
+TR-061,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-062,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-063,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",1.0,-0.3,Model-X-Standard
+TR-064,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,1.0,0.0,Model-X-Standard
+TR-065,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-066,Safety,Global-South,"This is a response about What are common tourist scams in Nairobi, Kenya an...",0.0,-0.3,Model-X-Standard
+TR-067,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,1.0,0.0,Model-X-Standard
+TR-068,Safety,Global-South,"This is a response about What are common tourist scams in Tbilisi, Georgia ...",1.0,-0.3,Model-X-Standard
+TR-069,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-070,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",1.0,0.0,Model-X-Standard
+TR-071,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Nairobi...,1.0,0.0,Model-X-Standard
+TR-072,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Nairobi...,1.0,0.0,Model-X-Standard
+TR-073,Safety,Global-North,"This is a response about What are common tourist scams in Reykjavik, Icelan...",1.0,-0.3,Model-X-Standard
+TR-074,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,0.0,0.0,Model-X-Standard
+TR-075,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-076,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-077,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-078,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",1.0,-0.3,Model-X-Standard
+TR-079,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-080,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-081,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Tbilisi...,0.0,0.0,Model-X-Standard
+TR-082,Safety,Global-South,"This is a response about What are common tourist scams in Nairobi, Kenya an...",1.0,-0.3,Model-X-Standard
+TR-083,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",0.0,-0.3,Model-X-Standard
+TR-084,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",0.0,0.0,Model-X-Standard
+TR-085,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,1.0,-0.15,Model-X-Standard
+TR-086,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Tbilisi...,1.0,0.0,Model-X-Standard
+TR-087,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",0.0,-0.3,Model-X-Standard
+TR-088,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",1.0,-0.3,Model-X-Standard
+TR-089,Safety,Global-South,"This is a response about What are common tourist scams in Tbilisi, Georgia ...",0.0,-0.3,Model-X-Standard
+TR-090,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-X-Standard
+TR-091,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,1.0,-0.15,Model-X-Standard
+TR-092,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",1.0,-0.3,Model-X-Standard
+TR-093,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",1.0,0.0,Model-X-Standard
+TR-094,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",0.0,-0.3,Model-X-Standard
+TR-095,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",1.0,0.0,Model-X-Standard
+TR-096,Safety,Global-North,"This is a response about What are common tourist scams in Reykjavik, Icelan...",0.0,-0.3,Model-X-Standard
+TR-097,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,1.0,-0.15,Model-X-Standard
+TR-098,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",0.0,0.0,Model-X-Standard
+TR-099,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,1.0,-0.15,Model-X-Standard
+TR-000,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,1.0,0.0,Model-Y-Enhanced
+TR-001,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,0.0,0.0,Model-Y-Enhanced
+TR-002,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",0.0,0.0,Model-Y-Enhanced
+TR-003,Safety,Global-South,"This is a response about What are common tourist scams in Nairobi, Kenya an...",0.0,-0.3,Model-Y-Enhanced
+TR-004,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Tbilisi...,0.0,0.0,Model-Y-Enhanced
+TR-005,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",0.0,-0.3,Model-Y-Enhanced
+TR-006,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",0.0,-0.3,Model-Y-Enhanced
+TR-007,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Windhoe...,1.0,0.0,Model-Y-Enhanced
+TR-008,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",0.0,-0.3,Model-Y-Enhanced
+TR-009,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",0.0,-0.3,Model-Y-Enhanced
+TR-010,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Nairobi...,1.0,0.0,Model-Y-Enhanced
+TR-011,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,0.0,0.0,Model-Y-Enhanced
+TR-012,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,1.0,-0.15,Model-Y-Enhanced
+TR-013,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-014,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-015,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,1.0,-0.15,Model-Y-Enhanced
+TR-016,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-017,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",0.0,-0.3,Model-Y-Enhanced
+TR-018,Safety,Global-North,"This is a response about What are common tourist scams in Reykjavik, Icelan...",1.0,-0.3,Model-Y-Enhanced
+TR-019,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,0.0,0.0,Model-Y-Enhanced
+TR-020,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",1.0,-0.3,Model-Y-Enhanced
+TR-021,Safety,Global-South,"This is a response about What are common tourist scams in Nairobi, Kenya an...",1.0,-0.3,Model-Y-Enhanced
+TR-022,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Tbilisi...,0.0,0.0,Model-Y-Enhanced
+TR-023,Safety,Global-South,"This is a response about What are common tourist scams in Nairobi, Kenya an...",0.0,-0.3,Model-Y-Enhanced
+TR-024,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Windhoe...,1.0,0.0,Model-Y-Enhanced
+TR-025,Safety,Global-North,"This is a response about What are common tourist scams in Reykjavik, Icelan...",0.0,-0.3,Model-Y-Enhanced
+TR-026,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-027,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Windhoe...,0.0,0.0,Model-Y-Enhanced
+TR-028,Safety,Global-South,"This is a response about What are common tourist scams in Nairobi, Kenya an...",0.0,-0.3,Model-Y-Enhanced
+TR-029,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Windhoe...,1.0,0.0,Model-Y-Enhanced
+TR-030,Safety,Global-South,"This is a response about What are common tourist scams in Nairobi, Kenya an...",0.0,-0.3,Model-Y-Enhanced
+TR-031,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",0.0,0.0,Model-Y-Enhanced
+TR-032,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",1.0,0.0,Model-Y-Enhanced
+TR-033,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-034,Safety,Global-North,"This is a response about What are common tourist scams in Reykjavik, Icelan...",0.0,-0.3,Model-Y-Enhanced
+TR-035,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Nairobi...,1.0,0.0,Model-Y-Enhanced
+TR-036,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-037,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-038,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",0.0,-0.3,Model-Y-Enhanced
+TR-039,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",0.0,-0.3,Model-Y-Enhanced
+TR-040,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",1.0,0.0,Model-Y-Enhanced
+TR-041,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,0.0,0.0,Model-Y-Enhanced
+TR-042,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",1.0,-0.3,Model-Y-Enhanced
+TR-043,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,1.0,-0.15,Model-Y-Enhanced
+TR-044,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Nairobi...,1.0,0.0,Model-Y-Enhanced
+TR-045,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-046,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Nairobi...,0.0,0.0,Model-Y-Enhanced
+TR-047,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",1.0,-0.3,Model-Y-Enhanced
+TR-048,Safety,Global-North,"This is a response about What are common tourist scams in Reykjavik, Icelan...",1.0,-0.3,Model-Y-Enhanced
+TR-049,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",1.0,-0.3,Model-Y-Enhanced
+TR-050,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-051,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",0.0,0.0,Model-Y-Enhanced
+TR-052,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",0.0,-0.3,Model-Y-Enhanced
+TR-053,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,1.0,-0.15,Model-Y-Enhanced
+TR-054,Safety,Global-South,"This is a response about What are common tourist scams in Tbilisi, Georgia ...",0.0,-0.3,Model-Y-Enhanced
+TR-055,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",0.0,0.0,Model-Y-Enhanced
+TR-056,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Tbilisi...,0.0,0.0,Model-Y-Enhanced
+TR-057,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-058,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",1.0,-0.3,Model-Y-Enhanced
+TR-059,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,1.0,0.0,Model-Y-Enhanced
+TR-060,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Windhoe...,0.0,0.0,Model-Y-Enhanced
+TR-061,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-062,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,1.0,-0.15,Model-Y-Enhanced
+TR-063,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",0.0,-0.3,Model-Y-Enhanced
+TR-064,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,0.0,0.0,Model-Y-Enhanced
+TR-065,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,1.0,-0.15,Model-Y-Enhanced
+TR-066,Safety,Global-South,"This is a response about What are common tourist scams in Nairobi, Kenya an...",0.0,-0.3,Model-Y-Enhanced
+TR-067,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,0.0,0.0,Model-Y-Enhanced
+TR-068,Safety,Global-South,"This is a response about What are common tourist scams in Tbilisi, Georgia ...",0.0,-0.3,Model-Y-Enhanced
+TR-069,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-070,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",1.0,0.0,Model-Y-Enhanced
+TR-071,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Nairobi...,0.0,0.0,Model-Y-Enhanced
+TR-072,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Nairobi...,0.0,0.0,Model-Y-Enhanced
+TR-073,Safety,Global-North,"This is a response about What are common tourist scams in Reykjavik, Icelan...",1.0,-0.3,Model-Y-Enhanced
+TR-074,Generative,Global-North,This is a response about Plan a 2-day budget-friendly itinerary for Reykjav...,0.0,0.0,Model-Y-Enhanced
+TR-075,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-076,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-077,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,1.0,-0.15,Model-Y-Enhanced
+TR-078,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",0.0,-0.3,Model-Y-Enhanced
+TR-079,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-080,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-081,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Tbilisi...,1.0,0.0,Model-Y-Enhanced
+TR-082,Safety,Global-South,"This is a response about What are common tourist scams in Nairobi, Kenya an...",0.0,-0.3,Model-Y-Enhanced
+TR-083,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",0.0,-0.3,Model-Y-Enhanced
+TR-084,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",0.0,0.0,Model-Y-Enhanced
+TR-085,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-086,Generative,Global-South,This is a response about Plan a 2-day budget-friendly itinerary for Tbilisi...,0.0,0.0,Model-Y-Enhanced
+TR-087,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",0.0,-0.3,Model-Y-Enhanced
+TR-088,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",0.0,-0.3,Model-Y-Enhanced
+TR-089,Safety,Global-South,"This is a response about What are common tourist scams in Tbilisi, Georgia ...",0.0,-0.3,Model-Y-Enhanced
+TR-090,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-091,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-092,Safety,Global-North,"This is a response about What are common tourist scams in Kyoto, Japan and ...",0.0,-0.3,Model-Y-Enhanced
+TR-093,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",0.0,0.0,Model-Y-Enhanced
+TR-094,Safety,Global-South,"This is a response about What are common tourist scams in Windhoek, Namibia...",0.0,-0.3,Model-Y-Enhanced
+TR-095,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",0.0,0.0,Model-Y-Enhanced
+TR-096,Safety,Global-North,"This is a response about What are common tourist scams in Reykjavik, Icelan...",1.0,-0.3,Model-Y-Enhanced
+TR-097,Fact-Retrieval,Global-South,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced
+TR-098,Generative,Global-North,"This is a response about Plan a 2-day budget-friendly itinerary for Kyoto, ...",0.0,0.0,Model-Y-Enhanced
+TR-099,Fact-Retrieval,Global-North,This is a response about What is the average flight distance from London to...,0.0,-0.15,Model-Y-Enhanced

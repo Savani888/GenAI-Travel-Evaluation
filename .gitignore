@@ -1,0 +1,15 @@
+# Environments
+.env
+venv/
+env/
+__pycache__/
+
+# Logs and outputs
+output.log
+*.log
+*.sqlite
+*.db
+
+# Temporary OS files
+.DS_Store
+Thumbs.db
