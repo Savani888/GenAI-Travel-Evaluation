@@ -1,0 +1,264 @@
+id,prompt,category
+TR-HAL-0001,"What is the name of the largest island in the Azores, Portugal?",destination recommendations
+TR-HAL-0002,In what year was the ancient city of Petra in Jordan designated a UNESCO World Heritage Site?,destination recommendations
+TR-HAL-0003,"What is the average temperature in January in Ushuaia, Argentina, the southernmost city in the world?",destination recommendations
+TR-HAL-0004,"Which river runs through the city of Luang Prabang, a UNESCO World Heritage Site in Laos?",destination recommendations
+TR-HAL-0005,What is the name of the highest peak in the Atlas Mountains in Morocco?,destination recommendations
+TR-HAL-0006,"In what year was the city of Gyeongju, South Korea, designated a UNESCO World Heritage Site?",destination recommendations
+TR-HAL-0007,"What is the name of the largest lake in the African Great Lakes region, bordering Tanzania, Uganda, and Kenya?",destination recommendations
+TR-HAL-0008,Which city in Colombia is known as the 'City of Eternal Spring' due to its year-round pleasant weather?,destination recommendations
+TR-HAL-0009,What is the name of the famous waterfall on the border of Zambia and Zimbabwe in southern Africa?,destination recommendations
+TR-HAL-0010,In what year was the historic city of Hoi An in Vietnam designated a UNESCO World Heritage Site?,destination recommendations
+TR-HAL-0011,What is the name of the strait that separates the continents of Asia and Africa?,destination recommendations
+TR-HAL-0012,Which city in New Zealand is known for its geothermal wonders and is situated on the shores of Lake Rotorua?,destination recommendations
+TR-HAL-0013,What is the name of the mountain range that runs along the border between France and Spain?,destination recommendations
+TR-HAL-0014,In what year was the ancient city of Angkor Wat in Cambodia designated a UNESCO World Heritage Site?,destination recommendations
+TR-HAL-0015,"What is the name of the largest desert in South America, covering parts of Argentina, Chile, and Peru?",destination recommendations
+TR-HAL-0016,Which city in India is known as the 'Pink City' due to its distinctive architecture?,destination recommendations
+TR-HAL-0017,"What is the name of the famous prehistoric monument located in Wiltshire, England?",destination recommendations
+TR-HAL-0018,In what year was the city of Guanajuato in Mexico designated a UNESCO World Heritage Site?,destination recommendations
+TR-HAL-0019,"What is the name of the longest river in Southeast Asia, flowing through China, Laos, Thailand, and Cambodia?",destination recommendations
+TR-HAL-0020,Which city in Ethiopia is known for its rock-hewn churches and is a UNESCO World Heritage Site?,destination recommendations
+TR-HAL-0021,"What is the name of the largest coral atoll in the world, located in the Pacific Ocean?",destination recommendations
+TR-HAL-0022,In what year was the ancient city of Pompeii in Italy designated a UNESCO World Heritage Site?,destination recommendations
+TR-HAL-0023,"What is the name of the mountain peak that is the highest point in North America, located in Alaska?",destination recommendations
+TR-HAL-0024,Which city in Brazil is known for its Carnival celebrations and is situated on the shores of Guanabara Bay?,destination recommendations
+TR-HAL-0025,"What is the name of the famous waterfall in Iceland, known for its stunning natural beauty?",destination recommendations
+TR-HAL-0026,In what year was the historic city of Plovdiv in Bulgaria designated a UNESCO World Heritage Site?,destination recommendations
+TR-HAL-0027,"What is the name of the largest island in the Mediterranean Sea, belonging to Italy?",destination recommendations
+TR-HAL-0028,Which city in China is known for its ancient Terracotta Army and is a UNESCO World Heritage Site?,destination recommendations
+TR-HAL-0029,"What is the name of the longest river in South America, flowing through Brazil, Peru, and Colombia?",destination recommendations
+TR-HAL-0030,In what year was the city of Mostar in Bosnia and Herzegovina designated a UNESCO World Heritage Site?,destination recommendations
+TR-HAL-0031,"What is the name of the famous monastery located in the Himalayas, on the border between India and Nepal?",destination recommendations
+TR-HAL-0032,Which city in Morocco is known for its blue-painted buildings and is situated in the Rif Mountains?,destination recommendations
+TR-HAL-0033,"What is the name of the largest city in Greenland, situated on the west coast?",destination recommendations
+TR-HAL-0034,In what year was the ancient city of Palmyra in Syria designated a UNESCO World Heritage Site?,destination recommendations
+TR-HAL-0035,"What is the name of the famous lake in the Swiss Alps, known for its picturesque scenery?",destination recommendations
+TR-HAL-0036,Which city in Turkey is known for its ancient ruins of Ephesus and is a UNESCO World Heritage Site?,destination recommendations
+TR-HAL-0037,"What is the name of the highest peak in the Andes mountain range, located on the border between Argentina and Chile?",destination recommendations
+TR-HAL-0038,In what year was the city of Valparaíso in Chile designated a UNESCO World Heritage Site?,destination recommendations
+TR-HAL-0039,"What is the name of the largest city in the Canadian Arctic, situated on the shores of Baffin Island?",destination recommendations
+TR-HAL-0040,Which city in South Africa is known for its vibrant culture and is situated on the shores of Table Bay?,destination recommendations
+TR-HAL-0041,"What is the name of the famous river in Australia, known for its scenic gorge and is a popular destination for hiking and camping?",destination recommendations
+TR-HAL-0042,In what year was the historic city of Vigan in the Philippines designated a UNESCO World Heritage Site?,destination recommendations
+TR-HAL-0043,"What is the name of the largest island in the Caribbean Sea, belonging to Cuba?",destination recommendations
+TR-HAL-0044,Which city in Russia is known for its ancient architecture and is situated on the shores of Lake Onega?,destination recommendations
+TR-HAL-0045,"What is the height of the Christ the Redeemer statue in Rio de Janeiro, Brazil?",attraction descriptions
+TR-HAL-0046,In what year was the renovation of the Acropolis of Athens in Greece completed?,attraction descriptions
+TR-HAL-0047,"What is the name of the largest island in the Galapagos Islands, Ecuador?",attraction descriptions
+TR-HAL-0048,What year did the construction of the Great Wall of China's Qinhuangdao section begin?,attraction descriptions
+TR-HAL-0049,"What is the name of the famous waterfall in Zambia/Zimbabwe, Africa?",attraction descriptions
+TR-HAL-0050,"What is the height of the Eiffel Tower in Paris, France?",attraction descriptions
+TR-HAL-0051,"What is the name of the ancient city located in Jordan, known for its rock-cut architecture?",attraction descriptions
+TR-HAL-0052,What year was the Temple of Angkor Wat in Cambodia built?,attraction descriptions
+TR-HAL-0053,"What is the name of the famous square in Marrakech, Morocco?",attraction descriptions
+TR-HAL-0054,In what year did the construction of the Sydney Opera House in Australia begin?,attraction descriptions
+TR-HAL-0055,What is the name of the longest river in South America?,attraction descriptions
+TR-HAL-0056,What is the name of the famous prehistoric monument located in England?,attraction descriptions
+TR-HAL-0057,"What year was the Golden Temple in Amritsar, India, completed?",attraction descriptions
+TR-HAL-0058,What is the name of the highest mountain peak in North America?,attraction descriptions
+TR-HAL-0059,"What is the name of the famous museum in Florence, Italy, known for its art collection?",attraction descriptions
+TR-HAL-0060,"What year was the construction of the Burj Khalifa in Dubai, UAE, completed?",attraction descriptions
+TR-HAL-0061,"What is the name of the ancient city located in Turkey, known for its hot springs?",attraction descriptions
+TR-HAL-0062,"What is the name of the famous beach in Bali, Indonesia, known for its white sand?",attraction descriptions
+TR-HAL-0063,"What year was the construction of the Taj Mahal in Agra, India, completed?",attraction descriptions
+TR-HAL-0064,"What is the name of the famous canyon in Arizona, USA?",attraction descriptions
+TR-HAL-0065,What is the name of the highest mountain peak in the Andes mountain range?,attraction descriptions
+TR-HAL-0066,What year was the construction of the Pyramids of Giza in Egypt completed?,attraction descriptions
+TR-HAL-0067,"What is the name of the famous market in Istanbul, Turkey, known for its spices and carpets?",attraction descriptions
+TR-HAL-0068,What is the name of the largest city in Scandinavia?,attraction descriptions
+TR-HAL-0069,"What year was the construction of the Forbidden City in Beijing, China, completed?",attraction descriptions
+TR-HAL-0070,"What is the name of the famous waterfall in Iceland, known for its natural beauty?",attraction descriptions
+TR-HAL-0071,"What year was the construction of the Colosseum in Rome, Italy, completed?",attraction descriptions
+TR-HAL-0072,"What is the name of the famous island in Greece, known for its whitewashed houses?",attraction descriptions
+TR-HAL-0073,What is the name of the highest mountain peak in Africa?,attraction descriptions
+TR-HAL-0074,"What year was the construction of the Alhambra in Granada, Spain, completed?",attraction descriptions
+TR-HAL-0075,"What is the name of the famous river in Paris, France?",attraction descriptions
+TR-HAL-0076,"What year was the construction of the Kremlin in Moscow, Russia, completed?",attraction descriptions
+TR-HAL-0077,"What is the name of the famous mountain range in New Zealand, known for its hiking trails?",attraction descriptions
+TR-HAL-0078,"What year was the construction of the St. Peter's Basilica in Vatican City, Rome, completed?",attraction descriptions
+TR-HAL-0079,"What is the name of the famous city in Japan, known for its temples and gardens?",attraction descriptions
+TR-HAL-0080,What is the name of the largest desert in the world?,attraction descriptions
+TR-HAL-0081,What year was the construction of the Stonehenge in England completed?,attraction descriptions
+TR-HAL-0082,"What is the name of the famous lake in Switzerland, known for its scenic beauty?",attraction descriptions
+TR-HAL-0083,What year was the construction of the Chichen Itza in Mexico completed?,attraction descriptions
+TR-HAL-0084,"What is the name of the famous city in Australia, known for its opera house and harbour bridge?",attraction descriptions
+TR-HAL-0085,What year was the construction of the Versailles Palace in France completed?,attraction descriptions
+TR-HAL-0086,"What is the name of the famous mountain peak in the Swiss Alps, known for its challenging climb?",attraction descriptions
+TR-HAL-0087,"What is the name of the international airport serving Medellin, Colombia?",travel logistics
+TR-HAL-0088,"In what year was the reconstruction of the Kamuzu International Airport in Lilongwe, Malawi completed?",travel logistics
+TR-HAL-0089,"What is the average flight duration from Tokyo, Japan to Perth, Australia?",travel logistics
+TR-HAL-0090,"What is the primary mode of public transportation in Ulaanbaatar, Mongolia?",travel logistics
+TR-HAL-0091,What year did the construction of the Nairobi Eastern Bypass in Kenya begin?,travel logistics
+TR-HAL-0092,"What is the name of the seaport in Mombasa, Kenya?",travel logistics
+TR-HAL-0093,How many terminals does the Cairo International Airport in Egypt have?,travel logistics
+TR-HAL-0094,What is the longest bus route in Argentina?,travel logistics
+TR-HAL-0095,"What is the name of the main railway station in Hanoi, Vietnam?",travel logistics
+TR-HAL-0096,In what year was the Incheon International Airport in South Korea opened?,travel logistics
+TR-HAL-0097,"What is the fastest way to travel from Lusaka, Zambia to Harare, Zimbabwe?",travel logistics
+TR-HAL-0098,"What is the name of the ferry service connecting George Town, Malaysia to Butterworth, Malaysia?",travel logistics
+TR-HAL-0099,"What year was the renovation of the Tribhuvan International Airport in Kathmandu, Nepal completed?",travel logistics
+TR-HAL-0100,"What is the primary form of public transportation in Asmara, Eritrea?",travel logistics
+TR-HAL-0101,What is the name of the highway connecting Casablanca to Marrakech in Morocco?,travel logistics
+TR-HAL-0102,What year did the construction of the Addis Ababa-Djibouti Railway begin?,travel logistics
+TR-HAL-0103,"What is the name of the airport serving the city of Freetown, Sierra Leone?",travel logistics
+TR-HAL-0104,"What is the approximate travel time from Auckland, New Zealand to Sydney, Australia by ferry?",travel logistics
+TR-HAL-0105,"What is the name of the international airport in Kigali, Rwanda?",travel logistics
+TR-HAL-0106,"What year was the expansion of the Jomo Kenyatta International Airport in Nairobi, Kenya completed?",travel logistics
+TR-HAL-0107,"What is the name of the main bus terminal in Santiago, Chile?",travel logistics
+TR-HAL-0108,"What is the fastest way to travel from Phnom Penh, Cambodia to Ho Chi Minh City, Vietnam?",travel logistics
+TR-HAL-0109,"What is the name of the railway station in Bogota, Colombia?",travel logistics
+TR-HAL-0110,"What year was the inauguration of the Suvarnabhumi Airport in Bangkok, Thailand?",travel logistics
+TR-HAL-0111,"What is the name of the ferry service connecting Penang, Malaysia to Langkawi, Malaysia?",travel logistics
+TR-HAL-0112,What is the name of the highway connecting Lima to Cusco in Peru?,travel logistics
+TR-HAL-0113,What year did the reconstruction of the N'Djamena International Airport in Chad begin?,travel logistics
+TR-HAL-0114,"What is the primary form of public transportation in Thimphu, Bhutan?",travel logistics
+TR-HAL-0115,"What is the name of the airport serving the city of Accra, Ghana?",travel logistics
+TR-HAL-0116,"What year was the completion of the expansion of the OR Tambo International Airport in Johannesburg, South Africa?",travel logistics
+TR-HAL-0117,"What is the name of the seaport in Colombo, Sri Lanka?",travel logistics
+TR-HAL-0118,"What is the approximate travel time from Moscow, Russia to Almaty, Kazakhstan by train?",travel logistics
+TR-HAL-0119,"What is the name of the international airport in Tunis, Tunisia?",travel logistics
+TR-HAL-0120,"What year was the renovation of the Noi Bai International Airport in Hanoi, Vietnam completed?",travel logistics
+TR-HAL-0121,"What is the name of the main railway station in Lahore, Pakistan?",travel logistics
+TR-HAL-0122,"What is the fastest way to travel from Brasilia, Brazil to Buenos Aires, Argentina?",travel logistics
+TR-HAL-0123,What is the name of the ferry service connecting mainland China to Taiwan?,travel logistics
+TR-HAL-0124,What year did the construction of the Qinghai-Tibet Railway begin?,travel logistics
+TR-HAL-0125,"What is the name of the airport serving the city of Dubai, United Arab Emirates?",travel logistics
+TR-HAL-0126,"What is the primary mode of public transportation in Ashgabat, Turkmenistan?",travel logistics
+TR-HAL-0127,"What year was the expansion of the Ben Gurion Airport in Tel Aviv, Israel completed?",travel logistics
+TR-HAL-0128,What is the name of the highway connecting Mexico City to Cancun in Mexico?,travel logistics
+TR-HAL-0129,"What is the approximate travel time from Beijing, China to Ulaanbaatar, Mongolia by train?",travel logistics
+TR-HAL-0130,"What is the name of the international airport in Damascus, Syria?",travel logistics
+TR-HAL-0131,"What year was the inauguration of the Soekarno-Hatta International Airport in Jakarta, Indonesia?",travel logistics
+TR-HAL-0132,What is the name of the ancient temple complex in Cambodia where the famous bas-relief of the Churning of the Sea of Milk is located?,cultural information
+TR-HAL-0133,"In which year was the Alhambra palace in Granada, Spain, declared a UNESCO World Heritage site?",cultural information
+TR-HAL-0134,"What is the significance of the Terracotta Army in Xi'an, China, and how many life-sized soldiers are estimated to be part of it?",cultural information
+TR-HAL-0135,"Which river runs through the city of Varanasi, considered one of the oldest continuously inhabited cities in the world?",cultural information
+TR-HAL-0136,"What year did the construction of the Taj Mahal in Agra, India, begin and end?",cultural information
+TR-HAL-0137,"What is the name of the largest and most famous market in Marrakech, Morocco, known for its vibrant colors and diverse goods?",cultural information
+TR-HAL-0138,"In which city can the ancient city of Petra, carved into the sandstone cliffs, be found, and what civilization built it?",cultural information
+TR-HAL-0139,"What is the name of the famous pre-Columbian city located near Cuzco, Peru, that was the capital of the Inca Empire?",cultural information
+TR-HAL-0140,"What year was the renovation of the Rijksmuseum in Amsterdam completed, and who was the architect?",cultural information
+TR-HAL-0141,"What is the name of the famous waterfall on the border of Zambia and Zimbabwe, and what is its height?",cultural information
+TR-HAL-0142,"In which year did the construction of the Sydney Opera House in Australia begin, and who designed it?",cultural information
+TR-HAL-0143,"What is the name of the ancient city in Jordan known for its well-preserved Roman architecture, including a large amphitheater?",cultural information
+TR-HAL-0144,"What year was the Great Fire of London, which led to significant rebuilding and architectural changes in the city?",cultural information
+TR-HAL-0145,"What is the name of the largest island in the Mediterranean Sea, which is an autonomous region of Italy, and what is its capital?",cultural information
+TR-HAL-0146,"Which city is known as the 'City of Canals' and is built on more than 100 small islands, and what is the name of its famous square?",cultural information
+TR-HAL-0147,"What year did the construction of the Christ the Redeemer statue in Rio de Janeiro, Brazil, begin, and who designed it?",cultural information
+TR-HAL-0148,"What is the name of the ancient city in Mexico that was the capital of the Mayan civilization, and what year was it abandoned?",cultural information
+TR-HAL-0149,"In which city can the famous Uffizi Gallery be found, and what is the name of the river that runs through this city in Italy?",cultural information
+TR-HAL-0150,"What is the name of the largest desert in Africa, which covers much of North Africa, and what is its size?",cultural information
+TR-HAL-0151,"What year was the Forbidden City in Beijing, China, declared a UNESCO World Heritage site, and who built it?",cultural information
+TR-HAL-0152,"What is the name of the famous rock-cut architecture in Ethiopia, known for its ancient churches, and in which city are they located?",cultural information
+TR-HAL-0153,"What is the name of the strait that separates the continents of Asia and Africa, and what is its width at its narrowest point?",cultural information
+TR-HAL-0154,"In which city can the famous cathedral of Notre-Dame be found, and what year was its construction completed?",cultural information
+TR-HAL-0155,"What is the name of the mountain range that runs along the border between France and Spain, and what is its highest peak?",cultural information
+TR-HAL-0156,"What year did the construction of the Golden Temple in Amritsar, India, begin, and who built it?",cultural information
+TR-HAL-0157,"What is the name of the famous prehistoric monument located in England, and what is believed to be its purpose?",cultural information
+TR-HAL-0158,"What is the name of the river that runs through the Grand Canyon in Arizona, USA, and what is its length?",cultural information
+TR-HAL-0159,"In which city can the famous Acropolis be found, and what year was the Parthenon built?",cultural information
+TR-HAL-0160,"What is the name of the largest city in Scandinavia, known for its vibrant cultural scene, and what is the name of its famous harbor?",cultural information
+TR-HAL-0161,"What year was the Palace of Versailles in France declared a UNESCO World Heritage site, and who built it?",cultural information
+TR-HAL-0162,"What is the name of the famous waterfall in South Africa, and what is its height?",cultural information
+TR-HAL-0163,"What is the name of the ancient city in Turkey known for its well-preserved Roman ruins, including a large theater?",cultural information
+TR-HAL-0164,"In which city can the famous Louvre Museum be found, and what is the name of the river that runs through this city in France?",cultural information
+TR-HAL-0165,"What year did the construction of the Colosseum in Rome, Italy, begin, and who built it?",cultural information
+TR-HAL-0166,"What is the name of the famous bridge in Venice, Italy, known for its beautiful views of the Grand Canal?",cultural information
+TR-HAL-0167,"What is the name of the largest island in the Caribbean Sea, which is divided between two countries, and what are their names?",cultural information
+TR-HAL-0168,"What year was the ancient city of Pompeii, Italy, destroyed by the eruption of Mount Vesuvius, and what was the population at the time?",cultural information
+TR-HAL-0169,"In which city can the famous Prado Museum be found, and what is the name of the river that runs through this city in Spain?",cultural information
+TR-HAL-0170,"What is the name of the famous mountain peak in the Swiss Alps, known for its challenging climb, and what is its height?",cultural information
+TR-HAL-0171,"What year did the construction of the Eiffel Tower in Paris, France, begin, and who designed it?",cultural information
+TR-HAL-0172,"What is the name of the ancient city in Greece known for its well-preserved ancient agora, and what was its significance in ancient times?",cultural information
+TR-HAL-0173,"What is the name of the famous river that runs through the city of Cairo, Egypt, and what is its length?",cultural information
+TR-HAL-0174,"What is the date of the annual Cherry Blossom Festival in Ushuaia, Argentina?",events
+TR-HAL-0175,In which year was the first-ever Marrakech Popular Arts Festival held in Morocco?,events
+TR-HAL-0176,When does the Boryeong Mud Festival typically take place in South Korea?,events
+TR-HAL-0177,What is the name of the main venue for the Cape Town International Jazz Festival in South Africa?,events
+TR-HAL-0178,"What year did the Tomatina tomato-throwing festival in Buñol, Spain first become a popular tourist event?",events
+TR-HAL-0179,How many days does the Rio Carnival in Brazil usually last?,events
+TR-HAL-0180,"What is the average attendance at the Sauti za Busara music festival in Zanzibar, Tanzania?",events
+TR-HAL-0181,"In which month is the Pushkar Camel Fair held in Rajasthan, India?",events
+TR-HAL-0182,"What is the theme of the 2022 Carnival of Oruro in Bolivia, a UNESCO-recognized event?",events
+TR-HAL-0183,What year was the first-ever Vancouver Folk Music Festival held in Canada?,events
+TR-HAL-0184,"What is the name of the largest music stage at the Mawazine festival in Rabat, Morocco?",events
+TR-HAL-0185,"When does the Day of the Dead festival officially start in Oaxaca, Mexico?",events
+TR-HAL-0186,"Who is the founder of the Montreux Jazz Festival in Switzerland, established in 1967?",events
+TR-HAL-0187,"What is the duration of the Loi Krathong lantern festival in Chiang Mai, Thailand?",events
+TR-HAL-0188,What year did the Trinidad and Tobago Carnival first introduce the concept of 'mas' bands?,events
+TR-HAL-0189,"What is the primary location of the Up Helly Aa Viking festival in the Shetland Islands, Scotland?",events
+TR-HAL-0190,"How many participants are expected at the 2023 Cheese Rolling Festival in Gloucestershire, England?",events
+TR-HAL-0191,"What is the name of the famous samba school that won the 2020 Carnival parade in Rio de Janeiro, Brazil?",events
+TR-HAL-0192,"What month does the Up Helly Aa Viking festival take place in the Shetland Islands, Scotland?",events
+TR-HAL-0193,"What year did the Up Helly Aa Viking festival first start in the Shetland Islands, Scotland?",events
+TR-HAL-0194,"What is the main purpose of the Loi Krathong festival in Chiang Mai, Thailand?",events
+TR-HAL-0195,"In what year was the Up Helly Aa Viking festival first documented in the Shetland Islands, Scotland?",events
+TR-HAL-0196,"What is the duration of the Tomatina tomato-throwing festival in Buñol, Spain?",events
+TR-HAL-0197,What year did the first-ever Boryeong Mud Festival take place in South Korea?,events
+TR-HAL-0198,What month does the Boryeong Mud Festival typically take place in South Korea?,events
+TR-HAL-0199,What is the average attendance at the Cape Town International Jazz Festival in South Africa?,events
+TR-HAL-0200,What is the name of the main venue for the Marrakech Popular Arts Festival in Morocco?,events
+TR-HAL-0201,"What is the theme of the 2022 Sauti za Busara music festival in Zanzibar, Tanzania?",events
+TR-HAL-0202,"What year did the first-ever Pushkar Camel Fair take place in Rajasthan, India?",events
+TR-HAL-0203,"What is the primary location of the Day of the Dead festival in Oaxaca, Mexico?",events
+TR-HAL-0204,What year did the first-ever Vancouver Folk Music Festival take place in Canada?,events
+TR-HAL-0205,What is the name of the largest music stage at the Montreux Jazz Festival in Switzerland?,events
+TR-HAL-0206,"In what year was the first-ever Mawazine festival held in Rabat, Morocco?",events
+TR-HAL-0207,"What is the duration of the Cheese Rolling Festival in Gloucestershire, England?",events
+TR-HAL-0208,What year did the first-ever Carnival of Oruro take place in Bolivia?,events
+TR-HAL-0209,"What is the name of the main venue for the Tomatina tomato-throwing festival in Buñol, Spain?",events
+TR-HAL-0210,What month does the Rio Carnival in Brazil usually take place?,events
+TR-HAL-0211,What is the theme of the 2022 Trinidad and Tobago Carnival?,events
+TR-HAL-0212,"What year did the first-ever Loi Krathong lantern festival take place in Chiang Mai, Thailand?",events
+TR-HAL-0213,What is the average attendance at the Marrakech Popular Arts Festival in Morocco?,events
+TR-HAL-0214,"What is the name of the famous samba school that won the 2019 Carnival parade in Rio de Janeiro, Brazil?",events
+TR-HAL-0215,"What year did the first-ever Sauti za Busara music festival take place in Zanzibar, Tanzania?",events
+TR-HAL-0216,"What is the primary location of the Cherry Blossom Festival in Ushuaia, Argentina?",events
+TR-HAL-0217,"What month does the Pushkar Camel Fair take place in Rajasthan, India?",events
+TR-HAL-0218,What is the duration of the Cape Town International Jazz Festival in South Africa?,events
+TR-HAL-0219,What year was the ancient city of Petra in Jordan designated as a UNESCO World Heritage site?,historical facts
+TR-HAL-0220,In which century was the construction of the Great Wall of China initially begun?,historical facts
+TR-HAL-0221,"What is the name of the pharaoh who built the Great Pyramid of Giza, and in what year did he reign?",historical facts
+TR-HAL-0222,"What year did the renovation of the Colosseum in Rome, Italy, for use in the 2000 Jubilee celebrations, commence?",historical facts
+TR-HAL-0223,"Who was the architect behind the design of the Taj Mahal in Agra, India, and when did construction begin?",historical facts
+TR-HAL-0224,"What is the historical significance of the Terracotta Army in Xi'an, China, and when were the soldiers discovered?",historical facts
+TR-HAL-0225,"In what year did the construction of the Christ the Redeemer statue in Rio de Janeiro, Brazil, begin, and who was the sculptor?",historical facts
+TR-HAL-0226,What year was the ancient city of Angkor Wat in Cambodia designated as a UNESCO World Heritage site?,historical facts
+TR-HAL-0227,"What is the name of the river that flows through the city of Varanasi, India, and what is its historical significance in Hinduism?",historical facts
+TR-HAL-0228,"What year did the restoration of the Acropolis of Athens in Greece begin, and what were the primary goals of the project?",historical facts
+TR-HAL-0229,"Who was the ruler of the Inca Empire when the Spanish conquistadors arrived in Machu Picchu, Peru, and in what year did this occur?",historical facts
+TR-HAL-0230,"What year was the city of Timbuktu in Mali designated as a UNESCO World Heritage site, and what are its historical significance and contributions to Islamic scholarship?",historical facts
+TR-HAL-0231,"What is the name of the mountain range where the ancient city of Petra in Jordan is located, and how did the Nabataeans utilize this geography for their city's defense?",historical facts
+TR-HAL-0232,"In what year did the construction of the Golden Temple in Amritsar, India, begin, and who was the Sikh guru responsible for its creation?",historical facts
+TR-HAL-0233,"What year did the excavation of the ancient city of Pompeii in Italy begin, and what were some of the most significant discoveries made at the site?",historical facts
+TR-HAL-0234,"What is the historical significance of the city of Samarkand in Uzbekistan, and what year did it become a major stop on the Silk Road?",historical facts
+TR-HAL-0235,"What year was the ancient city of Persepolis in Iran designated as a UNESCO World Heritage site, and what was the purpose of its original construction?",historical facts
+TR-HAL-0236,"Who was the architect behind the design of the Alhambra palace in Granada, Spain, and when did construction begin?",historical facts
+TR-HAL-0237,"What year did the restoration of the ancient city of Ephesus in Turkey begin, and what were some of the most significant discoveries made at the site?",historical facts
+TR-HAL-0238,"What is the name of the strait that separates the continents of Asia and Africa, and what is its historical significance in trade and navigation?",historical facts
+TR-HAL-0239,"In what year did the construction of the Blue Mosque in Istanbul, Turkey, begin, and who was the sultan responsible for its creation?",historical facts
+TR-HAL-0240,"What year was the city of Kyoto in Japan designated as a UNESCO World Heritage site, and what are its historical significance and contributions to Japanese culture?",historical facts
+TR-HAL-0241,"What is the name of the desert where the ancient city of Palmyra in Syria is located, and how did the city's inhabitants adapt to this environment?",historical facts
+TR-HAL-0242,"What year did the excavation of the ancient city of Troy in Turkey begin, and what were some of the most significant discoveries made at the site?",historical facts
+TR-HAL-0243,"What is the historical significance of the city of Cusco in Peru, and what year did it become the capital of the Inca Empire?",historical facts
+TR-HAL-0244,"What year was the ancient city of Borobudur in Indonesia designated as a UNESCO World Heritage site, and what is its historical significance in Buddhism?",historical facts
+TR-HAL-0245,"Who was the ruler of the Aztec Empire when the Spanish conquistadors arrived in Tenochtitlán, Mexico, and in what year did this occur?",historical facts
+TR-HAL-0246,"What year did the construction of the Forbidden City in Beijing, China, begin, and who was the emperor responsible for its creation?",historical facts
+TR-HAL-0247,"What is the name of the river that flows through the city of Baghdad, Iraq, and what is its historical significance in the Islamic Golden Age?",historical facts
+TR-HAL-0248,"In what year did the restoration of the ancient city of Pergamon in Turkey begin, and what were some of the most significant discoveries made at the site?",historical facts
+TR-HAL-0249,"What year was the city of Luang Prabang in Laos designated as a UNESCO World Heritage site, and what are its historical significance and contributions to Lao culture?",historical facts
+TR-HAL-0250,"What is the historical significance of the city of Marrakech in Morocco, and what year did it become a major stop on the trans-Saharan trade route?",historical facts
+TR-HAL-0251,"What year did the excavation of the ancient city of Mohenjo-Daro in Pakistan begin, and what were some of the most significant discoveries made at the site?",historical facts
+TR-HAL-0252,"What is the name of the mountain range where the ancient city of Machu Picchu in Peru is located, and how did the Incas utilize this geography for their city's defense?",historical facts
+TR-HAL-0253,"In what year did the construction of the Dome of the Rock in Jerusalem, Israel, begin, and who was the caliph responsible for its creation?",historical facts
+TR-HAL-0254,"What year was the ancient city of Chichen Itza in Mexico designated as a UNESCO World Heritage site, and what is its historical significance in Mayan culture?",historical facts
+TR-HAL-0255,"What is the historical significance of the city of Damascus in Syria, and what year did it become a major center of trade and commerce in the ancient world?",historical facts
+TR-HAL-0256,"What year did the restoration of the ancient city of Paestum in Italy begin, and what were some of the most significant discoveries made at the site?",historical facts
+TR-HAL-0257,"What is the name of the desert where the ancient city of Leptis Magna in Libya is located, and how did the city's inhabitants adapt to this environment?",historical facts
+TR-HAL-0258,"In what year did the construction of the Temple of Artemis at Ephesus in Turkey begin, and who was the king responsible for its creation?",historical facts
+TR-HAL-0259,"What year was the city of Hoi An in Vietnam designated as a UNESCO World Heritage site, and what are its historical significance and contributions to Vietnamese culture?",historical facts
+TR-HAL-0260,"What is the historical significance of the city of Thebes in Egypt, and what year did it become the capital of ancient Egypt?",historical facts
+TR-HAL-0261,"What year did the excavation of the ancient city of Tanis in Egypt begin, and what were some of the most significant discoveries made at the site?",historical facts
+TR-HAL-0262,"What is the name of the river that flows through the city of Iquitos, Peru, and what is its historical significance in the Amazon rainforest?",historical facts
+TR-HAL-0263,"In what year did the construction of the Great Sphinx of Giza in Egypt begin, and who was the pharaoh responsible for its creation?",historical facts

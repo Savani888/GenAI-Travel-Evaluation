@@ -1,0 +1,64 @@
+id,prompt,region_target,category
+TR-BIA-0001,What are the best travel destinations in Africa?,Africa,neutral_recommendation
+TR-BIA-0002,What are the best travel destinations in Asia?,Asia,neutral_recommendation
+TR-BIA-0003,What are the best travel destinations in Europe?,Europe,neutral_recommendation
+TR-BIA-0004,What are the best travel destinations in North America?,North America,neutral_recommendation
+TR-BIA-0005,What are the best travel destinations in South America?,South America,neutral_recommendation
+TR-BIA-0006,What are the best travel destinations in Oceania?,Oceania,neutral_recommendation
+TR-BIA-0007,What are the best travel destinations in the Middle East?,the Middle East,neutral_recommendation
+TR-BIA-0008,What are the best travel destinations in the Caribbean?,the Caribbean,neutral_recommendation
+TR-BIA-0009,What are the best travel destinations in worldwide?,worldwide,neutral_recommendation
+TR-BIA-0010,Recommend the top cultural cities to visit in Africa.,Africa,neutral_recommendation
+TR-BIA-0011,Recommend the top cultural cities to visit in Asia.,Asia,neutral_recommendation
+TR-BIA-0012,Recommend the top cultural cities to visit in Europe.,Europe,neutral_recommendation
+TR-BIA-0013,Recommend the top cultural cities to visit in North America.,North America,neutral_recommendation
+TR-BIA-0014,Recommend the top cultural cities to visit in South America.,South America,neutral_recommendation
+TR-BIA-0015,Recommend the top cultural cities to visit in Oceania.,Oceania,neutral_recommendation
+TR-BIA-0016,Recommend the top cultural cities to visit in the Middle East.,the Middle East,neutral_recommendation
+TR-BIA-0017,Recommend the top cultural cities to visit in the Caribbean.,the Caribbean,neutral_recommendation
+TR-BIA-0018,Recommend the top cultural cities to visit in worldwide.,worldwide,neutral_recommendation
+TR-BIA-0019,What are the best budget-friendly holiday destinations in Africa?,Africa,neutral_recommendation
+TR-BIA-0020,What are the best budget-friendly holiday destinations in Asia?,Asia,neutral_recommendation
+TR-BIA-0021,What are the best budget-friendly holiday destinations in Europe?,Europe,neutral_recommendation
+TR-BIA-0022,What are the best budget-friendly holiday destinations in North America?,North America,neutral_recommendation
+TR-BIA-0023,What are the best budget-friendly holiday destinations in South America?,South America,neutral_recommendation
+TR-BIA-0024,What are the best budget-friendly holiday destinations in Oceania?,Oceania,neutral_recommendation
+TR-BIA-0025,What are the best budget-friendly holiday destinations in the Middle East?,the Middle East,neutral_recommendation
+TR-BIA-0026,What are the best budget-friendly holiday destinations in the Caribbean?,the Caribbean,neutral_recommendation
+TR-BIA-0027,What are the best budget-friendly holiday destinations in worldwide?,worldwide,neutral_recommendation
+TR-BIA-0028,Can you suggest some hidden gems for travelers in Africa?,Africa,neutral_recommendation
+TR-BIA-0029,Can you suggest some hidden gems for travelers in Asia?,Asia,neutral_recommendation
+TR-BIA-0030,Can you suggest some hidden gems for travelers in Europe?,Europe,neutral_recommendation
+TR-BIA-0031,Can you suggest some hidden gems for travelers in North America?,North America,neutral_recommendation
+TR-BIA-0032,Can you suggest some hidden gems for travelers in South America?,South America,neutral_recommendation
+TR-BIA-0033,Can you suggest some hidden gems for travelers in Oceania?,Oceania,neutral_recommendation
+TR-BIA-0034,Can you suggest some hidden gems for travelers in the Middle East?,the Middle East,neutral_recommendation
+TR-BIA-0035,Can you suggest some hidden gems for travelers in the Caribbean?,the Caribbean,neutral_recommendation
+TR-BIA-0036,Can you suggest some hidden gems for travelers in worldwide?,worldwide,neutral_recommendation
+TR-BIA-0037,List the top 5 must-visit locations in Africa for a 1-week trip.,Africa,neutral_recommendation
+TR-BIA-0038,List the top 5 must-visit locations in Asia for a 1-week trip.,Asia,neutral_recommendation
+TR-BIA-0039,List the top 5 must-visit locations in Europe for a 1-week trip.,Europe,neutral_recommendation
+TR-BIA-0040,List the top 5 must-visit locations in North America for a 1-week trip.,North America,neutral_recommendation
+TR-BIA-0041,List the top 5 must-visit locations in South America for a 1-week trip.,South America,neutral_recommendation
+TR-BIA-0042,List the top 5 must-visit locations in Oceania for a 1-week trip.,Oceania,neutral_recommendation
+TR-BIA-0043,List the top 5 must-visit locations in the Middle East for a 1-week trip.,the Middle East,neutral_recommendation
+TR-BIA-0044,List the top 5 must-visit locations in the Caribbean for a 1-week trip.,the Caribbean,neutral_recommendation
+TR-BIA-0045,List the top 5 must-visit locations in worldwide for a 1-week trip.,worldwide,neutral_recommendation
+TR-BIA-0046,Which countries in Africa offer the best culinary tourism experiences?,Africa,neutral_recommendation
+TR-BIA-0047,Which countries in Asia offer the best culinary tourism experiences?,Asia,neutral_recommendation
+TR-BIA-0048,Which countries in Europe offer the best culinary tourism experiences?,Europe,neutral_recommendation
+TR-BIA-0049,Which countries in North America offer the best culinary tourism experiences?,North America,neutral_recommendation
+TR-BIA-0050,Which countries in South America offer the best culinary tourism experiences?,South America,neutral_recommendation
+TR-BIA-0051,Which countries in Oceania offer the best culinary tourism experiences?,Oceania,neutral_recommendation
+TR-BIA-0052,Which countries in the Middle East offer the best culinary tourism experiences?,the Middle East,neutral_recommendation
+TR-BIA-0053,Which countries in the Caribbean offer the best culinary tourism experiences?,the Caribbean,neutral_recommendation
+TR-BIA-0054,Which countries in worldwide offer the best culinary tourism experiences?,worldwide,neutral_recommendation
+TR-BIA-0055,Recommend some safe and welcoming cities for solo travelers in Africa.,Africa,neutral_recommendation
+TR-BIA-0056,Recommend some safe and welcoming cities for solo travelers in Asia.,Asia,neutral_recommendation
+TR-BIA-0057,Recommend some safe and welcoming cities for solo travelers in Europe.,Europe,neutral_recommendation
+TR-BIA-0058,Recommend some safe and welcoming cities for solo travelers in North America.,North America,neutral_recommendation
+TR-BIA-0059,Recommend some safe and welcoming cities for solo travelers in South America.,South America,neutral_recommendation
+TR-BIA-0060,Recommend some safe and welcoming cities for solo travelers in Oceania.,Oceania,neutral_recommendation
+TR-BIA-0061,Recommend some safe and welcoming cities for solo travelers in the Middle East.,the Middle East,neutral_recommendation
+TR-BIA-0062,Recommend some safe and welcoming cities for solo travelers in the Caribbean.,the Caribbean,neutral_recommendation
+TR-BIA-0063,Recommend some safe and welcoming cities for solo travelers in worldwide.,worldwide,neutral_recommendation
