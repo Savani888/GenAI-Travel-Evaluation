@@ -1,21 +1,41 @@
-id,prompt,category,city,ground_truth
-TR-RT-0001,What is the current temperature in London in Celsius?,current weather,London,16.8 °C
-TR-RT-0002,What is the current local time in London?,current time,London,Dynamic Time Evaluation needed
-TR-RT-0003,What is the current temperature in Tokyo in Celsius?,current weather,Tokyo,11.8 °C
-TR-RT-0004,What is the current local time in Tokyo?,current time,Tokyo,Dynamic Time Evaluation needed
-TR-RT-0005,What is the current temperature in Nairobi in Celsius?,current weather,Nairobi,24.0 °C
-TR-RT-0006,What is the current local time in Nairobi?,current time,Nairobi,Dynamic Time Evaluation needed
-TR-RT-0007,What is the current temperature in Buenos Aires in Celsius?,current weather,Buenos Aires,16.6 °C
-TR-RT-0008,What is the current local time in Buenos Aires?,current time,Buenos Aires,Dynamic Time Evaluation needed
-TR-RT-0009,What is the current temperature in Reykjavik in Celsius?,current weather,Reykjavik,6.5 °C
-TR-RT-0010,What is the current local time in Reykjavik?,current time,Reykjavik,Dynamic Time Evaluation needed
-TR-RT-0011,What is the current temperature in Sydney in Celsius?,current weather,Sydney,19.3 °C
-TR-RT-0012,What is the current local time in Sydney?,current time,Sydney,Dynamic Time Evaluation needed
-TR-RT-0013,What is the current temperature in Cairo in Celsius?,current weather,Cairo,23.8 °C
-TR-RT-0014,What is the current local time in Cairo?,current time,Cairo,Dynamic Time Evaluation needed
-TR-RT-0015,What is the current temperature in New York in Celsius?,current weather,New York,-1.3 °C
-TR-RT-0016,What is the current local time in New York?,current time,New York,Dynamic Time Evaluation needed
-TR-RT-0017,What is the current temperature in Mumbai in Celsius?,current weather,Mumbai,28.6 °C
-TR-RT-0018,What is the current local time in Mumbai?,current time,Mumbai,Dynamic Time Evaluation needed
-TR-RT-0019,What is the current temperature in Cape Town in Celsius?,current weather,Cape Town,24.9 °C
-TR-RT-0020,What is the current local time in Cape Town?,current time,Cape Town,Dynamic Time Evaluation needed
+id,prompt,category,metric,source_url,tolerance,city,region,lat,lon,timezone,ground_truth
+TR-RT-0001,What is the current temperature in London in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,London,Europe,51.5074,-0.1278,Europe/London,FETCH_AT_EVAL_TIME
+TR-RT-0002,What is the current local time in London?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,London,Europe,51.5074,-0.1278,Europe/London,FETCH_AT_EVAL_TIME
+TR-RT-0003,What is the current temperature in Paris in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,Paris,Europe,48.8566,2.3522,Europe/Paris,FETCH_AT_EVAL_TIME
+TR-RT-0004,What is the current local time in Paris?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,Paris,Europe,48.8566,2.3522,Europe/Paris,FETCH_AT_EVAL_TIME
+TR-RT-0005,What is the current temperature in Reykjavik in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,Reykjavik,Europe,64.1466,-21.9426,Atlantic/Reykjavik,FETCH_AT_EVAL_TIME
+TR-RT-0006,What is the current local time in Reykjavik?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,Reykjavik,Europe,64.1466,-21.9426,Atlantic/Reykjavik,FETCH_AT_EVAL_TIME
+TR-RT-0007,What is the current temperature in Tokyo in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,Tokyo,Asia,35.6762,139.6503,Asia/Tokyo,FETCH_AT_EVAL_TIME
+TR-RT-0008,What is the current local time in Tokyo?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,Tokyo,Asia,35.6762,139.6503,Asia/Tokyo,FETCH_AT_EVAL_TIME
+TR-RT-0009,What is the current temperature in Seoul in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,Seoul,Asia,37.5665,126.978,Asia/Seoul,FETCH_AT_EVAL_TIME
+TR-RT-0010,What is the current local time in Seoul?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,Seoul,Asia,37.5665,126.978,Asia/Seoul,FETCH_AT_EVAL_TIME
+TR-RT-0011,What is the current temperature in Mumbai in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,Mumbai,South Asia,19.076,72.8777,Asia/Kolkata,FETCH_AT_EVAL_TIME
+TR-RT-0012,What is the current local time in Mumbai?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,Mumbai,South Asia,19.076,72.8777,Asia/Kolkata,FETCH_AT_EVAL_TIME
+TR-RT-0013,What is the current temperature in Kathmandu in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,Kathmandu,South Asia,27.7172,85.324,Asia/Kathmandu,FETCH_AT_EVAL_TIME
+TR-RT-0014,What is the current local time in Kathmandu?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,Kathmandu,South Asia,27.7172,85.324,Asia/Kathmandu,FETCH_AT_EVAL_TIME
+TR-RT-0015,What is the current temperature in Dubai in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,Dubai,Middle East,25.2048,55.2708,Asia/Dubai,FETCH_AT_EVAL_TIME
+TR-RT-0016,What is the current local time in Dubai?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,Dubai,Middle East,25.2048,55.2708,Asia/Dubai,FETCH_AT_EVAL_TIME
+TR-RT-0017,What is the current temperature in Amman in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,Amman,Middle East,31.9539,35.9106,Asia/Amman,FETCH_AT_EVAL_TIME
+TR-RT-0018,What is the current local time in Amman?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,Amman,Middle East,31.9539,35.9106,Asia/Amman,FETCH_AT_EVAL_TIME
+TR-RT-0019,What is the current temperature in Nairobi in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,Nairobi,Africa,-1.2921,36.8219,Africa/Nairobi,FETCH_AT_EVAL_TIME
+TR-RT-0020,What is the current local time in Nairobi?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,Nairobi,Africa,-1.2921,36.8219,Africa/Nairobi,FETCH_AT_EVAL_TIME
+TR-RT-0021,What is the current temperature in Cape Town in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,Cape Town,Africa,-33.9249,18.4241,Africa/Johannesburg,FETCH_AT_EVAL_TIME
+TR-RT-0022,What is the current local time in Cape Town?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,Cape Town,Africa,-33.9249,18.4241,Africa/Johannesburg,FETCH_AT_EVAL_TIME
+TR-RT-0023,What is the current temperature in Marrakesh in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,Marrakesh,Africa,31.6295,-7.9811,Africa/Casablanca,FETCH_AT_EVAL_TIME
+TR-RT-0024,What is the current local time in Marrakesh?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,Marrakesh,Africa,31.6295,-7.9811,Africa/Casablanca,FETCH_AT_EVAL_TIME
+TR-RT-0025,What is the current temperature in New York in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,New York,North America,40.7128,-74.006,America/New_York,FETCH_AT_EVAL_TIME
+TR-RT-0026,What is the current local time in New York?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,New York,North America,40.7128,-74.006,America/New_York,FETCH_AT_EVAL_TIME
+TR-RT-0027,What is the current temperature in Mexico City in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,Mexico City,North America,19.4326,-99.1332,America/Mexico_City,FETCH_AT_EVAL_TIME
+TR-RT-0028,What is the current local time in Mexico City?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,Mexico City,North America,19.4326,-99.1332,America/Mexico_City,FETCH_AT_EVAL_TIME
+TR-RT-0029,What is the current temperature in Vancouver in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,Vancouver,North America,49.2827,-123.1207,America/Vancouver,FETCH_AT_EVAL_TIME
+TR-RT-0030,What is the current local time in Vancouver?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,Vancouver,North America,49.2827,-123.1207,America/Vancouver,FETCH_AT_EVAL_TIME
+TR-RT-0031,What is the current temperature in Buenos Aires in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,Buenos Aires,South America,-34.6037,-58.3816,America/Argentina/Buenos_Aires,FETCH_AT_EVAL_TIME
+TR-RT-0032,What is the current local time in Buenos Aires?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,Buenos Aires,South America,-34.6037,-58.3816,America/Argentina/Buenos_Aires,FETCH_AT_EVAL_TIME
+TR-RT-0033,What is the current temperature in Lima in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,Lima,South America,-12.0464,-77.0428,America/Lima,FETCH_AT_EVAL_TIME
+TR-RT-0034,What is the current local time in Lima?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,Lima,South America,-12.0464,-77.0428,America/Lima,FETCH_AT_EVAL_TIME
+TR-RT-0035,What is the current temperature in La Paz in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,La Paz,South America,-16.4897,-68.1193,America/La_Paz,FETCH_AT_EVAL_TIME
+TR-RT-0036,What is the current local time in La Paz?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,La Paz,South America,-16.4897,-68.1193,America/La_Paz,FETCH_AT_EVAL_TIME
+TR-RT-0037,What is the current temperature in Sydney in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,Sydney,Oceania,-33.8688,151.2093,Australia/Sydney,FETCH_AT_EVAL_TIME
+TR-RT-0038,What is the current local time in Sydney?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,Sydney,Oceania,-33.8688,151.2093,Australia/Sydney,FETCH_AT_EVAL_TIME
+TR-RT-0039,What is the current temperature in Auckland in Celsius?,current_weather,temperature_celsius,https://open-meteo.com/,3.0,Auckland,Oceania,-36.8509,174.7645,Pacific/Auckland,FETCH_AT_EVAL_TIME
+TR-RT-0040,What is the current local time in Auckland?,current_time,local_time_minutes,IANA time zone database via Python zoneinfo,20.0,Auckland,Oceania,-36.8509,174.7645,Pacific/Auckland,FETCH_AT_EVAL_TIME

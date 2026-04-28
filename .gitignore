@@ -3,8 +3,10 @@
 venv/
 env/
 __pycache__/
+.cache/
 
 # Logs and outputs
+results/
 output.log
 *.log
 *.sqlite

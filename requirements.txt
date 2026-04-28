@@ -1,0 +1,11 @@
+pandas
+numpy
+requests
+python-dotenv
+tenacity
+textblob
+openai
+google-generativeai
+groq
+google-search-results
+scipy

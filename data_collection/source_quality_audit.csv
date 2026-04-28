@@ -1,0 +1,6 @@
+source_quality,evidence_tier,rows
+official,high,53
+commercial_or_blog,low,68
+weak_social_or_forum,low,89
+general_web,medium,140
+open_knowledge,medium,1
