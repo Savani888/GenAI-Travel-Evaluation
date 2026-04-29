@@ -227,18 +227,35 @@ def call_llm(prompt: str, model: str, dry_run: bool = False) -> str:
 
 
 def call_judge_json(prompt: str, judge_model: str, dry_run: bool = False) -> Dict[str, Any]:
-    """Call the Groq judge and parse a JSON object."""
+    """Call a judge model and parse a JSON object.
+
+    Bare Groq model names are supported for backward compatibility. Prefix a Groq
+    model with groq: explicitly, or pass any regular model supported by call_llm
+    such as deepseek-chat, gemini-*, or an OpenRouter model id.
+    """
     if dry_run:
         return {"verdict": "UNCLEAR", "score": 0.0, "rationale": "Dry-run judge output."}
 
-    client = _get_groq_client()
-    response = client.chat.completions.create(
-        messages=[{"role": "user", "content": prompt}],
-        model=judge_model,
-        temperature=0.0,
-        response_format={"type": "json_object"},
+    use_groq = judge_model.startswith("groq:") or not (
+        judge_model.startswith("deepseek")
+        or judge_model.startswith("gemini")
+        or "/" in judge_model
+        or ":" in judge_model
     )
-    return _parse_json_object(response.choices[0].message.content or "{}")
+
+    if use_groq:
+        groq_model = judge_model.split(":", 1)[1] if judge_model.startswith("groq:") else judge_model
+        client = _get_groq_client()
+        response = client.chat.completions.create(
+            messages=[{"role": "user", "content": prompt}],
+            model=groq_model,
+            temperature=0.0,
+            response_format={"type": "json_object"},
+        )
+        return _parse_json_object(response.choices[0].message.content or "{}")
+
+    response_text = call_llm(prompt, model=judge_model, dry_run=False)
+    return _parse_json_object(response_text or "{}")
 
 
 def regex_extract_claims(response: str) -> List[str]:
@@ -299,6 +316,11 @@ Return JSON with this schema:
         return regex_extract_claims(response)
 
 
+@retry(
+    wait=wait_exponential(multiplier=2, min=4, max=60),
+    stop=stop_after_attempt(5),
+    retry=retry_if_exception_type(Exception),
+)
 def search_evidence(query: str, num_results: int, dry_run: bool = False) -> List[Dict[str, str]]:
     if dry_run:
         return [{"title": "Dry-run source", "link": "dry-run://source", "snippet": "No live search used."}]
@@ -566,6 +588,34 @@ class TravelEvalPipeline:
         answer_verdict = ""
         answer_correctness: Optional[float] = None
         answer_rationale = ""
+
+        if response == "ERROR":
+            return (
+                {
+                    "prompt_id": row["id"],
+                    "prompt": row["prompt"],
+                    "task": row["task"],
+                    "region": row["region"],
+                    "destination": row["destination"],
+                    "model": model_name,
+                    "evaluation_mode": eval_mode,
+                    "response": response,
+                    "status": "ERROR",
+                    "total_claims": 0,
+                    "supported_claims": 0,
+                    "contradicted_claims": 0,
+                    "not_found_claims": 0,
+                    "unclear_claims": 0,
+                    "hallucination_rate": None,
+                    "answer_correctness": None,
+                    "answer_verdict": "",
+                    "answer_rationale": "",
+                    "sentiment_score": 0.0,
+                    "source_url": row["source_url"],
+                    "ground_truth": row["ground_truth"],
+                },
+                [],
+            )
 
         if eval_mode == "gold":
             answer = judge_answer_against_ground_truth(
