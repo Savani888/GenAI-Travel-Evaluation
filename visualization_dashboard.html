@@ -1,0 +1,1329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TravelEval Visualisation Dashboard</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314202b'/%3E%3Cpath d='M7 20l7-13 4 8 7-3-7 13-4-8-7 3z' fill='%23087f7a'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --surface-2: #eef3f8;
+      --ink: #14202b;
+      --muted: #64748b;
+      --line: #d8e0ea;
+      --teal: #087f7a;
+      --blue: #2563eb;
+      --amber: #d97706;
+      --rose: #be123c;
+      --violet: #6d28d9;
+      --green: #16a34a;
+      --shadow: 0 18px 46px rgba(30, 41, 59, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(246, 248, 251, 0.96)),
+        url("data:image/svg+xml,%3Csvg width='1400' height='840' viewBox='0 0 1400 840' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1400' height='840' fill='%23eef3f8'/%3E%3Cpath d='M0 490 C130 430 245 440 370 475 C505 512 642 544 782 514 C910 486 1017 407 1140 426 C1251 443 1324 514 1400 486 L1400 840 L0 840 Z' fill='%23d8e8e4'/%3E%3Cpath d='M0 655 C150 604 267 622 410 646 C596 677 680 684 842 622 C981 568 1136 551 1400 620 L1400 840 L0 840 Z' fill='%23dfe7f3'/%3E%3Cpath d='M231 229 C278 206 329 210 369 241 C396 262 429 263 461 255 C527 239 576 276 578 322 C580 370 529 399 472 385 C433 376 410 395 383 410 C328 441 251 421 235 366 C224 327 197 300 190 273 C185 253 200 239 231 229 Z' fill='%23c7d8cf' opacity='.72'/%3E%3Cpath d='M744 187 C799 153 872 169 903 220 C924 255 972 245 1005 268 C1047 298 1034 365 983 384 C941 400 923 438 879 449 C813 467 747 425 729 365 C717 324 687 307 684 275 C681 236 706 210 744 187 Z' fill='%23cbd6ea' opacity='.78'/%3E%3Cpath d='M1112 152 C1167 126 1231 143 1261 188 C1294 237 1344 229 1377 262 C1404 290 1390 346 1349 365 C1296 389 1252 358 1221 386 C1182 422 1117 413 1084 370 C1050 326 1073 283 1050 253 C1029 226 1069 173 1112 152 Z' fill='%23ead5c6' opacity='.72'/%3E%3Cpath d='M177 153 L215 168 L251 153 L280 180 L251 206 L215 191 L178 207 L148 180 Z' fill='%23c2d5e5' opacity='.75'/%3E%3Cpath d='M1048 579 L1110 610 L1172 581 L1231 617 L1172 652 L1110 625 L1048 654 L988 617 Z' fill='%23d7cde8' opacity='.6'/%3E%3Cg stroke='%23bcc8d6' stroke-width='1' opacity='.7'%3E%3Cpath d='M70 124 C220 200 340 193 487 140 C644 84 775 105 908 166 C1042 228 1169 243 1330 187' fill='none'/%3E%3Cpath d='M92 557 C238 506 356 521 484 579 C616 638 761 658 900 584 C1028 516 1175 502 1322 559' fill='none'/%3E%3Cpath d='M214 705 C369 657 512 683 646 728 C829 790 1005 771 1187 711' fill='none'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: cover;
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .app {
+      width: min(1440px, 100%);
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 0 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 260px;
+    }
+
+    .mark {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(20, 32, 43, 0.14);
+      border-radius: 8px;
+      background: conic-gradient(from 120deg, var(--teal), var(--blue), var(--amber), var(--rose), var(--teal));
+      box-shadow: inset 0 0 0 7px rgba(255, 255, 255, 0.78);
+      flex: 0 0 auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(1.45rem, 2vw, 2.2rem);
+      line-height: 1.05;
+      font-weight: 760;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 5px;
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .segmented,
+    .toggles {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.82);
+      border-radius: 8px;
+      padding: 4px;
+      box-shadow: 0 8px 24px rgba(30, 41, 59, 0.08);
+    }
+
+    .segmented button,
+    .toggle {
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--muted);
+      min-height: 34px;
+      padding: 0 12px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .segmented button.active,
+    .toggle.active {
+      color: #fff;
+      background: #14202b;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(216, 224, 234, 0.94);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backdrop-filter: blur(9px);
+    }
+
+    .metric-row {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(140px, 1fr));
+      gap: 12px;
+    }
+
+    .metric {
+      min-height: 108px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-left: 5px solid var(--blue);
+    }
+
+    .metric:nth-child(2) {
+      border-left-color: var(--rose);
+    }
+
+    .metric:nth-child(3) {
+      border-left-color: var(--teal);
+    }
+
+    .metric:nth-child(4) {
+      border-left-color: var(--amber);
+    }
+
+    .metric:nth-child(5) {
+      border-left-color: var(--violet);
+    }
+
+    .metric-label,
+    .panel-kicker {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 720;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .metric-value {
+      font-size: clamp(1.55rem, 3.1vw, 2.55rem);
+      line-height: 1;
+      font-weight: 780;
+      letter-spacing: 0;
+    }
+
+    .metric-foot {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .wide {
+      grid-column: span 7;
+      min-height: 380px;
+    }
+
+    .side {
+      grid-column: span 5;
+      min-height: 380px;
+    }
+
+    .half {
+      grid-column: span 6;
+      min-height: 360px;
+    }
+
+    .third {
+      grid-column: span 4;
+      min-height: 324px;
+    }
+
+    .panel-head {
+      min-height: 70px;
+      padding: 16px 18px 10px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .panel-title {
+      font-size: 1.02rem;
+      font-weight: 760;
+      line-height: 1.2;
+    }
+
+    .panel-note {
+      color: var(--muted);
+      font-size: 0.84rem;
+      margin-top: 4px;
+      max-width: 54ch;
+    }
+
+    .legend {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--blue);
+      display: inline-block;
+    }
+
+    .dot.rose {
+      background: var(--rose);
+    }
+
+    .dot.teal {
+      background: var(--teal);
+    }
+
+    .dot.amber {
+      background: var(--amber);
+    }
+
+    .dot.violet {
+      background: var(--violet);
+    }
+
+    .panel-body {
+      padding: 16px 18px 18px;
+      min-height: calc(100% - 70px);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 230px;
+    }
+
+    .chart-wrap {
+      position: relative;
+      min-height: 260px;
+      height: 100%;
+    }
+
+    .matrix {
+      display: grid;
+      grid-template-columns: 132px repeat(5, minmax(70px, 1fr));
+      gap: 8px;
+      align-items: stretch;
+    }
+
+    .matrix .cell {
+      min-height: 50px;
+      border-radius: 7px;
+      border: 1px solid rgba(216, 224, 234, 0.88);
+      padding: 9px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 730;
+      font-size: 0.82rem;
+      color: #fff;
+    }
+
+    .matrix .head,
+    .matrix .rowhead {
+      color: var(--ink);
+      background: var(--surface-2);
+      font-weight: 760;
+    }
+
+    .matrix .rowhead {
+      justify-content: flex-start;
+      text-align: left;
+      color: #263443;
+    }
+
+    .source-stack {
+      display: grid;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .source-line {
+      display: grid;
+      grid-template-columns: 132px 1fr 42px;
+      gap: 10px;
+      align-items: center;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .bar-track {
+      height: 12px;
+      border-radius: 6px;
+      background: var(--surface-2);
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      background: var(--teal);
+    }
+
+    .world {
+      position: relative;
+      min-height: 248px;
+      border-radius: 8px;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.6), rgba(255,255,255,.18)),
+        repeating-linear-gradient(0deg, transparent 0 31px, rgba(100,116,139,.11) 32px),
+        repeating-linear-gradient(90deg, transparent 0 47px, rgba(100,116,139,.11) 48px),
+        #eef5f2;
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .region-bubble {
+      position: absolute;
+      width: var(--size);
+      height: var(--size);
+      left: var(--x);
+      top: var(--y);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background: color-mix(in srgb, var(--bubble) 74%, white);
+      border: 2px solid rgba(255, 255, 255, 0.86);
+      box-shadow: 0 14px 30px rgba(20, 32, 43, 0.18);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: clamp(0.72rem, 1.4vw, 0.92rem);
+      font-weight: 780;
+    }
+
+    .bubble-label {
+      position: absolute;
+      left: var(--x);
+      top: calc(var(--y) + var(--size) / 2 + 4px);
+      transform: translateX(-50%);
+      font-size: 0.74rem;
+      color: #263443;
+      font-weight: 720;
+      white-space: nowrap;
+      background: rgba(255,255,255,.76);
+      border-radius: 6px;
+      padding: 2px 6px;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      table-layout: fixed;
+    }
+
+    .table th,
+    .table td {
+      padding: 10px 8px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    .table th {
+      color: var(--muted);
+      font-size: 0.76rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 72px;
+      min-height: 26px;
+      padding: 3px 8px;
+      border-radius: 7px;
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 760;
+      white-space: nowrap;
+    }
+
+    .pill.good {
+      background: var(--green);
+    }
+
+    .pill.mid {
+      background: var(--amber);
+    }
+
+    .pill.bad {
+      background: var(--rose);
+    }
+
+    .controls-line {
+      display: grid;
+      grid-template-columns: minmax(120px, auto) 1fr minmax(48px, auto);
+      gap: 12px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .range {
+      width: 100%;
+      accent-color: var(--teal);
+    }
+
+    .footnote {
+      grid-column: 1 / -1;
+      color: #536477;
+      font-size: 0.88rem;
+      padding: 4px 2px 18px;
+    }
+
+    @media (max-width: 1120px) {
+      .metric-row {
+        grid-template-columns: repeat(3, minmax(140px, 1fr));
+      }
+
+      .wide,
+      .side,
+      .half,
+      .third {
+        grid-column: 1 / -1;
+      }
+
+      .matrix {
+        grid-template-columns: 118px repeat(5, minmax(58px, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      .app {
+        padding: 14px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .toolbar {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .segmented {
+        width: 100%;
+        overflow-x: auto;
+      }
+
+      .metric-row {
+        grid-template-columns: 1fr;
+      }
+
+      .panel-head {
+        flex-direction: column;
+      }
+
+      .legend {
+        justify-content: flex-start;
+      }
+
+      .matrix {
+        width: 100%;
+        min-width: 0;
+        overflow-x: auto;
+        grid-template-columns: 112px repeat(5, 72px);
+      }
+
+      .source-line {
+        grid-template-columns: 96px 1fr 38px;
+      }
+
+      .table {
+        font-size: 0.72rem;
+      }
+
+      .table th,
+      .table td {
+        padding: 8px 4px;
+        overflow-wrap: anywhere;
+      }
+
+      .pill {
+        min-width: 56px;
+        font-size: 0.68rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <h1>TravelEval Visualisation</h1>
+          <p class="subtitle">Simulated full-run dashboard shaped from the current benchmark assets</p>
+        </div>
+      </div>
+      <div class="toolbar" aria-label="Dashboard controls">
+        <div class="segmented" role="tablist" aria-label="Scenario">
+          <button class="active" data-scenario="baseline" role="tab">Baseline</button>
+          <button data-scenario="rag" role="tab">RAG</button>
+          <button data-scenario="xai" role="tab">XAI</button>
+        </div>
+        <div class="toggles" aria-label="Model visibility">
+          <button class="toggle active" data-model="Atlas">Atlas</button>
+          <button class="toggle active" data-model="Gemini">Gemini</button>
+          <button class="toggle active" data-model="DeepSeek">DeepSeek</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="grid" aria-label="TravelEval dashboard">
+      <div class="metric-row">
+        <article class="panel metric">
+          <div class="metric-label">Evaluated Answers</div>
+          <div class="metric-value" id="metricAnswers">1,812</div>
+          <div class="metric-foot">3 models x 604 prompts</div>
+        </article>
+        <article class="panel metric">
+          <div class="metric-label">Hallucination Rate</div>
+          <div class="metric-value" id="metricHallucination">18.7%</div>
+          <div class="metric-foot">unsupported or contradicted claims</div>
+        </article>
+        <article class="panel metric">
+          <div class="metric-label">Gold QA Correctness</div>
+          <div class="metric-value" id="metricCorrectness">76.3%</div>
+          <div class="metric-foot">exact and partial credit included</div>
+        </article>
+        <article class="panel metric">
+          <div class="metric-label">Real-Time Accuracy</div>
+          <div class="metric-value" id="metricRealtime">52.0%</div>
+          <div class="metric-foot">weather and local-time tasks</div>
+        </article>
+        <article class="panel metric">
+          <div class="metric-label">Trust Lift</div>
+          <div class="metric-value" id="metricTrust">+0.61</div>
+          <div class="metric-foot">XAI vs standard assistant</div>
+        </article>
+      </div>
+
+      <article class="panel wide">
+        <div class="panel-head">
+          <div>
+            <div class="panel-kicker">Model Reliability</div>
+            <h2 class="panel-title">Performance Matrix</h2>
+            <p class="panel-note">Rates are simulated from the intended full-study design using current dataset sizes and live-probe behavior.</p>
+          </div>
+          <div class="legend">
+            <span><i class="dot teal"></i> stronger</span>
+            <span><i class="dot amber"></i> mixed</span>
+            <span><i class="dot rose"></i> weaker</span>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="matrix" id="matrix"></div>
+        </div>
+      </article>
+
+      <article class="panel side">
+        <div class="panel-head">
+          <div>
+            <div class="panel-kicker">Claim Audit</div>
+            <h2 class="panel-title">Verdict Distribution</h2>
+            <p class="panel-note">Claim-level evidence categories for the selected scenario.</p>
+          </div>
+          <div class="legend">
+            <span><i class="dot teal"></i> supported</span>
+            <span><i class="dot rose"></i> contradicted</span>
+            <span><i class="dot amber"></i> unresolved</span>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="chart-wrap"><canvas id="claimChart" aria-label="Claim verdict donut chart"></canvas></div>
+        </div>
+      </article>
+
+      <article class="panel half">
+        <div class="panel-head">
+          <div>
+            <div class="panel-kicker">Geographic Reliability</div>
+            <h2 class="panel-title">Hallucination by Region</h2>
+            <p class="panel-note">Lower bars indicate fewer unsupported factual claims.</p>
+          </div>
+          <div class="legend">
+            <span><i class="dot blue"></i> Atlas</span>
+            <span><i class="dot teal"></i> Gemini</span>
+            <span><i class="dot violet"></i> DeepSeek</span>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="chart-wrap"><canvas id="regionChart" aria-label="Hallucination by region bar chart"></canvas></div>
+        </div>
+      </article>
+
+      <article class="panel half">
+        <div class="panel-head">
+          <div>
+            <div class="panel-kicker">Recommendation Bias</div>
+            <h2 class="panel-title">Exposure Share Map</h2>
+            <p class="panel-note">Bubble size shows simulated share of recommended destinations.</p>
+          </div>
+          <div class="legend">
+            <span><i class="dot rose"></i> over-exposed</span>
+            <span><i class="dot teal"></i> under-exposed</span>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="world" id="worldMap"></div>
+        </div>
+      </article>
+
+      <article class="panel third">
+        <div class="panel-head">
+          <div>
+            <div class="panel-kicker">Dynamic Questions</div>
+            <h2 class="panel-title">Real-Time Reliability</h2>
+            <p class="panel-note">Accuracy within weather and local-time tolerances.</p>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="chart-wrap"><canvas id="gaugeChart" aria-label="Real-time reliability gauge"></canvas></div>
+          <div class="controls-line">
+            <span>Latency</span>
+            <input class="range" id="latencyRange" type="range" min="0" max="100" value="42" aria-label="Latency stress">
+            <strong id="latencyValue">42</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="panel third">
+        <div class="panel-head">
+          <div>
+            <div class="panel-kicker">Evidence Base</div>
+            <h2 class="panel-title">Source Quality</h2>
+            <p class="panel-note">Current niche dataset audit: 194 medium/high rows selected from 351 candidates.</p>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="chart-wrap"><canvas id="sourceChart" aria-label="Source quality horizontal chart"></canvas></div>
+          <div class="source-stack" id="sourceStack"></div>
+        </div>
+      </article>
+
+      <article class="panel third">
+        <div class="panel-head">
+          <div>
+            <div class="panel-kicker">User Study</div>
+            <h2 class="panel-title">Trust Outcomes</h2>
+            <p class="panel-note">Likert means for standard assistant vs explainable tourism system.</p>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="chart-wrap"><canvas id="trustChart" aria-label="Trust study radar chart"></canvas></div>
+        </div>
+      </article>
+
+      <article class="panel wide">
+        <div class="panel-head">
+          <div>
+            <div class="panel-kicker">Publication Table</div>
+            <h2 class="panel-title">Simulated Headline Results</h2>
+            <p class="panel-note">Compact table for the selected scenario and visible models.</p>
+          </div>
+        </div>
+        <div class="panel-body">
+          <table class="table" id="resultsTable">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Hallucination</th>
+                <th>Correctness</th>
+                <th>Real-Time</th>
+                <th>Bias HHI</th>
+                <th>Verdict</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="panel side">
+        <div class="panel-head">
+          <div>
+            <div class="panel-kicker">Study Flow</div>
+            <h2 class="panel-title">Module Completion</h2>
+            <p class="panel-note">Research readiness across the four aims after the latest pipeline upgrades.</p>
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="chart-wrap"><canvas id="moduleChart" aria-label="Module completion chart"></canvas></div>
+        </div>
+      </article>
+
+      <p class="footnote">Simulated visualisation for presentation and paper planning. Replace the embedded dataset in this HTML with exported CSV metrics after the full benchmark run.</p>
+    </section>
+  </main>
+
+  <script>
+    const scenarios = {
+      baseline: {
+        label: "Baseline",
+        answers: 1812,
+        hallucination: 18.7,
+        correctness: 76.3,
+        realtime: 52.0,
+        trust: 0.61,
+        verdicts: { supported: 62, contradicted: 12, notFound: 17, unclear: 9 },
+        models: {
+          Atlas: { hallucination: 16.4, correctness: 79.8, realtime: 58, bias: 0.32, trust: 3.72, tone: 0.18 },
+          Gemini: { hallucination: 18.9, correctness: 76.1, realtime: 54, bias: 0.36, trust: 3.58, tone: 0.13 },
+          DeepSeek: { hallucination: 20.8, correctness: 72.9, realtime: 44, bias: 0.41, trust: 3.35, tone: 0.08 }
+        },
+        regions: {
+          "Central Asia": { Atlas: 20.2, Gemini: 23.8, DeepSeek: 27.6 },
+          "Sub-Saharan Africa": { Atlas: 22.4, Gemini: 25.1, DeepSeek: 29.8 },
+          "South America": { Atlas: 15.7, Gemini: 18.2, DeepSeek: 20.5 },
+          "Middle East": { Atlas: 17.8, Gemini: 19.4, DeepSeek: 21.1 },
+          "Europe": { Atlas: 9.4, Gemini: 11.8, DeepSeek: 13.6 }
+        },
+        exposure: [
+          { name: "Europe", share: 31, parity: 1.44, x: "49%", y: "38%", color: "#be123c" },
+          { name: "North America", share: 18, parity: 1.22, x: "23%", y: "40%", color: "#d97706" },
+          { name: "Asia", share: 20, parity: 0.94, x: "70%", y: "48%", color: "#2563eb" },
+          { name: "Africa", share: 11, parity: 0.64, x: "51%", y: "62%", color: "#087f7a" },
+          { name: "South America", share: 8, parity: 0.71, x: "33%", y: "70%", color: "#087f7a" },
+          { name: "Oceania", share: 6, parity: 0.82, x: "82%", y: "73%", color: "#6d28d9" }
+        ],
+        trustStudy: { trust: [3.12, 3.73], transparency: [2.68, 4.05], reliability: [3.21, 3.78], confidence: [3.04, 3.66], adoption: [3.27, 3.81] }
+      },
+      rag: {
+        label: "RAG",
+        answers: 1812,
+        hallucination: 11.9,
+        correctness: 84.2,
+        realtime: 68.0,
+        trust: 0.74,
+        verdicts: { supported: 74, contradicted: 7, notFound: 12, unclear: 7 },
+        models: {
+          Atlas: { hallucination: 10.2, correctness: 86.9, realtime: 71, bias: 0.29, trust: 3.93, tone: 0.2 },
+          Gemini: { hallucination: 12.1, correctness: 84.4, realtime: 69, bias: 0.31, trust: 3.84, tone: 0.17 },
+          DeepSeek: { hallucination: 13.6, correctness: 81.3, realtime: 64, bias: 0.35, trust: 3.69, tone: 0.12 }
+        },
+        regions: {
+          "Central Asia": { Atlas: 13.4, Gemini: 15.9, DeepSeek: 17.2 },
+          "Sub-Saharan Africa": { Atlas: 14.2, Gemini: 16.4, DeepSeek: 18.8 },
+          "South America": { Atlas: 10.3, Gemini: 11.9, DeepSeek: 13.5 },
+          "Middle East": { Atlas: 11.1, Gemini: 12.5, DeepSeek: 14.1 },
+          "Europe": { Atlas: 6.7, Gemini: 7.9, DeepSeek: 9.3 }
+        },
+        exposure: [
+          { name: "Europe", share: 27, parity: 1.21, x: "49%", y: "38%", color: "#d97706" },
+          { name: "North America", share: 15, parity: 1.02, x: "23%", y: "40%", color: "#2563eb" },
+          { name: "Asia", share: 22, parity: 1.02, x: "70%", y: "48%", color: "#2563eb" },
+          { name: "Africa", share: 15, parity: 0.88, x: "51%", y: "62%", color: "#087f7a" },
+          { name: "South America", share: 10, parity: 0.92, x: "33%", y: "70%", color: "#087f7a" },
+          { name: "Oceania", share: 7, parity: 0.96, x: "82%", y: "73%", color: "#6d28d9" }
+        ],
+        trustStudy: { trust: [3.16, 3.9], transparency: [2.7, 4.28], reliability: [3.26, 3.95], confidence: [3.08, 3.82], adoption: [3.25, 3.92] }
+      },
+      xai: {
+        label: "XAI",
+        answers: 1812,
+        hallucination: 13.1,
+        correctness: 82.7,
+        realtime: 63.0,
+        trust: 0.88,
+        verdicts: { supported: 71, contradicted: 8, notFound: 11, unclear: 10 },
+        models: {
+          Atlas: { hallucination: 11.8, correctness: 85.1, realtime: 66, bias: 0.27, trust: 4.08, tone: 0.21 },
+          Gemini: { hallucination: 13.3, correctness: 82.8, realtime: 64, bias: 0.3, trust: 3.98, tone: 0.16 },
+          DeepSeek: { hallucination: 14.2, correctness: 80.1, realtime: 59, bias: 0.33, trust: 3.84, tone: 0.11 }
+        },
+        regions: {
+          "Central Asia": { Atlas: 14.8, Gemini: 16.6, DeepSeek: 18.4 },
+          "Sub-Saharan Africa": { Atlas: 15.6, Gemini: 17.2, DeepSeek: 19.1 },
+          "South America": { Atlas: 10.9, Gemini: 12.6, DeepSeek: 14.0 },
+          "Middle East": { Atlas: 12.1, Gemini: 13.4, DeepSeek: 14.8 },
+          "Europe": { Atlas: 7.6, Gemini: 8.4, DeepSeek: 9.8 }
+        },
+        exposure: [
+          { name: "Europe", share: 25, parity: 1.12, x: "49%", y: "38%", color: "#d97706" },
+          { name: "North America", share: 14, parity: 0.96, x: "23%", y: "40%", color: "#2563eb" },
+          { name: "Asia", share: 23, parity: 1.07, x: "70%", y: "48%", color: "#2563eb" },
+          { name: "Africa", share: 16, parity: 0.95, x: "51%", y: "62%", color: "#087f7a" },
+          { name: "South America", share: 11, parity: 1.01, x: "33%", y: "70%", color: "#087f7a" },
+          { name: "Oceania", share: 7, parity: 0.98, x: "82%", y: "73%", color: "#6d28d9" }
+        ],
+        trustStudy: { trust: [3.14, 4.02], transparency: [2.66, 4.44], reliability: [3.22, 4.03], confidence: [3.05, 3.94], adoption: [3.26, 4.06] }
+      }
+    };
+
+    const sourceQuality = [
+      { label: "Official", value: 53, color: "#087f7a" },
+      { label: "General Web", value: 140, color: "#2563eb" },
+      { label: "Open Knowledge", value: 1, color: "#6d28d9" },
+      { label: "Low Tier Excluded", value: 157, color: "#be123c" }
+    ];
+
+    const moduleProgress = [
+      { label: "Hallucination", value: 82, color: "#2563eb" },
+      { label: "Bias", value: 70, color: "#087f7a" },
+      { label: "Real-Time", value: 76, color: "#d97706" },
+      { label: "Trust Study", value: 38, color: "#be123c" }
+    ];
+
+    const modelColors = { Atlas: "#2563eb", Gemini: "#087f7a", DeepSeek: "#6d28d9" };
+    let activeScenario = "baseline";
+    const activeModels = new Set(["Atlas", "Gemini", "DeepSeek"]);
+    let latencyStress = 42;
+
+    const canvases = {};
+
+    function fmtPercent(value) {
+      return `${value.toFixed(1)}%`;
+    }
+
+    function resizeCanvas(canvas) {
+      const rect = canvas.parentElement.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = Math.max(320, Math.floor(rect.width * dpr));
+      canvas.height = Math.max(220, Math.floor(rect.height * dpr));
+      const ctx = canvas.getContext("2d");
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      return { ctx, width: rect.width, height: rect.height };
+    }
+
+    function drawText(ctx, text, x, y, options = {}) {
+      ctx.save();
+      ctx.fillStyle = options.color || "#14202b";
+      ctx.font = `${options.weight || 650} ${options.size || 12}px Inter, system-ui, sans-serif`;
+      ctx.textAlign = options.align || "left";
+      ctx.textBaseline = options.baseline || "alphabetic";
+      ctx.fillText(text, x, y);
+      ctx.restore();
+    }
+
+    function roundRect(ctx, x, y, width, height, radius) {
+      const r = Math.min(radius, width / 2, height / 2);
+      ctx.beginPath();
+      ctx.moveTo(x + r, y);
+      ctx.arcTo(x + width, y, x + width, y + height, r);
+      ctx.arcTo(x + width, y + height, x, y + height, r);
+      ctx.arcTo(x, y + height, x, y, r);
+      ctx.arcTo(x, y, x + width, y, r);
+      ctx.closePath();
+    }
+
+    function drawGroupedBars() {
+      const canvas = canvases.region;
+      const { ctx, width, height } = resizeCanvas(canvas);
+      ctx.clearRect(0, 0, width, height);
+      const scenario = scenarios[activeScenario];
+      const regions = Object.keys(scenario.regions);
+      const models = [...activeModels];
+      const left = 132;
+      const right = 18;
+      const top = 18;
+      const bottom = 38;
+      const plotW = width - left - right;
+      const plotH = height - top - bottom;
+      const max = 32;
+
+      ctx.strokeStyle = "#d8e0ea";
+      ctx.lineWidth = 1;
+      for (let tick = 0; tick <= max; tick += 8) {
+        const y = top + plotH - (tick / max) * plotH;
+        ctx.beginPath();
+        ctx.moveTo(left, y);
+        ctx.lineTo(width - right, y);
+        ctx.stroke();
+        drawText(ctx, `${tick}%`, left - 12, y + 4, { align: "right", color: "#64748b", size: 11, weight: 600 });
+      }
+
+      const groupW = plotW / regions.length;
+      const barW = Math.max(10, Math.min(22, (groupW - 18) / Math.max(1, models.length)));
+      regions.forEach((region, i) => {
+        const center = left + groupW * i + groupW / 2;
+        drawText(ctx, region.replace("Sub-Saharan ", "Sub-S. "), center, height - 11, { align: "center", color: "#64748b", size: 11, weight: 650 });
+        models.forEach((model, j) => {
+          const value = scenario.regions[region][model];
+          const x = center - (models.length * barW + (models.length - 1) * 5) / 2 + j * (barW + 5);
+          const barH = (value / max) * plotH;
+          const y = top + plotH - barH;
+          ctx.fillStyle = modelColors[model];
+          roundRect(ctx, x, y, barW, barH, 5);
+          ctx.fill();
+        });
+      });
+    }
+
+    function drawDonut() {
+      const canvas = canvases.claim;
+      const { ctx, width, height } = resizeCanvas(canvas);
+      ctx.clearRect(0, 0, width, height);
+      const values = scenarios[activeScenario].verdicts;
+      const slices = [
+        { label: "Supported", value: values.supported, color: "#087f7a" },
+        { label: "Contradicted", value: values.contradicted, color: "#be123c" },
+        { label: "Not Found", value: values.notFound, color: "#d97706" },
+        { label: "Unclear", value: values.unclear, color: "#64748b" }
+      ];
+      const total = slices.reduce((sum, item) => sum + item.value, 0);
+      const cx = width * 0.42;
+      const cy = height * 0.48;
+      const radius = Math.min(width, height) * 0.31;
+      let start = -Math.PI / 2;
+      slices.forEach(slice => {
+        const angle = (slice.value / total) * Math.PI * 2;
+        ctx.beginPath();
+        ctx.moveTo(cx, cy);
+        ctx.arc(cx, cy, radius, start, start + angle);
+        ctx.closePath();
+        ctx.fillStyle = slice.color;
+        ctx.fill();
+        start += angle;
+      });
+      ctx.globalCompositeOperation = "destination-out";
+      ctx.beginPath();
+      ctx.arc(cx, cy, radius * 0.62, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.globalCompositeOperation = "source-over";
+      drawText(ctx, `${values.supported}%`, cx, cy - 2, { align: "center", baseline: "middle", color: "#14202b", size: 32, weight: 780 });
+      drawText(ctx, "supported", cx, cy + 26, { align: "center", baseline: "middle", color: "#64748b", size: 12, weight: 700 });
+
+      const lx = width * 0.72;
+      let ly = height * 0.22;
+      slices.forEach(slice => {
+        ctx.fillStyle = slice.color;
+        roundRect(ctx, lx, ly - 9, 12, 12, 4);
+        ctx.fill();
+        drawText(ctx, slice.label, lx + 20, ly, { color: "#14202b", size: 12, weight: 700 });
+        drawText(ctx, `${slice.value}%`, width - 18, ly, { align: "right", color: "#64748b", size: 12, weight: 700 });
+        ly += 30;
+      });
+    }
+
+    function drawGauge() {
+      const canvas = canvases.gauge;
+      const { ctx, width, height } = resizeCanvas(canvas);
+      ctx.clearRect(0, 0, width, height);
+      const base = scenarios[activeScenario].realtime;
+      const adjusted = Math.max(18, Math.min(92, base - (latencyStress - 42) * 0.18));
+      const cx = width / 2;
+      const cy = height * 0.72;
+      const radius = Math.min(width * 0.36, height * 0.55);
+      const start = Math.PI;
+      const end = Math.PI * 2;
+
+      ctx.lineCap = "round";
+      ctx.lineWidth = 22;
+      ctx.strokeStyle = "#d8e0ea";
+      ctx.beginPath();
+      ctx.arc(cx, cy, radius, start, end);
+      ctx.stroke();
+
+      const valueEnd = start + (adjusted / 100) * Math.PI;
+      const grad = ctx.createLinearGradient(cx - radius, cy, cx + radius, cy);
+      grad.addColorStop(0, "#be123c");
+      grad.addColorStop(0.5, "#d97706");
+      grad.addColorStop(1, "#087f7a");
+      ctx.strokeStyle = grad;
+      ctx.beginPath();
+      ctx.arc(cx, cy, radius, start, valueEnd);
+      ctx.stroke();
+
+      const needle = valueEnd;
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = "#14202b";
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(cx + Math.cos(needle) * (radius - 12), cy + Math.sin(needle) * (radius - 12));
+      ctx.stroke();
+      ctx.fillStyle = "#14202b";
+      ctx.beginPath();
+      ctx.arc(cx, cy, 6, 0, Math.PI * 2);
+      ctx.fill();
+      drawText(ctx, `${adjusted.toFixed(0)}%`, cx, cy - 38, { align: "center", color: "#14202b", size: 34, weight: 780 });
+      drawText(ctx, "live accuracy", cx, cy - 10, { align: "center", color: "#64748b", size: 12, weight: 700 });
+    }
+
+    function drawSources() {
+      const canvas = canvases.source;
+      const { ctx, width, height } = resizeCanvas(canvas);
+      ctx.clearRect(0, 0, width, height);
+      const max = Math.max(...sourceQuality.map(item => item.value));
+      const left = 114;
+      const top = 18;
+      const rowH = 38;
+      sourceQuality.forEach((item, i) => {
+        const y = top + i * rowH;
+        drawText(ctx, item.label, 0, y + 18, { color: "#64748b", size: 12, weight: 700 });
+        ctx.fillStyle = "#eef3f8";
+        roundRect(ctx, left, y + 6, width - left - 44, 16, 6);
+        ctx.fill();
+        ctx.fillStyle = item.color;
+        roundRect(ctx, left, y + 6, (width - left - 44) * (item.value / max), 16, 6);
+        ctx.fill();
+        drawText(ctx, `${item.value}`, width - 8, y + 18, { align: "right", color: "#14202b", size: 12, weight: 760 });
+      });
+
+      const stack = document.getElementById("sourceStack");
+      stack.innerHTML = "";
+      const selected = sourceQuality.slice(0, 3).reduce((sum, item) => sum + item.value, 0);
+      [
+        ["Selected Rows", selected, "#087f7a"],
+        ["Candidates", 351, "#2563eb"],
+        ["Official Rows", 53, "#d97706"]
+      ].forEach(([label, value, color]) => {
+        const line = document.createElement("div");
+        line.className = "source-line";
+        line.innerHTML = `<span>${label}</span><div class="bar-track"><div class="bar-fill" style="width:${(value / 351) * 100}%;background:${color}"></div></div><strong>${value}</strong>`;
+        stack.appendChild(line);
+      });
+    }
+
+    function drawRadar() {
+      const canvas = canvases.trust;
+      const { ctx, width, height } = resizeCanvas(canvas);
+      ctx.clearRect(0, 0, width, height);
+      const data = scenarios[activeScenario].trustStudy;
+      const axes = Object.keys(data);
+      const cx = width / 2;
+      const cy = height / 2 + 8;
+      const radius = Math.min(width, height) * 0.32;
+
+      ctx.strokeStyle = "#d8e0ea";
+      ctx.fillStyle = "rgba(238, 243, 248, 0.55)";
+      for (let level = 1; level <= 5; level++) {
+        ctx.beginPath();
+        axes.forEach((axis, i) => {
+          const angle = -Math.PI / 2 + (i / axes.length) * Math.PI * 2;
+          const r = radius * (level / 5);
+          const x = cx + Math.cos(angle) * r;
+          const y = cy + Math.sin(angle) * r;
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        });
+        ctx.closePath();
+        ctx.stroke();
+      }
+
+      axes.forEach((axis, i) => {
+        const angle = -Math.PI / 2 + (i / axes.length) * Math.PI * 2;
+        ctx.beginPath();
+        ctx.moveTo(cx, cy);
+        ctx.lineTo(cx + Math.cos(angle) * radius, cy + Math.sin(angle) * radius);
+        ctx.stroke();
+        drawText(ctx, axis[0].toUpperCase() + axis.slice(1), cx + Math.cos(angle) * (radius + 22), cy + Math.sin(angle) * (radius + 18), { align: "center", color: "#64748b", size: 11, weight: 700 });
+      });
+
+      function polygon(index, color, alpha) {
+        ctx.beginPath();
+        axes.forEach((axis, i) => {
+          const angle = -Math.PI / 2 + (i / axes.length) * Math.PI * 2;
+          const r = radius * (data[axis][index] / 5);
+          const x = cx + Math.cos(angle) * r;
+          const y = cy + Math.sin(angle) * r;
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        });
+        ctx.closePath();
+        ctx.fillStyle = alpha;
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2;
+        ctx.fill();
+        ctx.stroke();
+      }
+
+      polygon(0, "#64748b", "rgba(100,116,139,.14)");
+      polygon(1, "#087f7a", "rgba(8,127,122,.18)");
+      drawText(ctx, "standard", 14, 18, { color: "#64748b", size: 12, weight: 760 });
+      drawText(ctx, "XAI", 92, 18, { color: "#087f7a", size: 12, weight: 760 });
+    }
+
+    function drawModuleProgress() {
+      const canvas = canvases.module;
+      const { ctx, width, height } = resizeCanvas(canvas);
+      ctx.clearRect(0, 0, width, height);
+      const left = 118;
+      const top = 24;
+      const rowH = 48;
+      moduleProgress.forEach((item, i) => {
+        const y = top + i * rowH;
+        drawText(ctx, item.label, 0, y + 21, { color: "#14202b", size: 13, weight: 730 });
+        ctx.fillStyle = "#eef3f8";
+        roundRect(ctx, left, y + 7, width - left - 50, 18, 7);
+        ctx.fill();
+        ctx.fillStyle = item.color;
+        roundRect(ctx, left, y + 7, (width - left - 50) * item.value / 100, 18, 7);
+        ctx.fill();
+        drawText(ctx, `${item.value}%`, width - 8, y + 22, { align: "right", color: "#14202b", size: 13, weight: 780 });
+      });
+    }
+
+    function renderMatrix() {
+      const scenario = scenarios[activeScenario];
+      const metrics = [
+        { key: "hallucination", label: "Halluc.", invert: true, suffix: "%" },
+        { key: "correctness", label: "Correct", suffix: "%" },
+        { key: "realtime", label: "Realtime", suffix: "%" },
+        { key: "bias", label: "Bias HHI", invert: true, suffix: "" },
+        { key: "trust", label: "Trust", suffix: "" }
+      ];
+      const matrix = document.getElementById("matrix");
+      matrix.innerHTML = "";
+      matrix.appendChild(cell("", "head"));
+      metrics.forEach(metric => matrix.appendChild(cell(metric.label, "head")));
+      Object.entries(scenario.models).forEach(([model, values]) => {
+        if (!activeModels.has(model)) return;
+        matrix.appendChild(cell(model, "rowhead"));
+        metrics.forEach(metric => {
+          const value = values[metric.key];
+          const score = metric.key === "bias" ? (1 - value) * 100 : metric.invert ? 100 - value : value * (metric.key === "trust" ? 20 : 1);
+          const color = scaleColor(score);
+          const display = metric.key === "bias" ? value.toFixed(2) : metric.key === "trust" ? value.toFixed(2) : `${value.toFixed(1)}%`;
+          matrix.appendChild(cell(display, "cell", color));
+        });
+      });
+    }
+
+    function cell(text, className, bg) {
+      const item = document.createElement("div");
+      item.className = `cell ${className}`;
+      item.textContent = text;
+      if (bg) item.style.background = bg;
+      return item;
+    }
+
+    function scaleColor(score) {
+      if (score >= 78) return "#087f7a";
+      if (score >= 62) return "#d97706";
+      return "#be123c";
+    }
+
+    function renderMap() {
+      const map = document.getElementById("worldMap");
+      map.innerHTML = "";
+      scenarios[activeScenario].exposure.forEach(region => {
+        const size = 30 + region.share * 1.55;
+        const bubble = document.createElement("div");
+        bubble.className = "region-bubble";
+        bubble.style.setProperty("--x", region.x);
+        bubble.style.setProperty("--y", region.y);
+        bubble.style.setProperty("--size", `${size}px`);
+        bubble.style.setProperty("--bubble", region.color);
+        bubble.textContent = `${region.share}%`;
+        map.appendChild(bubble);
+
+        const label = document.createElement("div");
+        label.className = "bubble-label";
+        label.style.setProperty("--x", region.x);
+        label.style.setProperty("--y", region.y);
+        label.style.setProperty("--size", `${size}px`);
+        label.textContent = region.name;
+        map.appendChild(label);
+      });
+    }
+
+    function renderTable() {
+      const scenario = scenarios[activeScenario];
+      const tbody = document.querySelector("#resultsTable tbody");
+      tbody.innerHTML = "";
+      Object.entries(scenario.models).forEach(([model, values]) => {
+        if (!activeModels.has(model)) return;
+        const tr = document.createElement("tr");
+        const verdict = values.hallucination < 13 && values.correctness > 82 ? ["Strong", "good"] : values.hallucination < 18 ? ["Mixed", "mid"] : ["Needs Work", "bad"];
+        tr.innerHTML = `
+          <td><strong>${model}</strong></td>
+          <td>${fmtPercent(values.hallucination)}</td>
+          <td>${fmtPercent(values.correctness)}</td>
+          <td>${fmtPercent(values.realtime)}</td>
+          <td>${values.bias.toFixed(2)}</td>
+          <td><span class="pill ${verdict[1]}">${verdict[0]}</span></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function updateMetrics() {
+      const scenario = scenarios[activeScenario];
+      const selected = [...activeModels];
+      const averages = selected.map(model => scenario.models[model]);
+      const mean = key => averages.reduce((sum, item) => sum + item[key], 0) / averages.length;
+      document.getElementById("metricAnswers").textContent = scenario.answers.toLocaleString();
+      document.getElementById("metricHallucination").textContent = fmtPercent(mean("hallucination"));
+      document.getElementById("metricCorrectness").textContent = fmtPercent(mean("correctness"));
+      document.getElementById("metricRealtime").textContent = fmtPercent(Math.max(18, mean("realtime") - (latencyStress - 42) * 0.18));
+      document.getElementById("metricTrust").textContent = `+${scenario.trust.toFixed(2)}`;
+    }
+
+    function renderAll() {
+      updateMetrics();
+      renderMatrix();
+      renderMap();
+      renderTable();
+      drawGroupedBars();
+      drawDonut();
+      drawGauge();
+      drawSources();
+      drawRadar();
+      drawModuleProgress();
+    }
+
+    function bindControls() {
+      document.querySelectorAll("[data-scenario]").forEach(button => {
+        button.addEventListener("click", () => {
+          document.querySelectorAll("[data-scenario]").forEach(item => item.classList.remove("active"));
+          button.classList.add("active");
+          activeScenario = button.dataset.scenario;
+          renderAll();
+        });
+      });
+
+      document.querySelectorAll("[data-model]").forEach(button => {
+        button.addEventListener("click", () => {
+          const model = button.dataset.model;
+          if (activeModels.has(model) && activeModels.size > 1) {
+            activeModels.delete(model);
+            button.classList.remove("active");
+          } else {
+            activeModels.add(model);
+            button.classList.add("active");
+          }
+          renderAll();
+        });
+      });
+
+      const range = document.getElementById("latencyRange");
+      range.addEventListener("input", () => {
+        latencyStress = Number(range.value);
+        document.getElementById("latencyValue").textContent = latencyStress;
+        updateMetrics();
+        drawGauge();
+      });
+
+      window.addEventListener("resize", () => {
+        clearTimeout(window.__travelEvalResize);
+        window.__travelEvalResize = setTimeout(renderAll, 120);
+      });
+    }
+
+    function init() {
+      canvases.region = document.getElementById("regionChart");
+      canvases.claim = document.getElementById("claimChart");
+      canvases.gauge = document.getElementById("gaugeChart");
+      canvases.source = document.getElementById("sourceChart");
+      canvases.trust = document.getElementById("trustChart");
+      canvases.module = document.getElementById("moduleChart");
+      bindControls();
+      renderAll();
+    }
+
+    init();
+  </script>
+</body>
+</html>
