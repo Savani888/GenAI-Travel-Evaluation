@@ -10,7 +10,7 @@ from zoneinfo import ZoneInfo
 import pandas as pd
 import requests
 
-from eval_pipeline import call_llm, parse_models
+from eval_pipeline import DEFAULT_MAX_TOKENS, call_llm, parse_models
 
 
 def fetch_temperature_c(lat: float, lon: float) -> Optional[float]:
@@ -112,6 +112,7 @@ def main() -> None:
     parser.add_argument("--models", default="deepseek-chat,gemini-1.5-flash")
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--sleep", type=float, default=0.0)
+    parser.add_argument("--max-tokens", type=int, default=DEFAULT_MAX_TOKENS)
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
@@ -128,7 +129,12 @@ def main() -> None:
         print(f"Evaluating real-time prompts with {model}")
         for _, row in rows.iterrows():
             try:
-                response = call_llm(str(row["prompt"]), model=model, dry_run=args.dry_run)
+                response = call_llm(
+                    str(row["prompt"]),
+                    model=model,
+                    dry_run=args.dry_run,
+                    max_tokens=args.max_tokens,
+                )
                 if args.sleep > 0:
                     time.sleep(args.sleep)
                 scoring = evaluate_row(row, response) if not args.dry_run else {

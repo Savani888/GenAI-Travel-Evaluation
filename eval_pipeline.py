@@ -23,6 +23,8 @@ OPENROUTER_KEY = os.getenv("OPENROUTER_KEY")
 DEEPSEEK_KEY = os.getenv("DEEPSEEK_KEY")
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+NVIDIA_API_KEY = os.getenv("NVIDIA_API_KEY") or os.getenv("NVIDIA_KEY")
+NVIDIA_BASE_URL = os.getenv("NVIDIA_BASE_URL", "https://integrate.api.nvidia.com/v1")
 
 DEFAULT_MODELS = [
     "deepseek-chat",
@@ -32,6 +34,7 @@ DEFAULT_MODELS = [
 ]
 DEFAULT_JUDGE_MODEL = os.getenv("JUDGE_MODEL", "llama-3.3-70b-versatile")
 DEFAULT_OUTPUT_DIR = "results"
+DEFAULT_MAX_TOKENS = 256
 CACHE_DIR = Path(".cache") / "traveleval"
 
 _clients: Dict[str, Any] = {}
@@ -125,7 +128,7 @@ def _get_openai_client(provider: str) -> Any:
     try:
         from openai import OpenAI
     except ImportError as exc:
-        raise ProviderConfigError("Install openai to use OpenRouter or DeepSeek models.") from exc
+        raise ProviderConfigError("Install openai to use OpenRouter, DeepSeek, or NVIDIA models.") from exc
 
     if provider == "openrouter":
         if not OPENROUTER_KEY:
@@ -135,6 +138,10 @@ def _get_openai_client(provider: str) -> Any:
         if not DEEPSEEK_KEY:
             raise ProviderConfigError("DEEPSEEK_KEY is missing from .env.")
         _clients[provider] = OpenAI(base_url="https://api.deepseek.com/v1", api_key=DEEPSEEK_KEY)
+    elif provider == "nvidia":
+        if not NVIDIA_API_KEY:
+            raise ProviderConfigError("NVIDIA_API_KEY or NVIDIA_KEY is missing from .env.")
+        _clients[provider] = OpenAI(base_url=NVIDIA_BASE_URL, api_key=NVIDIA_API_KEY)
     else:
         raise ProviderConfigError(f"Unknown OpenAI-compatible provider: {provider}")
 
@@ -173,7 +180,7 @@ def _get_gemini() -> Any:
     stop=stop_after_attempt(4),
     retry=retry_if_exception_type(Exception),
 )
-def call_llm(prompt: str, model: str, dry_run: bool = False) -> str:
+def call_llm(prompt: str, model: str, dry_run: bool = False, max_tokens: int = DEFAULT_MAX_TOKENS) -> str:
     """Call the requested model with deterministic settings where supported."""
     if dry_run:
         return (
@@ -185,7 +192,7 @@ def call_llm(prompt: str, model: str, dry_run: bool = False) -> str:
         genai = _get_gemini()
         response = genai.GenerativeModel(model).generate_content(
             prompt,
-            generation_config={"temperature": 0.0},
+            generation_config={"temperature": 0.0, "max_output_tokens": max_tokens},
         )
         return getattr(response, "text", "") or ""
 
@@ -194,6 +201,7 @@ def call_llm(prompt: str, model: str, dry_run: bool = False) -> str:
         response = client.chat.completions.create(
             model=model,
             temperature=0.0,
+            max_tokens=max_tokens,
             messages=[{"role": "user", "content": prompt}],
         )
         return response.choices[0].message.content or ""
@@ -204,6 +212,18 @@ def call_llm(prompt: str, model: str, dry_run: bool = False) -> str:
         response = client.chat.completions.create(
             model=groq_model,
             temperature=0.0,
+            max_tokens=max_tokens,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        return response.choices[0].message.content or ""
+
+    if model.startswith("nvidia:"):
+        nvidia_model = model.split(":", 1)[1]
+        client = _get_openai_client("nvidia")
+        response = client.chat.completions.create(
+            model=nvidia_model,
+            temperature=0.0,
+            max_tokens=max_tokens,
             messages=[{"role": "user", "content": prompt}],
         )
         return response.choices[0].message.content or ""
@@ -213,6 +233,7 @@ def call_llm(prompt: str, model: str, dry_run: bool = False) -> str:
         response = client.chat.completions.create(
             model=model,
             temperature=0.0,
+            max_tokens=max_tokens,
             messages=[{"role": "user", "content": prompt}],
             extra_headers={
                 "HTTP-Referer": "http://localhost:3000",
@@ -222,14 +243,60 @@ def call_llm(prompt: str, model: str, dry_run: bool = False) -> str:
         return response.choices[0].message.content or ""
 
     raise ProviderConfigError(
-        f"Unsupported model '{model}'. Use deepseek*, gemini*, groq:<model>, or OpenRouter names."
+        f"Unsupported model '{model}'. Use deepseek*, gemini*, groq:<model>, nvidia:<model>, or OpenRouter names."
     )
 
 
 def call_judge_json(prompt: str, judge_model: str, dry_run: bool = False) -> Dict[str, Any]:
-    """Call the Groq judge and parse a JSON object."""
+    """Call the configured judge model and parse a JSON object."""
     if dry_run:
         return {"verdict": "UNCLEAR", "score": 0.0, "rationale": "Dry-run judge output."}
+
+    if judge_model.startswith("groq:"):
+        judge_model = judge_model.split(":", 1)[1]
+
+    if judge_model.startswith("nvidia:"):
+        model_name = judge_model.split(":", 1)[1]
+        client = _get_openai_client("nvidia")
+        response = client.chat.completions.create(
+            messages=[{"role": "user", "content": prompt}],
+            model=model_name,
+            temperature=0.0,
+            max_tokens=DEFAULT_MAX_TOKENS,
+        )
+        return _parse_json_object(response.choices[0].message.content or "{}")
+
+    if judge_model.startswith("deepseek"):
+        client = _get_openai_client("deepseek")
+        response = client.chat.completions.create(
+            messages=[{"role": "user", "content": prompt}],
+            model=judge_model,
+            temperature=0.0,
+            max_tokens=DEFAULT_MAX_TOKENS,
+        )
+        return _parse_json_object(response.choices[0].message.content or "{}")
+
+    if judge_model.startswith("gemini"):
+        genai = _get_gemini()
+        response = genai.GenerativeModel(judge_model).generate_content(
+            prompt,
+            generation_config={"temperature": 0.0, "max_output_tokens": DEFAULT_MAX_TOKENS},
+        )
+        return _parse_json_object(getattr(response, "text", "") or "{}")
+
+    if ":" in judge_model or "/" in judge_model:
+        client = _get_openai_client("openrouter")
+        response = client.chat.completions.create(
+            messages=[{"role": "user", "content": prompt}],
+            model=judge_model,
+            temperature=0.0,
+            max_tokens=DEFAULT_MAX_TOKENS,
+            extra_headers={
+                "HTTP-Referer": "http://localhost:3000",
+                "X-Title": "TravelEval",
+            },
+        )
+        return _parse_json_object(response.choices[0].message.content or "{}")
 
     client = _get_groq_client()
     response = client.chat.completions.create(
@@ -523,6 +590,7 @@ class TravelEvalPipeline:
         claim_extractor: str,
         dry_run: bool,
         resume: bool,
+        max_tokens: int,
     ) -> None:
         self.dataset_path = dataset_path
         self.dataset = normalize_dataset(pd.read_csv(dataset_path))
@@ -533,6 +601,7 @@ class TravelEvalPipeline:
         self.claim_extractor = claim_extractor
         self.dry_run = dry_run
         self.resume = resume
+        self.max_tokens = max_tokens
 
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.response_path = self.output_dir / "eval_responses.csv"
@@ -667,7 +736,12 @@ class TravelEvalPipeline:
                     continue
 
                 try:
-                    response = call_llm(row["prompt"], model=model_name, dry_run=self.dry_run)
+                    response = call_llm(
+                        row["prompt"],
+                        model=model_name,
+                        dry_run=self.dry_run,
+                        max_tokens=self.max_tokens,
+                    )
                     if sleep_seconds > 0:
                         time.sleep(sleep_seconds)
                 except Exception as exc:
@@ -722,7 +796,7 @@ def main() -> None:
     parser.add_argument(
         "--models",
         default=",".join(DEFAULT_MODELS),
-        help="Comma-separated models. Supports deepseek*, gemini*, groq:<model>, and OpenRouter IDs.",
+        help="Comma-separated models. Supports deepseek*, gemini*, groq:<model>, nvidia:<model>, and OpenRouter IDs.",
     )
     parser.add_argument("--mode", choices=["auto", "gold", "claim", "bias"], default="auto")
     parser.add_argument("--judge-model", default=DEFAULT_JUDGE_MODEL)
@@ -731,6 +805,7 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=None, help="Optional max rows to evaluate.")
     parser.add_argument("--start", type=int, default=0, help="Start row offset.")
     parser.add_argument("--sleep", type=float, default=0.0, help="Seconds to sleep after each model call.")
+    parser.add_argument("--max-tokens", type=int, default=DEFAULT_MAX_TOKENS, help="Max tokens for model responses.")
     parser.add_argument("--dry-run", action="store_true", help="Exercise pipeline without external API calls.")
     parser.add_argument("--no-resume", action="store_true", help="Do not skip prompt/model pairs already in output.")
     args = parser.parse_args()
@@ -744,6 +819,7 @@ def main() -> None:
         claim_extractor=args.claim_extractor,
         dry_run=args.dry_run,
         resume=not args.no_resume,
+        max_tokens=args.max_tokens,
     )
     summary = pipeline.run(
         models=parse_models(args.models),
