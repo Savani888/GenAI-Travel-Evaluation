@@ -660,7 +660,16 @@
             <td>Open-source alternative</td>
         </tr>
     </table>
-    <div class="table-caption">Table 2: LLMs Evaluated via NVIDIA NIM API</div>
+
+    <h3>2.3 Data Sources and Benchmark Construction</h3>
+    <p>The evaluation benchmark was assembled from a combination of synthetic test prompts and public open-data travel sources to ensure coverage across destinations, transportation, and tourism demand. Synthetic prompts were used for controlled stress-testing of model behavior, while open datasets were used to ground the analysis in real-world travel and mobility patterns.</p>
+    <ul>
+        <li><strong>OpenFlights route and airport data:</strong> used for airport-network and route-level travel context.</li>
+        <li><strong>Eurostat tourism database:</strong> used for accommodation and nights-spent indicators across European destinations.</li>
+        <li><strong>U.S. BTS On-Time Performance data:</strong> used for flight punctuality and airline reliability signals.</li>
+        <li><strong>World Bank / UN Tourism indicators:</strong> used for cross-country arrivals and macro tourism trends.</li>
+    </ul>
+    <p><em>Note:</em> Any dataset counts in this report should be kept aligned with the actual files used in the experiment.</p>
 </div>
 
 <!-- VISUALIZATION 1: Hallucination Results Bar Chart -->
@@ -1301,10 +1310,11 @@
     </ul>
 </div>
 
+
 <!-- 6. References -->
 <div class="section">
     <h2>6. References</h2>
-    
+
     <h3>6.1 Technical Documentation</h3>
     <ul>
         <li>Project Aim Document: <code>Project Aim.md</code></li>
@@ -1312,20 +1322,23 @@
         <li>Practical Guide: <code>practical_guide.md</code></li>
         <li>Evaluation Pipeline: <code>eval_pipeline.py</code></li>
     </ul>
-    
-    <h3>6.2 Data Sources</h3>
+
+    <h3>6.2 Public Travel Datasets</h3>
+    <ul>
+        <li>OpenFlights Airport and Airline Route Data</li>
+        <li>Eurostat Tourism Database - nights spent and arrivals</li>
+        <li>U.S. Bureau of Transportation Statistics (BTS) Airline On-Time Performance Data</li>
+        <li>World Bank Indicator: International tourism, number of arrivals</li>
+        <li>UN Tourism Tourism Statistics Database</li>
+    </ul>
+
+    <h3>6.3 Internal Analysis Assets</h3>
     <ul>
         <li>Evaluation Results: <code>eval_results_final.csv</code></li>
         <li>Travel Benchmark: <code>travel_benchmark_niche.csv</code></li>
         <li>Bias Dataset: <code>data_collection/bias_dataset.csv</code></li>
         <li>Hallucination Dataset: <code>data_collection/hallucination_dataset.csv</code></li>
-    </ul>
-    
-    <h3>6.3 Analysis Results</h3>
-    <ul>
-        <li>Bias Analysis: <code>results/bias_nvidia_live_fast/</code></li>
-        <li>Hallucination Claims: <code>results/hallucination_claims_nvidia_live/</code></li>
-        <li>Real-Time Evaluation: <code>results/realtime_nvidia_live/</code></li>
+        <li>Analysis Results: <code>results/bias_nvidia_live_fast/</code>, <code>results/hallucination_claims_nvidia_live/</code>, <code>results/realtime_nvidia_live/</code></li>
     </ul>
 </div>
 
