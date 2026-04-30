@@ -1,6 +1,7 @@
 import argparse
 import json
 import sys
+import time
 from pathlib import Path
 from typing import Dict, List
 
@@ -62,6 +63,7 @@ def main() -> None:
     parser.add_argument("--judge-model", default=DEFAULT_JUDGE_MODEL)
     parser.add_argument("--serp-results", type=int, default=5)
     parser.add_argument("--limit", type=int, default=None)
+    parser.add_argument("--sleep", type=float, default=0.0, help="Seconds to pause after each completed row.")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
@@ -84,7 +86,17 @@ def main() -> None:
         category = str(row.get("category", ""))
         query = f"{prompt} tourism official source"
         evidence = search_evidence(query, num_results=args.serp_results, dry_run=args.dry_run)
-        gold = choose_gold_answer(prompt, category, evidence, judge_model=args.judge_model, dry_run=args.dry_run)
+        try:
+            gold = choose_gold_answer(prompt, category, evidence, judge_model=args.judge_model, dry_run=args.dry_run)
+        except Exception as exc:
+            print(f"{row_id}: ERROR ({exc})")
+            gold = {
+                "status": "ERROR",
+                "ground_truth": "",
+                "source_url": evidence[0]["link"] if evidence else "",
+                "source_quality": "",
+                "rationale": str(exc),
+            }
         rows.append(
             {
                 "id": row_id,
@@ -101,6 +113,8 @@ def main() -> None:
         )
         pd.DataFrame(rows).to_csv(output_path, index=False)
         print(f"{row_id}: {gold.get('status', 'UNVERIFIED')}")
+        if args.sleep > 0:
+            time.sleep(args.sleep)
 
     summary = pd.DataFrame(rows)["verification_status"].value_counts(dropna=False).to_dict() if rows else {}
     print(json.dumps(summary, indent=2))
