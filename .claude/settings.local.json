@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\Aadarsh\\\\Desktop\\\\GenAI-Travel-Evaluation\" -Recurse -Force | Select-Object FullName | ForEach-Object { $_.FullName.Replace\\(\"c:\\\\Users\\\\Aadarsh\\\\Desktop\\\\GenAI-Travel-Evaluation\\\\\", \"\"\\).Replace\\(\"c:\\\\Users\\\\Aadarsh\\\\Desktop\\\\GenAI-Travel-Evaluation\", \".\"\\) } | Sort-Object)",
+      "PowerShell($file = \"c:\\\\Users\\\\Aadarsh\\\\Desktop\\\\GenAI-Travel-Evaluation\\\\data_collection\\\\research_gold_niche.csv\"; $data = @\\(Get-Content $file | Select-Object -First 30\\); [pscustomobject]@{TotalRows = @\\(Get-Content $file\\).Count; Sample = $data -join \"`n\"})",
+      "PowerShell(\\(Get-Content \"c:\\\\Users\\\\Aadarsh\\\\Desktop\\\\GenAI-Travel-Evaluation\\\\data_collection\\\\research_gold_niche.csv\" | Measure-Object -Line\\).Lines)",
+      "PowerShell(\\(Get-Content \"c:\\\\Users\\\\Aadarsh\\\\Desktop\\\\GenAI-Travel-Evaluation\\\\data_collection\\\\hallucination_dataset.csv\" | Measure-Object -Line\\).Lines)",
+      "PowerShell(\\(Get-Content \"c:\\\\Users\\\\Aadarsh\\\\Desktop\\\\GenAI-Travel-Evaluation\\\\data_collection\\\\bias_dataset.csv\" | Measure-Object -Line\\).Lines)",
+      "PowerShell(\\(Get-Content \"c:\\\\Users\\\\Aadarsh\\\\Desktop\\\\GenAI-Travel-Evaluation\\\\data_collection\\\\realtime_dataset.csv\" | Measure-Object -Line\\).Lines)",
+      "PowerShell(Get-Item \"c:\\\\Users\\\\Aadarsh\\\\Desktop\\\\GenAI-Travel-Evaluation\\\\results\\\\full_20260429\" -ErrorAction SilentlyContinue | Get-ChildItem -Recurse | Select-Object Name | Group-Object -Property Name | Where-Object {$_.Name -match '\\\\.\\(csv|json\\)$'} | Select-Object -ExpandProperty Name | Sort-Object)",
+      "Bash(python -c \"import docx; print\\('python-docx available'\\)\")",
+      "Bash(pip show *)",
+      "Bash(pip install *)",
+      "Bash(python generate_final_report.py)"
+    ]
+  }
+}
