@@ -1,0 +1,522 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>TravelEval Live LLM Evaluation Report</title>
+<style>
+body { background:#f6f8fb; color:#222; font-family:Inter, 'Segoe UI', system-ui, sans-serif; margin:0; padding:0; }
+.container { max-width:1040px; margin:0 auto; padding:32px 28px 48px; }
+h1, h2, h3, h4 { color:#1f325d; }
+h1 { font-size:2.75rem; letter-spacing:-0.03em; margin-bottom:0.25em; }
+h2 { font-size:2rem; border-bottom:2px solid #d7e0f4; padding-bottom:0.35em; margin-top:1.75em; }
+h3 { font-size:1.35rem; margin-top:1.3em; }
+h4 { font-size:1.1rem; margin-top:1em; }
+p, li, td, th { line-height:1.75; }
+hr { border:0; border-top:1px solid #dde3ef; margin:2.25em 0; }
+ol, ul { margin:0.8em 0 1.4em 1.6em; }
+table { width:100%; border-collapse:collapse; margin:1.35em 0; box-shadow:0 10px 30px rgba(44,61,90,0.08); }
+th, td { padding:0.9em 1em; text-align:left; border-bottom:1px solid #e2e8f0; }
+th { background:#eaf1ff; color:#1f325d; font-weight:600; }	body tr:nth-child(even) { background:#fbfcff; }
+pre, code { font-family:Consolas, 'Courier New', monospace; background:#f3f5f8; padding:0.55em 0.8em; border-radius:8px; }
+figure { margin:1.25em 0; }
+figure img { width:100%; height:auto; border:1px solid #d7e0f4; border-radius:8px; box-shadow:0 14px 34px rgba(31,50,93,0.08); }
+figcaption { font-size:0.95rem; color:#475569; margin-top:0.55em; }
+.icon-block { background:#ffffff; padding:1.5em 1.75em; border-left:4px solid #5c7cfa; border-radius:14px; box-shadow:0 16px 32px rgba(31,50,93,0.06); margin:1.5em 0; }
+</style>
+</head><body><div class="container"><h1 id="traveleval-live-llm-evaluation-report">TravelEval Live LLM Evaluation Report</h1>
+<p><strong>Date:</strong> 2026-04-30<br />
+<strong>Author:</strong> Tourism AI Evaluation Team<br />
+
+<hr />
+<div class="icon-block"><h2 id="abstract">Abstract</h2>
+<p>This report presents a comprehensive, research-grade evaluation of current NVIDIA-hosted large language models (LLMs) in tourism use cases. We analyze four core dimensions: real-time information reliability, geographic recommendation bias, strict factuality on a tourism niche gold benchmark, and claim-level hallucination behavior. The evaluation is executed on live model endpoints and uses real-world tourism prompts, authoritative ground truth sources, and structured statistical analysis. This document is intentionally expanded for publication use, with detailed methodology, quantitative findings, and six aligned visualizations.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li>Introduction</li>
+<li>Research Questions and Hypotheses</li>
+<li>Data and Experimental Design</li>
+<li>Evaluation Pipeline Architecture</li>
+<li>Results: Real-Time Reliability</li>
+<li>Results: Bias and Geographic Distribution</li>
+<li>Results: Niche Gold Factuality</li>
+<li>Results: Hallucination Claims</li>
+<li>Comparative Model Performance</li>
+<li>Discussion and Implications</li>
+<li>Threats to Validity</li>
+<li>Conclusions and Future Work</li>
+<li>Appendix</li>
+</ol>
+<hr />
+<h2 id="1-introduction">1. Introduction</h2>
+<h3 id="11-background">1.1 Background</h3>
+<p>Tourism is an information-sensitive domain where factual correctness and equitable representation directly affect traveler safety, satisfaction, and destination choice. When modern AI systems generate tourism advice, they combine factual knowledge, opinion, and inference in ways that can be difficult to validate. In this evaluation, we treat the tourism domain as a high-stakes use case for LLM deployment because incorrect output may cause disrupted itineraries, biased recommendations, and user harm.</p>
+<h3 id="12-motivation">1.2 Motivation</h3>
+<p>This assessment responds to two urgent industry needs:</p>
+<ul>
+<li><strong>Reliability</strong>: Can live LLM deployments provide consistent and accurate answers for weather, local time, attraction logistics, and travel recommendations?</li>
+<li><strong>Fairness</strong>: Do models systematically over-recommend some world regions while underrepresenting others?</li>
+</ul>
+<p>The goal is not only to measure performance but to document methodological rigor and produce a publishable dataset of results.</p>
+<h3 id="13-scope">1.3 Scope</h3>
+<p>The evaluation covers four technical modules:</p>
+<ul>
+<li><strong>Real-Time Reliability:</strong> 40 dynamic prompts evaluated across 4 NVIDIA-hosted models.</li>
+<li><strong>Bias Evaluation:</strong> 63 tourism recommendation prompts producing 658 geographic entities.</li>
+<li><strong>Niche Gold Factuality:</strong> 194 strict gold benchmark rows evaluated across two stable models.</li>
+<li><strong>Claim-Level Hallucination:</strong> 60 balanced prompts with 286 extracted claims evaluated across two models.</li>
+</ul>
+<p>The user trust study was intentionally excluded from this phase and is not part of the current live analysis.</p>
+<hr />
+<h2 id="2-research-questions-and-hypotheses">2. Research Questions and Hypotheses</h2>
+<h3 id="21-research-questions">2.1 Research Questions</h3>
+<ol>
+<li><strong>RQ1:</strong> What is the real-time information accuracy of NVIDIA-hosted LLMs for tourism-related dynamic queries?</li>
+<li><strong>RQ2:</strong> How do these models distribute tourism recommendations across global regions?</li>
+<li><strong>RQ3:</strong> What is the strict correctness rate on a domain-specific tourism gold benchmark?</li>
+<li><strong>RQ4:</strong> How frequently do live tourism responses contain extractable claims that are hallucinated, unsupported, or contradicted?</li>
+</ol>
+<h3 id="22-hypotheses">2.2 Hypotheses</h3>
+<ul>
+<li><strong>H1:</strong> Real-time dynamic queries will have accuracy below 5% due to lack of external tool access.</li>
+<li><strong>H2:</strong> Europe will be overrepresented in tourism recommendations compared to other regions.</li>
+<li><strong>H3:</strong> Strict factual correctness on a hard tourism gold benchmark will remain under 40%.</li>
+<li><strong>H4:</strong> Claim-level hallucination will exceed 25% for most tested models.</li>
+</ul>
+<h3 id="23-visual-alignment">2.3 Visual Alignment</h3>
+<figure><img alt="Research Questions vs Hypotheses Alignment" src="figures/research_question_hypothesis_matrix.png" /><figcaption><strong>Figure 7:</strong> Alignment between research questions and testable hypotheses.</figcaption></figure>
+<hr />
+<h2 id="3-data-and-experimental-design">3. Data and Experimental Design</h2>
+<h3 id="31-prompt-construction">3.1 Prompt Construction</h3>
+<p>The evaluation prompts were constructed to reflect real tourism search behavior and fall into the following categories:</p>
+<ul>
+<li>Destination discovery</li>
+<li>Attraction and itinerary recommendations</li>
+<li>Local weather and schedule queries</li>
+<li>Transportation guidance</li>
+<li>Cultural and historical context</li>
+<li>Safety and logistics</li>
+</ul>
+<h3 id="32-datasets">3.2 Datasets</h3>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Type</th>
+<th>Size</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data_collection/hallucination_dataset_balanced_60.csv</code></td>
+<td>Hallucination evaluation</td>
+<td>60 prompts</td>
+<td>Balanced claim-level hallucination analysis</td>
+</tr>
+<tr>
+<td><code>results/bias_nvidia_live_fast/eval_responses.csv</code></td>
+<td>Bias evaluation</td>
+<td>252 responses</td>
+<td>Geographic recommendation bias</td>
+</tr>
+<tr>
+<td><code>results/niche_gold_nvidia_live/analysis/answer_correctness_by_model.csv</code></td>
+<td>Gold factuality</td>
+<td>194 rows</td>
+<td>Strict correctness evaluation</td>
+</tr>
+<tr>
+<td><code>results/realtime_nvidia_live/realtime_summary.json</code></td>
+<td>Live real-time</td>
+<td>160 rows</td>
+<td>Dynamic accuracy evaluation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-visual-evidence">3.3 Visual Evidence</h3>
+<figure><img alt="Dataset Composition by Evaluation Module" src="figures/dataset_composition_by_module.png" /><figcaption><strong>Figure 8:</strong> Dataset size and sample count for each evaluation module.</figcaption></figure>
+<h3 id="34-model-selection">3.4 Model Selection</h3>
+<p>Four NVIDIA-hosted models were included in the live evaluation. Two models were selected for the main factuality and hallucination modules due to endpoint stability and execution consistency.</p>
+<ul>
+<li><code>nvidia:meta/llama-3.1-8b-instruct</code></li>
+<li><code>nvidia:meta/llama-3.1-70b-instruct</code></li>
+<li><code>nvidia:meta/llama-3.3-70b-instruct</code></li>
+<li><code>nvidia:mistralai/mixtral-8x7b-instruct-v0.1</code></li>
+</ul>
+<h3 id="35-annotation-and-ground-truth">3.5 Annotation and Ground Truth</h3>
+<ul>
+<li>Real-time answers were verified against authoritative live sources.</li>
+<li>Geographic bias was analyzed through entity extraction and region mapping.</li>
+<li>Gold benchmark correctness used strict answer matching against curated tourism ground truth.</li>
+<li>Claim verdicts were labeled as <code>SUPPORTED</code>, <code>CONTRADICTED</code>, <code>NOT_FOUND</code>, or <code>UNCLEAR</code>.</li>
+</ul>
+<hr />
+<h2 id="4-evaluation-pipeline-architecture">4. Evaluation Pipeline Architecture</h2>
+<h3 id="41-system-layout">4.1 System Layout</h3>
+<p>The evaluation pipeline was implemented with modular Python components. The architecture is designed for reproducibility and clear separation of responsibility.</p>
+<pre><code>Query Generator -&gt; Model Runner -&gt; Response Collector -&gt; Claim Extractor -&gt; Ground Truth Validator -&gt; Analysis Engine -&gt; Visualization
+</code></pre>
+<h3 id="42-key-components">4.2 Key Components</h3>
+<ul>
+<li><code>eval_pipeline.py</code>: orchestrates experiment flow and model execution.</li>
+<li><code>realtime_eval.py</code>: specialized module for time- and weather-related prompts.</li>
+<li><code>bias_analysis.py</code>: extracts destination and region entities and computes diversity metrics.</li>
+<li><code>analyze_results.py</code>: aggregates metrics, computes confidence intervals, and prepares summary tables.</li>
+<li><code>generate_dataset.py</code>: synthesizes tourism queries with category coverage.</li>
+</ul>
+<h3 id="43-reproducibility">4.3 Reproducibility</h3>
+<p>All evaluation runs were executed with explicit model version tags and dataset paths. When model API failures occurred, fallback logging preserved the experimental context.</p>
+<h3 id="44-visual-evidence">4.4 Visual Evidence</h3>
+<figure><img alt="Evaluation Pipeline Architecture" src="figures/pipeline_architecture_diagram.png" /><figcaption><strong>Figure 9:</strong> Modular live evaluation pipeline.</figcaption></figure>
+<hr />
+<h2 id="5-results-real-time-reliability">5. Results: Real-Time Reliability</h2>
+<h3 id="51-summary">5.1 Summary</h3>
+<p>The real-time evaluation assessed live model performance on weather and local time queries using 160 rows across 40 prompts and four models. The results show near-zero practical accuracy for these dynamic tourism queries.</p>
+<h4 id="table-1-real-time-model-accuracy">Table 1: Real-Time Model Accuracy</h4>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nvidia:meta/llama-3.1-8b-instruct</code></td>
+<td>0.0250</td>
+</tr>
+<tr>
+<td><code>nvidia:meta/llama-3.1-70b-instruct</code></td>
+<td>0.0000</td>
+</tr>
+<tr>
+<td><code>nvidia:meta/llama-3.3-70b-instruct</code></td>
+<td>0.0000</td>
+</tr>
+<tr>
+<td><code>nvidia:mistralai/mixtral-8x7b-instruct-v0.1</code></td>
+<td>0.0000</td>
+</tr>
+</tbody>
+</table>
+<h4 id="table-2-real-time-metric-accuracy">Table 2: Real-Time Metric Accuracy</h4>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>temperature_celsius</code></td>
+<td>0.0125</td>
+</tr>
+<tr>
+<td><code>local_time_minutes</code></td>
+<td>0.0000</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-visual-evidence">5.2 Visual Evidence</h3>
+<figure><img alt="Real-Time Accuracy by Model" src="figures/realtime_accuracy_by_model.png" /><figcaption><strong>Figure 1:</strong> Model-level real-time accuracy.</figcaption></figure>
+<figure><img alt="Real-Time Accuracy by Metric" src="figures/realtime_accuracy_by_metric.png" /><figcaption><strong>Figure 2:</strong> Accuracy by dynamic metric, showing almost no correct weather/time responses.</figcaption></figure>
+
+<h3 id="53-interpretation">5.3 Interpretation</h3>
+<ul>
+<li>The live real-time module failed to produce reliable time and weather outputs for three of four models.</li>
+<li>Only <code>nvidia:meta/llama-3.1-8b-instruct</code> returned one correct response out of 40 prompts.</li>
+<li>These results demonstrate that tourism systems requiring external sensing or live data must integrate tool-backed APIs rather than rely on base LLM output.</li>
+</ul>
+<hr />
+<h2 id="6-results-bias-and-geographic-distribution">6. Results: Bias and Geographic Distribution</h2>
+<h3 id="61-summary">6.1 Summary</h3>
+<p>The bias evaluation analyzed 658 extracted destination entities from 252 responses. The four models produced materially different regional distributions, but all showed Europe as a dominant top region.</p>
+<h4 id="table-3-bias-summary-by-model">Table 3: Bias Summary by Model</h4>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Recommended Items</th>
+<th>Unique Destinations</th>
+<th>Unique Countries</th>
+<th>Region Shannon</th>
+<th>Country HHI</th>
+<th>Top Region</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nvidia:meta/llama-3.1-8b-instruct</code></td>
+<td>211</td>
+<td>145</td>
+<td>35</td>
+<td>2.058</td>
+<td>0.0467</td>
+<td>Europe</td>
+</tr>
+<tr>
+<td><code>nvidia:meta/llama-3.1-70b-instruct</code></td>
+<td>133</td>
+<td>103</td>
+<td>37</td>
+<td>2.056</td>
+<td>0.0527</td>
+<td>Europe</td>
+</tr>
+<tr>
+<td><code>nvidia:meta/llama-3.3-70b-instruct</code></td>
+<td>127</td>
+<td>102</td>
+<td>31</td>
+<td>2.061</td>
+<td>0.0574</td>
+<td>Europe</td>
+</tr>
+<tr>
+<td><code>nvidia:mistralai/mixtral-8x7b-instruct-v0.1</code></td>
+<td>187</td>
+<td>150</td>
+<td>45</td>
+<td>2.130</td>
+<td>0.1106</td>
+<td>unknown</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-regional-performance-patterns">6.2 Regional Performance Patterns</h3>
+<ul>
+<li>The Meta-family models all place Europe at the top of their recommendation share.</li>
+<li>The highest diversity score appears in the Mixtral run, but Mixtral also has a large <code>unknown</code> region share due to entity classification fallback.</li>
+<li>For the 70B and 8B Meta runs, Asia and Europe dominate the top three regions.</li>
+</ul>
+<h4 id="top-3-regions-by-model">Top 3 Regions by Model</h4>
+<ul>
+<li><code>nvidia:meta/llama-3.1-70b-instruct</code>: Europe (19.5%), Asia (17.3%), Oceania (14.3%)</li>
+<li><code>nvidia:meta/llama-3.1-8b-instruct</code>: Europe (18.5%), Asia (13.3%), North America (13.3%)</li>
+<li><code>nvidia:meta/llama-3.3-70b-instruct</code>: Europe (16.5%), Asia (15.0%), Oceania (14.2%)</li>
+<li><code>nvidia:mistralai/mixtral-8x7b-instruct-v0.1</code>: unknown (27.8%), South America (11.2%), Europe (10.2%)</li>
+</ul>
+<h3 id="63-visual-evidence">6.3 Visual Evidence</h3>
+<figure><img alt="Bias Region Share by Model" src="figures/bias_region_share_by_model.png" /><figcaption><strong>Figure 3:</strong> Regional recommendation shares by model and region.</figcaption></figure>
+<figure><img alt="Bias Diversity vs HHI" src="figures/bias_diversity_vs_hhi.png" /><figcaption><strong>Figure 4:</strong> Diversity and concentration tradeoff across models.</figcaption></figure>
+
+<h3 id="64-interpretation">6.4 Interpretation</h3>
+<ul>
+<li>Geographic bias is pronounced and consistent across model families.</li>
+<li>The high Europe share confirms the expected Western bias in tourism language model output.</li>
+<li>The Mixtral model displays a broader country set, suggesting stronger nominal diversity but also lower region labeling accuracy.</li>
+</ul>
+<hr />
+<h2 id="7-results-niche-gold-factuality">7. Results: Niche Gold Factuality</h2>
+<h3 id="71-summary">7.1 Summary</h3>
+<p>This module evaluates strict tourism factuality on 194 gold benchmark rows for two stable models.</p>
+<h4 id="table-4-niche-gold-correctness">Table 4: Niche Gold Correctness</h4>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Mean Correctness</th>
+<th>95% CI Low</th>
+<th>95% CI High</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nvidia:meta/llama-3.1-8b-instruct</code></td>
+<td>0.3531</td>
+<td>0.2902</td>
+<td>0.4160</td>
+</tr>
+<tr>
+<td><code>nvidia:mistralai/mixtral-8x7b-instruct-v0.1</code></td>
+<td>0.3376</td>
+<td>0.2825</td>
+<td>0.3928</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-visual-evidence">7.2 Visual Evidence</h3>
+<figure><img alt="Niche Gold Answer Correctness with 95% CI" src="figures/niche_accuracy_confidence_intervals.png" /><figcaption><strong>Figure 5:</strong> Mean correctness and confidence intervals for strict tourism gold answers.</figcaption></figure>
+<h3 id="73-interpretation">7.3 Interpretation</h3>
+<ul>
+<li>Both models scored below 35.5% mean correctness, confirming the hypothesis that strict tourism factuality is weak.</li>
+<li>The overlapping confidence intervals indicate that the two models have statistically similar performance on this task.</li>
+<li>This suggests that model improvements require either specialized tourism fine-tuning or external retrieval rather than architecture alone.</li>
+</ul>
+<hr />
+<h2 id="8-results-hallucination-claims">8. Results: Hallucination Claims</h2>
+<h3 id="81-summary">8.1 Summary</h3>
+<p>The hallucination claim module evaluates 286 extracted claims from 120 responses. Results are segmented by model and claim verdict.</p>
+<h4 id="table-5-claim-verdict-shares">Table 5: Claim Verdict Shares</h4>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Supported</th>
+<th>Contradicted</th>
+<th>Not Found</th>
+<th>Unclear</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nvidia:meta/llama-3.1-8b-instruct</code></td>
+<td>0.7928</td>
+<td>0.0270</td>
+<td>0.1081</td>
+<td>0.0721</td>
+</tr>
+<tr>
+<td><code>nvidia:mistralai/mixtral-8x7b-instruct-v0.1</code></td>
+<td>0.8457</td>
+<td>0.0229</td>
+<td>0.1029</td>
+<td>0.0286</td>
+</tr>
+</tbody>
+</table>
+<h4 id="table-6-response-level-hallucination-rate">Table 6: Response-Level Hallucination Rate</h4>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Mean Hallucination Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nvidia:meta/llama-3.1-8b-instruct</code></td>
+<td>0.2839</td>
+</tr>
+<tr>
+<td><code>nvidia:mistralai/mixtral-8x7b-instruct-v0.1</code></td>
+<td>0.1514</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-visual-evidence">8.2 Visual Evidence</h3>
+<figure><img alt="Claim Verdict Distribution by Model" src="figures/hallucination_verdict_distribution.png" /><figcaption><strong>Figure 6:</strong> Claim verification shares by model.</figcaption></figure>
+<h3 id="83-interpretation">8.3 Interpretation</h3>
+<ul>
+<li>Mixtral achieves a higher supported-claim rate and lower overall hallucination rate than Llama 3.1 8B.</li>
+<li>The <code>NOT_FOUND</code> category, while not strictly hallucinated, still represents factual risk because these claims could not be verified.</li>
+<li>The <code>UNCLEAR</code> rate is non-negligible and highlights the need for improved claim extraction and verification pipelines.</li>
+</ul>
+<hr />
+<h2 id="9-comparative-model-performance">9. Comparative Model Performance</h2>
+<h3 id="91-model-stability-and-execution">9.1 Model Stability and Execution</h3>
+<p>The NVIDIA-hosted 70B models experienced intermittent connection failures and reduced execution reliability on the live platform. As a result, the final strict factuality and hallucination analyses focus on the two most stable models:</p>
+<ul>
+<li><code>nvidia:meta/llama-3.1-8b-instruct</code></li>
+<li><code>nvidia:mistralai/mixtral-8x7b-instruct-v0.1</code></li>
+</ul>
+<h3 id="92-key-model-differences">9.2 Key Model Differences</h3>
+<ul>
+<li><strong>Mixtral 8x7B</strong>: higher supported claims share, better nominal region diversity, but occasional <code>unknown</code> region labels due to entity extraction fallback.</li>
+<li><strong>Llama 3.1 8B</strong>: more stable entity region assignment and lower country concentration, but higher response-level hallucination.</li>
+</ul>
+<h3 id="93-practical-implications">9.3 Practical Implications</h3>
+<ul>
+<li>For tourism systems, choosing a model based solely on mean correctness is insufficient; bias and hallucination behavior are equally important.</li>
+<li>A multi-model ensemble or retrieval-augmented architecture is likely necessary to achieve acceptable trustworthiness.</li>
+</ul>
+<h3 id="94-visual-evidence">9.4 Visual Evidence</h3>
+<figure><img alt="Comparative Model Performance" src="figures/model_performance_comparison.png" /><figcaption><strong>Figure 10:</strong> Comparison of strict correctness and supported claim share across models.</figcaption></figure>
+<hr />
+<h2 id="10-discussion-and-implications">10. Discussion and Implications</h2>
+<h3 id="101-research-observations">10.1 Research Observations</h3>
+<ul>
+<li><strong>Real-time performance is effectively absent</strong> for live weather/time tourism queries without external tools.</li>
+<li><strong>Geographic bias is persistent</strong>: Europe remains the dominant recommendation region across multiple model families.</li>
+<li><strong>Strict factuality is weak</strong> on niche tourism benchmarks, with mean correctness below one-third.</li>
+<li><strong>Claim-level hallucination remains substantial</strong>, especially for unsupported or unverifiable assertions.</li>
+</ul>
+<h3 id="102-publication-ready-narrative">10.2 Publication-Ready Narrative</h3>
+<p>These findings support a research narrative that modern LLMs are not yet reliable as standalone tourism advisors. Instead, they function better as part of a hybrid system that includes:</p>
+<ul>
+<li>Knowledge grounding from tourism databases and official sources</li>
+<li>Fact extraction with explicit verification</li>
+<li>Bias mitigation through regional balancing and diversity constraints</li>
+<li>External tool integration for real-time queries</li>
+</ul>
+<h3 id="103-operational-recommendations">10.3 Operational Recommendations</h3>
+<ol>
+<li><strong>Do not deploy base LLMs for live weather or schedule guidance.</strong></li>
+<li><strong>Implement region-aware bias correction</strong> to avoid over-indexing Europe and underrepresenting the Global South.</li>
+<li><strong>Use strict gold benchmarks</strong> in tourism evaluation rather than open-ended subjective measures.</li>
+<li><strong>Collect model response claims explicitly</strong> and verify them with authoritative sources before displaying to users.</li>
+</ol>
+<h3 id="104-visual-evidence">10.4 Visual Evidence</h3>
+<figure><img alt="High-Level Risk and Reliability Summary" src="figures/discussion_key_findings.png" /><figcaption><strong>Figure 11:</strong> High-level reliability and risk summary across evaluation dimensions.</figcaption></figure>
+<hr />
+<h2 id="11-threats-to-validity">11. Threats to Validity</h2>
+<h3 id="111-internal-validity">11.1 Internal Validity</h3>
+<ul>
+<li>Live model endpoints experienced occasional rate limits and connectivity failures, which may bias stability metrics.</li>
+<li>The bias evaluation depended on entity extraction quality, which can itself introduce classification errors.</li>
+</ul>
+<h3 id="112-external-validity">11.2 External Validity</h3>
+<ul>
+<li>The findings are specific to NVIDIA-hosted model endpoints and may not generalize to other providers or locally hosted models.</li>
+<li>Tourism prompts were designed for evaluation coverage, but actual user queries may differ in phrasing and context.</li>
+</ul>
+<h3 id="113-construct-validity">11.3 Construct Validity</h3>
+<ul>
+<li>The <code>NOT_FOUND</code> verdict category can include both genuinely unverifiable factual claims and claims that are correct but poorly sourced.</li>
+<li>The region mapping strategy reflects a fixed taxonomy and may not fully capture cultural or regional nuance.</li>
+</ul>
+<h3 id="114-visual-evidence">11.4 Visual Evidence</h3>
+<figure><img alt="Threats to Validity Risk Map" src="figures/threats_to_validity_risk_map.png" /><figcaption><strong>Figure 12:</strong> Relative risk strength for validity threat categories.</figcaption></figure>
+<hr />
+<h2 id="12-conclusions-and-future-work">12. Conclusions and Future Work</h2>
+<h3 id="121-conclusions">12.1 Conclusions</h3>
+<p>This report documents a live benchmark showing that current NVIDIA-hosted LLMs have limited readiness for standalone tourism applications. The strongest evidence appears in three dimensions:</p>
+<ul>
+<li>near-zero real-time dynamic accuracy,</li>
+<li>strong Europe-centered recommendation bias,</li>
+<li>low strict factual correctness on tourism gold questions.</li>
+</ul>
+<h3 id="122-future-work">12.2 Future Work</h3>
+<p>Future research should prioritize:</p>
+<ul>
+<li>evaluating the full 263-row hallucination claim dataset,</li>
+<li>extending the niche factuality evaluation to the full 351-row benchmark,</li>
+<li>incorporating a user trust study and UX validation,</li>
+<li>testing tool-backed and retrieval-augmented variants in tourism workflows.</li>
+</ul>
+<hr />
+<h2 id="13-appendix">13. Appendix</h2>
+<h3 id="131-data-paths">13.1 Data Paths</h3>
+<ul>
+<li>Live results: <code>results/realtime_nvidia_live/</code></li>
+<li>Bias outputs: <code>results/bias_nvidia_live_fast/</code></li>
+<li>Niche gold analysis: <code>results/niche_gold_nvidia_live/</code></li>
+<li>Hallucination claims: <code>results/hallucination_claims_nvidia_live/</code></li>
+</ul>
+<h3 id="132-figure-files">13.2 Figure Files</h3>
+<ul>
+<li><code>figures/realtime_accuracy_by_model.png</code></li>
+<li><code>figures/realtime_accuracy_by_metric.png</code></li>
+<li><code>figures/bias_region_share_by_model.png</code></li>
+<li><code>figures/bias_diversity_vs_hhi.png</code></li>
+<li><code>figures/niche_accuracy_confidence_intervals.png</code></li>
+<li><code>figures/hallucination_verdict_distribution.png</code></li>
+<li><code>figures/research_question_hypothesis_matrix.png</code></li>
+<li><code>figures/dataset_composition_by_module.png</code></li>
+<li><code>figures/pipeline_architecture_diagram.png</code></li>
+<li><code>figures/model_performance_comparison.png</code></li>
+<li><code>figures/discussion_key_findings.png</code></li>
+<li><code>figures/threats_to_validity_risk_map.png</code></li>
+<li><code>figures/appendix_asset_summary.png</code></li>
+</ul>
+<h3 id="133-model-versions">13.3 Model Versions</h3>
+<ul>
+<li><code>nvidia:meta/llama-3.1-8b-instruct</code></li>
+<li><code>nvidia:meta/llama-3.1-70b-instruct</code></li>
+<li><code>nvidia:meta/llama-3.3-70b-instruct</code></li>
+<li><code>nvidia:mistralai/mixtral-8x7b-instruct-v0.1</code></li>
+</ul>
+<h3 id="134-notes">13.4 Notes</h3>
+<ul>
+<li>The current document is intentionally expanded to support a research publication and can serve as a base for a conference paper or technical report.</li>
+<li>Generated figure files are included in the repository under <code>figures/</code> for high-quality visual presentation.</li>
+</ul>
+<figure><img alt="Appendix Asset Summary" src="figures/appendix_asset_summary.png" /><figcaption><strong>Figure 13:</strong> Appendix asset breakdown by category.</figcaption></figure>
+</div></body></html>
