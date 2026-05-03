@@ -166,6 +166,42 @@ if top_regions_per_model:
         pct = round(share * 100, 1)
         bias_region_bars += bar(region, pct, COLORS[i % len(COLORS)], max_pct=100)
 
+# Top destinations (strip markdown bold ** from names)
+top_dest_table = ""
+if not bias_ent.empty:
+    top_dest = (
+        bias_ent[bias_ent["model"].str.contains("3.3", na=False)]
+        .copy()
+    )
+    top_dest["clean_name"] = top_dest["name"].str.replace(r"\*+", "", regex=True).str.strip()
+    top_agg = (
+        top_dest.groupby(["clean_name", "region"])
+        .size()
+        .reset_index(name="count")
+        .sort_values("count", ascending=False)
+        .head(15)
+    )
+    for i, row in enumerate(top_agg.to_dict("records")):
+        alt = ' class="alt"' if i % 2 else ""
+        region_display = row["region"] if row["region"] != "unknown" else "—"
+        top_dest_table += (
+            f"<tr{alt}><td>{i+1}</td>"
+            f"<td><strong>{row['clean_name']}</strong></td>"
+            f"<td>{region_display}</td>"
+            f"<td>{row['count']}</td></tr>"
+        )
+
+# Known-region distribution for Llama-3.3-70B
+known_region_bars = ""
+if not bias_reg.empty:
+    known = bias_reg[
+        (bias_reg["model"].str.contains("3.3", na=False)) &
+        (bias_reg["region"] != "unknown")
+    ].sort_values("share", ascending=False)
+    for i, row in enumerate(known.to_dict("records")):
+        pct = round(row["share"] * 100, 1)
+        known_region_bars += bar(row["region"], pct, COLORS[i % len(COLORS)], max_pct=max(pct * 2, 10))
+
 # Niche verdict breakdown
 ng_verdict_html = ""
 if ng_verdicts:
@@ -654,8 +690,8 @@ HTML = f"""<!DOCTYPE html>
   <div class="two-col">
     <div>
       <div class="chart-container">
-        <div class="chart-title">Top Recommended Regions (Llama-3.3-70B)</div>
-        {bias_region_bars if bias_region_bars else '<p style="color:#999;text-align:center;">Processing...</p>'}
+        <div class="chart-title">Top Recommended Regions — Known (Llama-3.3-70B)</div>
+        {known_region_bars if known_region_bars else '<p style="color:#999;text-align:center;">Processing...</p>'}
       </div>
     </div>
     <div>
@@ -665,6 +701,12 @@ HTML = f"""<!DOCTYPE html>
       </table>
     </div>
   </div>
+
+  <h3>7.1 Top Recommended Destinations</h3>
+  <table>
+    <tr><th>#</th><th>Destination</th><th>Region</th><th>Mentions</th></tr>
+    {top_dest_table if top_dest_table else '<tr><td colspan="4" style="text-align:center;color:#999;">No data</td></tr>'}
+  </table>
 
   <h3>7.1 Entity Classification Notes</h3>
   <p>
