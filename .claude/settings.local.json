@@ -11,7 +11,20 @@
       "Bash(python -c \"import docx; print\\('python-docx available'\\)\")",
       "Bash(pip show *)",
       "Bash(pip install *)",
-      "Bash(python generate_final_report.py)"
+      "Bash(python generate_final_report.py)",
+      "Bash(cat .env)",
+      "Bash(cat .env.local)",
+      "Bash(python eval_pipeline.py --dataset data_collection/research_gold_niche.csv --output-dir results/final_run_2026/niche_gold --mode gold --models \"groq:llama-3.3-70b-versatile,groq:llama-3.1-8b-instant,gemini-1.5-flash,deepseek-chat\" --limit 50 --sleep 0.5 --max-tokens 300)",
+      "Bash(python eval_pipeline.py --dataset data_collection/bias_dataset.csv --output-dir results/final_run_2026/bias_responses --mode bias --models \"groq:llama-3.3-70b-versatile,groq:llama-3.1-8b-instant,gemini-1.5-flash,deepseek-chat\" --sleep 0.5 --max-tokens 512)",
+      "Bash(python realtime_eval.py --dataset data_collection/realtime_dataset.csv --output-dir results/final_run_2026/realtime --models \"groq:llama-3.3-70b-versatile,groq:llama-3.1-8b-instant,gemini-1.5-flash,deepseek-chat\" --sleep 0.5 --max-tokens 200)",
+      "Bash(python eval_pipeline.py --dataset data_collection/hallucination_dataset_balanced_60.csv --output-dir results/final_run_2026/hallucination --mode claim --models \"groq:llama-3.3-70b-versatile,gemini-1.5-flash,deepseek-chat\" --limit 15 --sleep 1.5 --max-tokens 400)",
+      "Bash(python bias_analysis.py --responses results/final_run_2026/bias_responses/eval_responses.csv --output-dir results/final_run_2026/bias_analysis --judge-model llama-3.3-70b-versatile)",
+      "Bash(python expand_datasets.py --modules all --sleep 1.5)",
+      "Bash(python -c \"import pandas as pd; df = pd.read_csv\\('results/final_run_2026/bias_responses/eval_responses.csv'\\); print\\('Total:', len\\(df\\)\\); print\\('eval_mode counts:', df['evaluation_mode'].value_counts\\(\\).to_dict\\(\\) if 'evaluation_mode' in df.columns else 'no eval_mode col'\\); print\\('models:', df['model'].unique\\(\\) if 'model' in df.columns else 'no model col'\\)\")",
+      "Bash(python -c ' *)",
+      "Bash(python generate_report_html.py)",
+      "Bash(python3 -c ' *)",
+      "Bash(python expand_datasets.py --modules bias,realtime --sleep 1.0)"
     ]
   }
 }

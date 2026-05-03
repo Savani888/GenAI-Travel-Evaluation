@@ -298,27 +298,15 @@ def call_judge_json(prompt: str, judge_model: str, dry_run: bool = False) -> Dic
         )
         return _parse_json_object(response.choices[0].message.content or "{}")
 
+    groq_model = judge_model.split(":", 1)[1] if judge_model.startswith("groq:") else judge_model
     client = _get_groq_client()
     response = client.chat.completions.create(
         messages=[{"role": "user", "content": prompt}],
-        model=judge_model,
+        model=groq_model,
         temperature=0.0,
         response_format={"type": "json_object"},
     )
-
-    if use_groq:
-        groq_model = judge_model.split(":", 1)[1] if judge_model.startswith("groq:") else judge_model
-        client = _get_groq_client()
-        response = client.chat.completions.create(
-            messages=[{"role": "user", "content": prompt}],
-            model=groq_model,
-            temperature=0.0,
-            response_format={"type": "json_object"},
-        )
-        return _parse_json_object(response.choices[0].message.content or "{}")
-
-    response_text = call_llm(prompt, model=judge_model, dry_run=False)
-    return _parse_json_object(response_text or "{}")
+    return _parse_json_object(response.choices[0].message.content or "{}")
 
 
 def regex_extract_claims(response: str) -> List[str]:

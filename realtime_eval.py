@@ -105,6 +105,19 @@ def summarize(results: pd.DataFrame) -> Dict:
     return summary
 
 
+def _completed_realtime_keys(output_path: Path) -> set:
+    """Return set of (prompt_id, model) pairs already saved — enables per-model resume."""
+    if not output_path.exists():
+        return set()
+    try:
+        df = pd.read_csv(output_path)
+        if {"prompt_id", "model"}.issubset(df.columns):
+            return set(zip(df["prompt_id"].astype(str), df["model"].astype(str)))
+    except Exception:
+        pass
+    return set()
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Evaluate real-time weather/time reliability.")
     parser.add_argument("--dataset", default="data_collection/realtime_dataset.csv")
@@ -114,6 +127,8 @@ def main() -> None:
     parser.add_argument("--sleep", type=float, default=0.0)
     parser.add_argument("--max-tokens", type=int, default=DEFAULT_MAX_TOKENS)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--no-resume", action="store_true",
+                        help="Ignore existing results and re-evaluate all rows.")
     args = parser.parse_args()
 
     rows = pd.read_csv(args.dataset)
@@ -124,10 +139,19 @@ def main() -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / "realtime_results.csv"
 
-    results: List[Dict] = []
+    completed = set() if args.no_resume else _completed_realtime_keys(output_path)
+    if completed:
+        print(f"Resuming: {len(completed)} (prompt_id, model) pairs already done — skipping.")
+
     for model in parse_models(args.models):
         print(f"Evaluating real-time prompts with {model}")
+        model_results: List[Dict] = []
         for _, row in rows.iterrows():
+            key = (str(row["id"]), model)
+            if key in completed:
+                print(f"  Skipping {row['id']} / {model} (already done)")
+                continue
+
             try:
                 response = call_llm(
                     str(row["prompt"]),
@@ -144,6 +168,7 @@ def main() -> None:
                     "correct": False,
                 }
             except Exception as exc:
+                print(f"  Error for {row['id']} / {model}: {exc}")
                 response = "ERROR"
                 scoring = {
                     "ground_truth_value": None,
@@ -153,23 +178,28 @@ def main() -> None:
                     "error": str(exc),
                 }
 
-            results.append(
-                {
-                    "prompt_id": row["id"],
-                    "prompt": row["prompt"],
-                    "model": model,
-                    "city": row["city"],
-                    "region": row["region"],
-                    "metric": row["metric"],
-                    "tolerance": row["tolerance"],
-                    "response": response,
-                    "evaluated_at_utc": datetime.now(timezone.utc).isoformat(),
-                    **scoring,
-                }
+            result_row = {
+                "prompt_id": row["id"],
+                "prompt": row["prompt"],
+                "model": model,
+                "city": row["city"],
+                "region": row["region"],
+                "metric": row["metric"],
+                "tolerance": row["tolerance"],
+                "response": response,
+                "evaluated_at_utc": datetime.now(timezone.utc).isoformat(),
+                **scoring,
+            }
+            model_results.append(result_row)
+            completed.add(key)
+            # Append incrementally so partial runs are not lost
+            pd.DataFrame([result_row]).to_csv(
+                output_path, mode="a", header=not output_path.exists(), index=False
             )
-            pd.DataFrame(results).to_csv(output_path, index=False)
 
-    df = pd.DataFrame(results)
+        print(f"  {model}: {len(model_results)} new rows written.")
+
+    df = pd.read_csv(output_path) if output_path.exists() else pd.DataFrame()
     summary = summarize(df)
     (output_dir / "realtime_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(json.dumps(summary, indent=2))

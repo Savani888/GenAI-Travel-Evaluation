@@ -1,0 +1,151 @@
+id,prompt,category,ground_truth,source_url,region,country,task_category,source_quality,evidence_tier
+TR-NICHE-APT-0001,What is the IATA code for Moree Airport in Australia?,airport_logistics,MRZ,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0002,What is the IATA code for Moruya Airport in Australia?,airport_logistics,MYA,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0003,What is the IATA code for Mudgee Airport in Australia?,airport_logistics,DGE,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0004,What is the IATA code for Narrabri Airport in Australia?,airport_logistics,NAA,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0005,What is the IATA code for Scottsdale Airport in United States?,airport_logistics,SCF,https://www.iata.org/,United States,United States,Niche-Verification,official,high
+TR-NICHE-APT-0006,What is the IATA code for Narrandera Airport in Australia?,airport_logistics,NRA,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0007,What is the IATA code for Narromine Airport in Australia?,airport_logistics,QRM,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0008,What is the IATA code for Newcastle Airport in Australia?,airport_logistics,NTL,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0009,What is the IATA code for Nyngan Airport in Australia?,airport_logistics,NYN,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0010,What is the IATA code for Orange Regional Airport in Australia?,airport_logistics,OAG,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0011,What is the IATA code for Parkes Regional Airport in Australia?,airport_logistics,PKE,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0012,What is the IATA code for Port Macquarie Airport in Australia?,airport_logistics,PQQ,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0013,What is the IATA code for Quirindi Airport in Australia?,airport_logistics,UIR,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0014,What is the IATA code for Sydney Airport in Australia?,airport_logistics,SYD,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0015,What is the IATA code for Tamworth Regional Airport in Australia?,airport_logistics,TMW,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0016,What is the IATA code for Taree Airport in Australia?,airport_logistics,TRO,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0017,What is the IATA code for Temora Airport in Australia?,airport_logistics,TEM,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0018,What is the IATA code for Tibooburra Airport in Australia?,airport_logistics,TYB,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0019,What is the IATA code for Tumut Airport in Australia?,airport_logistics,TUM,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0020,What is the IATA code for Wagga Wagga Airport in Australia?,airport_logistics,WGA,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0021,What is the IATA code for Walgett Airport in Australia?,airport_logistics,WGE,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0023,What is the IATA code for West Wyalong Airport in Australia?,airport_logistics,WWY,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0024,What is the IATA code for Shellharbour Airport in Australia?,airport_logistics,WOL,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0025,What is the IATA code for Young Airport in Australia?,airport_logistics,NGA,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0026,What is the IATA code for Alice Springs Airport in Australia?,airport_logistics,ASP,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0027,What is the IATA code for Bathurst Island Airfield in Australia?,airport_logistics,BRT,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0028,What is the IATA code for Croker Island Airport in Australia?,airport_logistics,CKI,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0029,What is the IATA code for Darwin International Airport in Australia?,airport_logistics,DRW,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0030,What is the IATA code for Elcho Island Airport in Australia?,airport_logistics,ELC,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0031,What is the IATA code for Gapuwiyak Landing Ground in Australia?,airport_logistics,LEL,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0032,What is the IATA code for Groote Eylandt Airport in Australia?,airport_logistics,GTE,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0033,What is the IATA code for Kalkgurung Aerodrome in Australia?,airport_logistics,KFG,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0034,What is the IATA code for Hooker Creek Aerodrome in Australia?,airport_logistics,HOK,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0035,What is the IATA code for Maningrida Aerodrome in Australia?,airport_logistics,MNG,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0036,What is the IATA code for Snake Bay Aerodrome in Australia?,airport_logistics,SNB,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0037,What is the IATA code for Milingimbi Airfield in Australia?,airport_logistics,MGT,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0038,What is the IATA code for Gove Airport in Australia?,airport_logistics,GOV,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0039,What is the IATA code for Port Keats Airfield in Australia?,airport_logistics,PKT,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0040,What is the IATA code for Garden Point Airport in Australia?,airport_logistics,GPN,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0041,What is the IATA code for Ramingining Airfield in Australia?,airport_logistics,RAM,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0042,What is the IATA code for Ngukurr Airport in Australia?,airport_logistics,RPM,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0043,What is the IATA code for Tennant Creek Airport in Australia?,airport_logistics,TCA,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0044,What is the IATA code for Ayers Rock Airport in Australia?,airport_logistics,AYQ,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0045,What is the IATA code for Victoria River Downs Aerodrome in Australia?,airport_logistics,VCD,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0046,What is the IATA code for Ararat airport in Australia?,airport_logistics,ARY,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0047,What is the IATA code for Bairnsdale Airport in Australia?,airport_logistics,BSJ,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0050,What is the IATA code for Benalla Airport in Australia?,airport_logistics,BLN,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0051,What is the IATA code for Corryong Airport in Australia?,airport_logistics,CYG,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0052,What is the IATA code for Echuca Airport in Australia?,airport_logistics,ECH,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0053,What is the IATA code for Hopetoun Airport in Australia?,airport_logistics,HTU,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0054,What is the IATA code for Horsham Airport in Australia?,airport_logistics,HSM,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0055,What is the IATA code for Kerang Airport in Australia?,airport_logistics,KRA,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0056,What is the IATA code for Latrobe Valley Airport in Australia?,airport_logistics,TGN,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0058,What is the IATA code for Mallacoota Airport in Australia?,airport_logistics,XMC,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0059,What is the IATA code for Incheon International Airport in South Korea?,airport_logistics,ICN,https://www.iata.org/,South Korea,South Korea,Niche-Verification,official,high
+TR-NICHE-APT-0061,What is the IATA code for Oued Irara–Krim Belkacem Airport in Algeria?,airport_logistics,HME,https://www.iata.org/,Algeria,Algeria,Niche-Verification,official,high
+TR-NICHE-APT-0062,What is the IATA code for Cam Ranh International Airport in Vietnam?,airport_logistics,CXR,https://www.iata.org/,Vietnam,Vietnam,Niche-Verification,official,high
+TR-NICHE-APT-0063,What is the IATA code for Ghadames Airport in Libya?,airport_logistics,LTD,https://www.iata.org/,Libya,Libya,Niche-Verification,official,high
+TR-NICHE-APT-0064,What is the IATA code for Ghat Airport in Libya?,airport_logistics,GHT,https://www.iata.org/,Libya,Libya,Niche-Verification,official,high
+TR-NICHE-APT-0065,What is the IATA code for Tobruk Airport in Libya?,airport_logistics,TOB,https://www.iata.org/,Libya,Libya,Niche-Verification,official,high
+TR-NICHE-APT-0066,What is the IATA code for Mora-Siljan Airport in Sweden?,airport_logistics,MXX,https://www.iata.org/,Sweden,Sweden,Niche-Verification,official,high
+TR-NICHE-APT-0067,What is the IATA code for Lycksele Airport in Sweden?,airport_logistics,LYC,https://www.iata.org/,Sweden,Sweden,Niche-Verification,official,high
+TR-NICHE-APT-0068,What is the IATA code for Nea Anchialos National Airport in Greece?,airport_logistics,VOL,https://www.iata.org/,Greece,Greece,Niche-Verification,official,high
+TR-NICHE-APT-0069,"What is the IATA code for Mo i Rana Airport, Røssvoll in Norway?",airport_logistics,MQN,https://www.iata.org/,Norway,Norway,Niche-Verification,official,high
+TR-NICHE-APT-0070,"What is the IATA code for Narvik Airport, Framnes in Norway?",airport_logistics,NVK,https://www.iata.org/,Norway,Norway,Niche-Verification,official,high
+TR-NICHE-APT-0071,What is the IATA code for Eilat Airport in Israel?,airport_logistics,ETH,https://www.iata.org/,Israel,Israel,Niche-Verification,official,high
+TR-NICHE-APT-0072,What is the IATA code for Mogilev Airport in Belarus?,airport_logistics,MVQ,https://www.iata.org/,Belarus,Belarus,Niche-Verification,official,high
+TR-NICHE-APT-0074,What is the IATA code for Oral Ak Zhol Airport in Kazakhstan?,airport_logistics,URA,https://www.iata.org/,Kazakhstan,Kazakhstan,Niche-Verification,official,high
+TR-NICHE-APT-0075,What is the IATA code for Jeongseok Airport in South Korea?,airport_logistics,JDG,https://www.iata.org/,South Korea,South Korea,Niche-Verification,official,high
+TR-NICHE-APT-0076,What is the IATA code for Gomel Airport in Belarus?,airport_logistics,GME,https://www.iata.org/,Belarus,Belarus,Niche-Verification,official,high
+TR-NICHE-APT-0077,What is the IATA code for Sialkot International Airport in Pakistan?,airport_logistics,SKT,https://www.iata.org/,Pakistan,Pakistan,Niche-Verification,official,high
+TR-NICHE-APT-0078,What is the IATA code for Vinh Airport in Vietnam?,airport_logistics,VII,https://www.iata.org/,Vietnam,Vietnam,Niche-Verification,official,high
+TR-NICHE-APT-0079,What is the IATA code for Velana International Airport in Maldives?,airport_logistics,MLE,https://www.iata.org/,Maldives,Maldives,Niche-Verification,official,high
+TR-NICHE-APT-0081,What is the IATA code for Ubari Airport in Libya?,airport_logistics,QUB,https://www.iata.org/,Libya,Libya,Niche-Verification,official,high
+TR-NICHE-APT-0082,What is the IATA code for Kufra Airport in Libya?,airport_logistics,AKF,https://www.iata.org/,Libya,Libya,Niche-Verification,official,high
+TR-NICHE-APT-0083,What is the IATA code for Multan International Airport in Pakistan?,airport_logistics,MUX,https://www.iata.org/,Pakistan,Pakistan,Niche-Verification,official,high
+TR-NICHE-APT-0084,What is the IATA code for Faisalabad International Airport in Pakistan?,airport_logistics,LYP,https://www.iata.org/,Pakistan,Pakistan,Niche-Verification,official,high
+TR-NICHE-APT-0085,What is the IATA code for Quetta International Airport in Pakistan?,airport_logistics,UET,https://www.iata.org/,Pakistan,Pakistan,Niche-Verification,official,high
+TR-NICHE-APT-0086,What is the IATA code for Singapore Changi Airport in Singapore?,airport_logistics,SIN,https://www.iata.org/,Singapore,Singapore,Niche-Verification,official,high
+TR-NICHE-APT-0087,What is the IATA code for Ghardabiya Air Base in Libya?,airport_logistics,SRX,https://www.iata.org/,Libya,Libya,Niche-Verification,official,high
+TR-NICHE-APT-0088,What is the IATA code for Al Abraq International Airport in Libya?,airport_logistics,LAQ,https://www.iata.org/,Libya,Libya,Niche-Verification,official,high
+TR-NICHE-APT-0090,What is the IATA code for Shanghai Pudong International Airport in People's Republic of China?,airport_logistics,PVG,https://www.iata.org/,People's Republic of China,People's Republic of China,Niche-Verification,official,high
+TR-NICHE-APT-0091,What is the IATA code for Narita International Airport in Japan?,airport_logistics,NRT,https://www.iata.org/,Japan,Japan,Niche-Verification,official,high
+TR-NICHE-APT-0092,What is the IATA code for Sir Seewoosagur Ramgoolam International Airport in Mauritius?,airport_logistics,MRU,https://www.iata.org/,Mauritius,Mauritius,Niche-Verification,official,high
+TR-NICHE-APT-0093,What is the IATA code for Gustaf III Airport in France?,airport_logistics,SBH,https://www.iata.org/,France,France,Niche-Verification,official,high
+TR-NICHE-APT-0094,What is the IATA code for Bodø Airport in Norway?,airport_logistics,BOO,https://www.iata.org/,Norway,Norway,Niche-Verification,official,high
+TR-NICHE-APT-0095,What is the IATA code for Misrata Airport in Libya?,airport_logistics,MRA,https://www.iata.org/,Libya,Libya,Niche-Verification,official,high
+TR-NICHE-APT-0096,What is the IATA code for Sabha Airport in Libya?,airport_logistics,SEB,https://www.iata.org/,Libya,Libya,Niche-Verification,official,high
+TR-NICHE-APT-0097,What is the IATA code for Benina International Airport in Libya?,airport_logistics,BEN,https://www.iata.org/,Libya,Libya,Niche-Verification,official,high
+TR-NICHE-APT-0098,What is the IATA code for Ebolowa Airport in Cameroon?,airport_logistics,EBW,https://www.iata.org/,Cameroon,Cameroon,Niche-Verification,official,high
+TR-NICHE-APT-0099,What is the IATA code for Taoyuan International Airport in Taiwan?,airport_logistics,TPE,https://www.iata.org/,Taiwan,Taiwan,Niche-Verification,official,high
+TR-NICHE-APT-0100,What is the IATA code for Guangzhou Baiyun International Airport in People's Republic of China?,airport_logistics,CAN,https://www.iata.org/,People's Republic of China,People's Republic of China,Niche-Verification,official,high
+TR-NICHE-APT-0101,What is the IATA code for Lyon–Saint-Exupéry Airport in France?,airport_logistics,LYS,https://www.iata.org/,France,France,Niche-Verification,official,high
+TR-NICHE-APT-0102,What is the IATA code for Lyon-Bron Airport in France?,airport_logistics,LYN,https://www.iata.org/,France,France,Niche-Verification,official,high
+TR-NICHE-APT-0103,What is the IATA code for Dong Hoi Airport in Vietnam?,airport_logistics,VDH,https://www.iata.org/,Vietnam,Vietnam,Niche-Verification,official,high
+TR-NICHE-APT-0104,What is the IATA code for San Francisco International Airport in United States?,airport_logistics,SFO,https://www.iata.org/,United States,United States,Niche-Verification,official,high
+TR-NICHE-APT-0105,What is the IATA code for Manchester Airport in United Kingdom?,airport_logistics,MAN,https://www.iata.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-NICHE-APT-0106,What is the IATA code for Edinburgh Airport in United Kingdom?,airport_logistics,EDI,https://www.iata.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-NICHE-APT-0107,What is the IATA code for Birmingham Airport in United Kingdom?,airport_logistics,BHX,https://www.iata.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-NICHE-APT-0108,What is the IATA code for Glasgow Airport in United Kingdom?,airport_logistics,GLA,https://www.iata.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-NICHE-APT-0109,What is the IATA code for Bristol Airport in United Kingdom?,airport_logistics,BRS,https://www.iata.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-NICHE-APT-0110,What is the IATA code for Liverpool John Lennon Airport in United Kingdom?,airport_logistics,LPL,https://www.iata.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-NICHE-APT-0111,What is the IATA code for Los Angeles International Airport in United States?,airport_logistics,LAX,https://www.iata.org/,United States,United States,Niche-Verification,official,high
+TR-NICHE-APT-0112,What is the IATA code for Newcastle International Airport in United Kingdom?,airport_logistics,NCL,https://www.iata.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-NICHE-APT-0113,What is the IATA code for East Midlands Airport in United Kingdom?,airport_logistics,EMA,https://www.iata.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-NICHE-APT-0114,What is the IATA code for Belfast International Airport in United Kingdom?,airport_logistics,BFS,https://www.iata.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-NICHE-APT-0115,What is the IATA code for Aberdeen Airport in United Kingdom?,airport_logistics,ABZ,https://www.iata.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-NICHE-APT-0116,What is the IATA code for London City Airport in United Kingdom?,airport_logistics,LCY,https://www.iata.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-NICHE-APT-0117,What is the IATA code for George Best Belfast City Airport in United Kingdom?,airport_logistics,BHD,https://www.iata.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-NICHE-APT-0118,What is the IATA code for Southampton Airport in United Kingdom?,airport_logistics,SOU,https://www.iata.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-NICHE-APT-0119,What is the IATA code for Jersey Airport in Jersey?,airport_logistics,JER,https://www.iata.org/,Jersey,Jersey,Niche-Verification,official,high
+TR-NICHE-APT-0120,What is the IATA code for Glasgow Prestwick Airport in United Kingdom?,airport_logistics,PIK,https://www.iata.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-NICHE-APT-0121,What is the IATA code for Cardiff Airport in United Kingdom?,airport_logistics,CWL,https://www.iata.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-NICHE-APT-0122,What is the IATA code for Guernsey Airport in Guernsey?,airport_logistics,GCI,https://www.iata.org/,Guernsey,Guernsey,Niche-Verification,official,high
+TR-NICHE-APT-0123,What is the IATA code for Doncaster Sheffield Airport in United Kingdom?,airport_logistics,DSA,https://www.iata.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-NICHE-APT-0124,What is the IATA code for Exeter Airport in United Kingdom?,airport_logistics,EXT,https://www.iata.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-NICHE-APT-0125,What is the IATA code for Isle of Man Airport in Isle of Man?,airport_logistics,IOM,https://www.iata.org/,Isle of Man,Isle of Man,Niche-Verification,official,high
+TR-NICHE-APT-0126,What is the IATA code for Capitán de Corbeta Carlos A. Curbelo International Airport in Uruguay?,airport_logistics,PDP,https://www.iata.org/,Uruguay,Uruguay,Niche-Verification,official,high
+TR-NICHE-APT-0127,What is the IATA code for Seattle–Tacoma International Airport in United States?,airport_logistics,SEA,https://www.iata.org/,United States,United States,Niche-Verification,official,high
+TR-NICHE-APT-0128,What is the IATA code for Canberra Airport in Australia?,airport_logistics,CBR,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0129,What is the IATA code for Adelaide Airport in Australia?,airport_logistics,ADL,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0131,What is the IATA code for Ceduna Airport in Australia?,airport_logistics,CED,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0132,What is the IATA code for Cleve Airport in Australia?,airport_logistics,CVC,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0133,What is the IATA code for Coober Pedy Airport in Australia?,airport_logistics,CPD,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0134,What is the IATA code for Cowell Airport in Australia?,airport_logistics,CCW,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0136,What is the IATA code for Kingscote Airport in Australia?,airport_logistics,KGC,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0137,What is the IATA code for Leigh Creek Airport in Australia?,airport_logistics,LGH,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0139,What is the IATA code for Mount Gambier Airport in Australia?,airport_logistics,MGB,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0140,What is the IATA code for Naracoorte Airport in Australia?,airport_logistics,NAC,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0141,What is the IATA code for Port Augusta Airport in Australia?,airport_logistics,PUG,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0142,What is the IATA code for Port Lincoln Airport in Australia?,airport_logistics,PLO,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0143,What is the IATA code for Port Pirie Airport in Australia?,airport_logistics,PPI,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0144,What is the IATA code for Renmark Airport in Australia?,airport_logistics,RMK,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0145,What is the IATA code for Streaky Bay Airport in Australia?,airport_logistics,KBY,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0147,What is the IATA code for Whyalla Airport in Australia?,airport_logistics,WYA,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0148,What is the IATA code for Wudinna Airport in Australia?,airport_logistics,WUD,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0149,What is the IATA code for Devonport Airport in Australia?,airport_logistics,DPO,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0150,What is the IATA code for Flinders Island Airport in Australia?,airport_logistics,FLS,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0151,What is the IATA code for Hobart Airport in Australia?,airport_logistics,HBA,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0153,What is the IATA code for King Island Airport in Australia?,airport_logistics,KNS,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0154,What is the IATA code for Launceston Airport in Australia?,airport_logistics,LST,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0155,What is the IATA code for St Helens Airport in Australia?,airport_logistics,HLS,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0156,What is the IATA code for Smithton Airport in Australia?,airport_logistics,SIO,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0157,What is the IATA code for Strahan Airport in Australia?,airport_logistics,SRN,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0158,What is the IATA code for Burnie Airport in Australia?,airport_logistics,BWT,https://www.iata.org/,Australia,Australia,Niche-Verification,official,high
+TR-NICHE-APT-0159,What is the IATA code for Berbera Airport in Somaliland?,airport_logistics,BBO,https://www.iata.org/,Somaliland,Somaliland,Niche-Verification,official,high
+TR-NICHE-APT-0160,What is the IATA code for Boorama Airport in Somalia?,airport_logistics,BXX,https://www.iata.org/,Somalia,Somalia,Niche-Verification,official,high
+TR-NICHE-APT-0161,What is the IATA code for Burao Airport in Somalia?,airport_logistics,BUO,https://www.iata.org/,Somalia,Somalia,Niche-Verification,official,high
+TR-NICHE-APT-0162,What is the IATA code for Erigavo Airport in Somalia?,airport_logistics,ERA,https://www.iata.org/,Somalia,Somalia,Niche-Verification,official,high
+TR-NICHE-APT-0163,What is the IATA code for Roland Garros Airport in France?,airport_logistics,RUN,https://www.iata.org/,France,France,Niche-Verification,official,high

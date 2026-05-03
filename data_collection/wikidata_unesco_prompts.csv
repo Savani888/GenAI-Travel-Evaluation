@@ -1,0 +1,143 @@
+id,prompt,category,ground_truth,source_url,region,country,task_category,source_quality,evidence_tier
+TR-HAL-WD-0001,Is Prehistoric Rock-Art Site of the Côa Valley and Siega Verde in Spain a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Spain,Spain,Niche-Verification,official,high
+TR-HAL-WD-0003,Is Bolgar Historical and Archaeological Complex in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0004,Is Cultural Landscape of Old Tea Forests of the Jingmai Mountain in Pu’er in People's Republic of China a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,People's Republic of China,People's Republic of China,Niche-Verification,official,high
+TR-HAL-WD-0005,Is Risco Caido in Spain a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Spain,Spain,Niche-Verification,official,high
+TR-HAL-WD-0006,Is Paphos in Cyprus a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Cyprus,Cyprus,Niche-Verification,official,high
+TR-HAL-WD-0007,Is Viking Age Ring Fortresses in Denmark a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Denmark,Denmark,Niche-Verification,official,high
+TR-HAL-WD-0012,Is Wadden Sea in Denmark a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Denmark,Denmark,Niche-Verification,official,high
+TR-HAL-WD-0015,Is Sardis and the Lydian Tumuli of Bin Tepe in Turkey a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Turkey,Turkey,Niche-Verification,official,high
+TR-HAL-WD-0016,Is Volcanoes of Kamchatka in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0021,Is Central Sikhote-Alin in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0022,Is Landscapes of Dauria in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0024,Is Western Caucasus in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0025,Is Petroglyphs of Lake Onega and the White Sea in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0026,Is Talayotic Culture of Minorca in Spain a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Spain,Spain,Niche-Verification,official,high
+TR-HAL-WD-0027,Is Churches of the Pskov School of Architecture in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0028,"Is Deer Stone Monuments, the Heart of Bronze Age Culture in Mongolia a UNESCO World Heritage Site?",UNESCO_verification,Yes,https://whc.unesco.org/,Mongolia,Mongolia,Niche-Verification,official,high
+TR-HAL-WD-0029,Is Gaya Tumuli in South Korea a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,South Korea,South Korea,Niche-Verification,official,high
+TR-HAL-WD-0030,"Is Birthplace of Jesus: Church of the Nativity and the Pilgrimage Route, Bethlehem in Palestine a UNESCO World Heritage Site?",UNESCO_verification,Yes,https://whc.unesco.org/,Palestine,Palestine,Niche-Verification,official,high
+TR-HAL-WD-0031,Is The Cosmological Axis of Yogyakarta and its Historic Landmarks in Indonesia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Indonesia,Indonesia,Niche-Verification,official,high
+TR-HAL-WD-0032,Is Historic City of Ayutthaya in Thailand a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Thailand,Thailand,Niche-Verification,official,high
+TR-HAL-WD-0033,Is Grčko groblje Novakovići in Montenegro a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Montenegro,Montenegro,Niche-Verification,official,high
+TR-HAL-WD-0034,Is Stećak Petka Kristjanina in Montenegro a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Montenegro,Montenegro,Niche-Verification,official,high
+TR-HAL-WD-0035,Is necropolis of Marmorija in Serbia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Serbia,Serbia,Niche-Verification,official,high
+TR-HAL-WD-0036,Is Großes Glückerthaus in Germany a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Germany,Germany,Niche-Verification,official,high
+TR-HAL-WD-0037,Is Rachid Karami International Fair in Lebanon a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Lebanon,Lebanon,Niche-Verification,official,high
+TR-HAL-WD-0038,Is Kremlin of Suzdal and Cathedral of the Nativity in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0039,Is Landmarks of the Ancient Kingdom of Saba in Yemen a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Yemen,Yemen,Niche-Verification,official,high
+TR-HAL-WD-0040,Is Galápagos Islands in Ecuador a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Ecuador,Ecuador,Niche-Verification,official,high
+TR-HAL-WD-0041,Is Cold Winter Deserts of Turan in Kazakhstan a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Kazakhstan,Kazakhstan,Niche-Verification,official,high
+TR-HAL-WD-0044,Is Viking ring fortress in Denmark a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Denmark,Denmark,Niche-Verification,official,high
+TR-HAL-WD-0045,Is Asmara: A Modernist African City in Eritrea a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Eritrea,Eritrea,Niche-Verification,official,high
+TR-HAL-WD-0046,Is Surtsey in Iceland a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Iceland,Iceland,Niche-Verification,official,high
+TR-HAL-WD-0047,Is Vatnajökull National Park - Dynamic Nature of Fire and Ice in Iceland a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Iceland,Iceland,Niche-Verification,official,high
+TR-HAL-WD-0048,Is Representación histórica de la cultura in Mexico a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Mexico,Mexico,Niche-Verification,official,high
+TR-HAL-WD-0049,Is Andrefana Dry Forests in Madagascar a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Madagascar,Madagascar,Niche-Verification,official,high
+TR-HAL-WD-0050,Is Cultural Landscape of Kenozero Lake in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0051,Is Q131885768 in Germany a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Germany,Germany,Niche-Verification,official,high
+TR-HAL-WD-0052,Is Archaeological site of Delos in Greece a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Greece,Greece,Niche-Verification,official,high
+TR-HAL-WD-0053,Is Q133029307 in Austria a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Austria,Austria,Niche-Verification,official,high
+TR-HAL-WD-0054,Is Prehistoric Sites of the Khorramabad Valley in Iran a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Iran,Iran,Niche-Verification,official,high
+TR-HAL-WD-0060,Is Mount Athos in Greece a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Greece,Greece,Niche-Verification,official,high
+TR-HAL-WD-0061,Is Q137187777 in Nauru a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Nauru,Nauru,Niche-Verification,official,high
+TR-HAL-WD-0062,Is Te Henua Enata (Marquesas Islands) in France a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,France,France,Niche-Verification,official,high
+TR-HAL-WD-0063,Is Cerrado Protected Areas: Chapada dos Veadeiros and Emas National Parks in Brazil a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Brazil,Brazil,Niche-Verification,official,high
+TR-HAL-WD-0065,Is Q138862189 in Austria a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Austria,Austria,Niche-Verification,official,high
+TR-HAL-WD-0066,Is archaeological Site of Delphi in Greece a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Greece,Greece,Niche-Verification,official,high
+TR-HAL-WD-0067,Is Rideau Canal World Heritage Site in Canada a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Canada,Canada,Niche-Verification,official,high
+TR-HAL-WD-0068,Is Q18405795 in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0069,Is Wae Rebo in Indonesia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Indonesia,Indonesia,Niche-Verification,official,high
+TR-HAL-WD-0070,"Is Champagne hillsides, houses and cellars in France a UNESCO World Heritage Site?",UNESCO_verification,Yes,https://whc.unesco.org/,France,France,Niche-Verification,official,high
+TR-HAL-WD-0071,Is Taos Pueblo in United States a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,United States,United States,Niche-Verification,official,high
+TR-HAL-WD-0072,Is Chinchorro mummies in Chile a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Chile,Chile,Niche-Verification,official,high
+TR-HAL-WD-0073,Is Historic centre of Cusco in Peru a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Peru,Peru,Niche-Verification,official,high
+TR-HAL-WD-0074,Is Old town of Corfu in Greece a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Greece,Greece,Niche-Verification,official,high
+TR-HAL-WD-0075,Is Kremlin and Red Square in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0076,Is The Historic Centre (Chorá) with the Monastery of Saint-John the Theologian and the Cave of the Apocalypse on the Island of Pátmos in Greece a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Greece,Greece,Niche-Verification,official,high
+TR-HAL-WD-0077,Is Lake Baikal in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0078,Is Curonian Spit in Lithuania a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Lithuania,Lithuania,Niche-Verification,official,high
+TR-HAL-WD-0080,Is Taj Mahal in India a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,India,India,Niche-Verification,official,high
+TR-HAL-WD-0081,Is Mogao Caves in People's Republic of China a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,People's Republic of China,People's Republic of China,Niche-Verification,official,high
+TR-HAL-WD-0082,Is Wrangel Island in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0083,Is Golden Mountains of Altai in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0084,Is Dessau-Wörlitz Garden Realm in Germany a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Germany,Germany,Niche-Verification,official,high
+TR-HAL-WD-0085,Is White City in Israel a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Israel,Israel,Niche-Verification,official,high
+TR-HAL-WD-0086,Is St Kilda in United Kingdom a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,United Kingdom,United Kingdom,Niche-Verification,official,high
+TR-HAL-WD-0087,Is Delos in Greece a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Greece,Greece,Niche-Verification,official,high
+TR-HAL-WD-0089,Is Masada in Israel a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Israel,Israel,Niche-Verification,official,high
+TR-HAL-WD-0090,Is Struve Geodetic Arc in Norway a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Norway,Norway,Niche-Verification,official,high
+TR-HAL-WD-0100,Is Church of the Nativity in Palestine a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Palestine,Palestine,Niche-Verification,official,high
+TR-HAL-WD-0101,Is Solovetsky Islands in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0102,Is Trinity Lavra of St. Sergius in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0103,"Is Church of the Ascension, Kolomenskoye in Russia a UNESCO World Heritage Site?",UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0104,Is Gorée in Senegal a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Senegal,Senegal,Niche-Verification,official,high
+TR-HAL-WD-0105,Is Serra da Capivara National Park in Brazil a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Brazil,Brazil,Niche-Verification,official,high
+TR-HAL-WD-0106,Is Novodevichy Convent in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0107,Is Putorana Plateau in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0108,Is Lena Pillars in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0109,Is Artists' Colony in Darmstadt in Germany a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Germany,Germany,Niche-Verification,official,high
+TR-HAL-WD-0110,Is Liberty Island in United States a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,United States,United States,Niche-Verification,official,high
+TR-HAL-WD-0111,Is City of Vicenza and the Palladian Villas of the Veneto in Italy a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Italy,Italy,Niche-Verification,official,high
+TR-HAL-WD-0112,Is Kizhi Pogost in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0113,Is Incense Route – Desert Cities in the Negev in Israel a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Israel,Israel,Niche-Verification,official,high
+TR-HAL-WD-0114,Is Suncheon Bay in South Korea a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,South Korea,South Korea,Niche-Verification,official,high
+TR-HAL-WD-0115,Is Bad Kissingen in Germany a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Germany,Germany,Niche-Verification,official,high
+TR-HAL-WD-0116,Is Jeju Volcanic Island and Lava Tubes in South Korea a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,South Korea,South Korea,Niche-Verification,official,high
+TR-HAL-WD-0117,Is Phra Ratchawang Boran in Thailand a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Thailand,Thailand,Niche-Verification,official,high
+TR-HAL-WD-0118,Is Saloum Delta in Senegal a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Senegal,Senegal,Niche-Verification,official,high
+TR-HAL-WD-0119,Is Virgin Komi Forests in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0120,Is Qazan Kremlin in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0121,Is Historic Centre of Saint Petersburg and Related Groups of Monuments in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0123,Is Lençóis Maranhenses National Park in Brazil a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Brazil,Brazil,Niche-Verification,official,high
+TR-HAL-WD-0124,Is Machu Picchu in Peru a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Peru,Peru,Niche-Verification,official,high
+TR-HAL-WD-0125,Is Neolithic flint mines of Spiennes in Belgium a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Belgium,Belgium,Niche-Verification,official,high
+TR-HAL-WD-0126,Is Old City of Bern in Switzerland a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Switzerland,Switzerland,Niche-Verification,official,high
+TR-HAL-WD-0127,Is Chavin de Huantar in Peru a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Peru,Peru,Niche-Verification,official,high
+TR-HAL-WD-0128,Is Ubsunur Hollow in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0129,Is Iguaçu National Park in Brazil a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Brazil,Brazil,Niche-Verification,official,high
+TR-HAL-WD-0131,Is Beit She'arim National Park in Israel a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Israel,Israel,Niche-Verification,official,high
+TR-HAL-WD-0132,Is Ferapontov Monastery in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0133,Is White Monuments of Vladimir and Suzdal in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0134,Is Medieval City of Rhodes in Greece a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Greece,Greece,Niche-Verification,official,high
+TR-HAL-WD-0135,Is Early Christian Necropolis of Pécs in Hungary a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Hungary,Hungary,Niche-Verification,official,high
+TR-HAL-WD-0136,Is Cavernas do Peruaçu National Park in Brazil a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Brazil,Brazil,Niche-Verification,official,high
+TR-HAL-WD-0137,Is Budapest Metro Line 1 in Hungary a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Hungary,Hungary,Niche-Verification,official,high
+TR-HAL-WD-0138,Is Monasteries on the slopes of Popocatépetl in Mexico a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Mexico,Mexico,Niche-Verification,official,high
+TR-HAL-WD-0139,Is Historic Monuments of Novgorod and Surroundings in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0140,Is Major Town Houses of the Architect Victor Horta in Belgium a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Belgium,Belgium,Niche-Verification,official,high
+TR-HAL-WD-0141,Is Nahal Me'arot Nature Reserve in Israel a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Israel,Israel,Niche-Verification,official,high
+TR-HAL-WD-0142,Is Decorated Farmhouses of Hälsingland in Sweden a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Sweden,Sweden,Niche-Verification,official,high
+TR-HAL-WD-0143,Is Kapova Cave in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0144,"Is Foreste Casentinesi, Monte Falterona, Campigna National Park in Italy a UNESCO World Heritage Site?",UNESCO_verification,Yes,https://whc.unesco.org/,Italy,Italy,Niche-Verification,official,high
+TR-HAL-WD-0145,Is Cinque Terre National Park in Italy a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Italy,Italy,Niche-Verification,official,high
+TR-HAL-WD-0146,Is Bahá'í World Centre buildings in Israel a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Israel,Israel,Niche-Verification,official,high
+TR-HAL-WD-0147,Is Beit Guvrin National Park in Israel a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Israel,Israel,Niche-Verification,official,high
+TR-HAL-WD-0148,Is World Heritage Dolomites in Italy a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Italy,Italy,Niche-Verification,official,high
+TR-HAL-WD-0149,Is Zubarah in Qatar a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Qatar,Qatar,Niche-Verification,official,high
+TR-HAL-WD-0150,Is Archaeological Area and the Patriarchal Basilica of Aquileia in Italy a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Italy,Italy,Niche-Verification,official,high
+TR-HAL-WD-0151,Is Astronomical Observatory of the University of Kazan in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0152,Is historical centre of Yaroslavl in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0153,Is Hopewell Culture National Historical Park in United States a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,United States,United States,Niche-Verification,official,high
+TR-HAL-WD-0154,Is Sviyazhsk Assumption Monastery in Russia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Russia,Russia,Niche-Verification,official,high
+TR-HAL-WD-0155,Is Historic City of Ahmadabad in India a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,India,India,Niche-Verification,official,high
+TR-HAL-WD-0156,Is Kaldar Cave in Iran a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Iran,Iran,Niche-Verification,official,high
+TR-HAL-WD-0157,Is Koza Han in Turkey a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Turkey,Turkey,Niche-Verification,official,high
+TR-HAL-WD-0158,Is Upper Middle Rhine Valley in Germany a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Germany,Germany,Niche-Verification,official,high
+TR-HAL-WD-0159,Is Pimachiowin Aki in Canada a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Canada,Canada,Niche-Verification,official,high
+TR-HAL-WD-0160,Is Dinosaur Ichnite Sites of the Iberian Peninsula in Spain a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Spain,Spain,Niche-Verification,official,high
+TR-HAL-WD-0162,Is Q10546335 in Saint Vincent and the Grenadines a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Saint Vincent and the Grenadines,Saint Vincent and the Grenadines,Niche-Verification,official,high
+TR-HAL-WD-0163,Is The Persian Garden in Iran a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Iran,Iran,Niche-Verification,official,high
+TR-HAL-WD-0164,Is Complex of Huế Monuments in Vietnam a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Vietnam,Vietnam,Niche-Verification,official,high
+TR-HAL-WD-0165,Is Lower Valley of the Omo in Ethiopia a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Ethiopia,Ethiopia,Niche-Verification,official,high
+TR-HAL-WD-0166,Is West Norwegian Fjords – Geirangerfjord and Nærøyfjord in Norway a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Norway,Norway,Niche-Verification,official,high
+TR-HAL-WD-0167,Is Limes Dacicus in Romania a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Romania,Romania,Niche-Verification,official,high
+TR-HAL-WD-0168,Is Timbuktu in Mali a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Mali,Mali,Niche-Verification,official,high
+TR-HAL-WD-0169,Is Old Towns of Djenné in Mali a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Mali,Mali,Niche-Verification,official,high
+TR-HAL-WD-0170,"Is Biblical Tels - Megiddo, Hazor, Beer Sheba in Israel a UNESCO World Heritage Site?",UNESCO_verification,Yes,https://whc.unesco.org/,Israel,Israel,Niche-Verification,official,high
+TR-HAL-WD-0171,Is Mantua and Sabbioneta in Italy a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Italy,Italy,Niche-Verification,official,high
+TR-HAL-WD-0172,Is Old City of Jerusalem and its Walls in Israel a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Israel,Israel,Niche-Verification,official,high
+TR-HAL-WD-0173,Is Churches and Convents of Goa in India a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,India,India,Niche-Verification,official,high
+TR-HAL-WD-0174,Is Historic Centre of Mexico City and Xochimilco in Mexico a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Mexico,Mexico,Niche-Verification,official,high
+TR-HAL-WD-0175,Is Gimnyeonggul in South Korea a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,South Korea,South Korea,Niche-Verification,official,high
+TR-HAL-WD-0176,Is Archaeological Sites of Mycenae and Tiryns in Greece a UNESCO World Heritage Site?,UNESCO_verification,Yes,https://whc.unesco.org/,Greece,Greece,Niche-Verification,official,high
