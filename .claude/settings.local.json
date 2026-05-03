@@ -24,7 +24,10 @@
       "Bash(python -c ' *)",
       "Bash(python generate_report_html.py)",
       "Bash(python3 -c ' *)",
-      "Bash(python expand_datasets.py --modules bias,realtime --sleep 1.0)"
+      "Bash(python expand_datasets.py --modules bias,realtime --sleep 1.0)",
+      "Bash(wc -l generate_final_report.py)",
+      "Bash(python -c \"print\\(len\\(open\\('generate_final_report.py'\\).readlines\\(\\)\\), 'lines'\\)\")",
+      "Bash(python generate_polished_report.py)"
     ]
   }
 }
